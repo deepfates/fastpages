@@ -1,6 +1,10 @@
 ---
 keywords: fastai
-title: Testing python variables into markdown, for tweets
+title: Can I extract tweets to this page
+toc: true 
+badges: true
+comments: true
+categories: [hacking, twitter]
 nb_path: _notebooks/2021-07-05-twitter-test.ipynb
 layout: notebook
 ---

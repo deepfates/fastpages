@@ -1,6 +1,11 @@
 ---
 keywords: fastai
 title: Exploring the dataset
+toc: true 
+badges: true
+comments: true
+categories: [books, invisible-canon]
+image: images/popularity-prestige.png
 nb_path: _notebooks/2021-06-29-exploring-data.ipynb
 layout: notebook
 ---

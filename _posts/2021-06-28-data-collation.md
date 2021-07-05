@@ -1,6 +1,11 @@
 ---
 keywords: fastai
+description: How do books become classics?
 title: Data Collation
+toc: true 
+badges: true
+comments: true
+categories: [books, invisible-canon]
 nb_path: _notebooks/2021-06-28-data-collation.ipynb
 layout: notebook
 ---
