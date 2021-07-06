@@ -2,7 +2,7 @@
 keywords: fastai
 title: Popular tweets
 badges: false
-categories: [hacking, twitter]
+categories: [twitter]
 nb_path: _notebooks/popular-tweets.ipynb
 layout: notebook
 ---
@@ -18,18 +18,131 @@ layout: notebook
         
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>I post memes, works-in-progress and shower thoughts on the social microblogging platform "Twitter". Here are some of my recent popular posts (not my most popular posts, which I delete when they start to make me anxious)</p>
+<p>This is the code I use to generate my <a href="../../../../tweets">Tweets</a> page</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>{% include twitter.html content='<a href="https://twitter.com/deepfates/status/1410803671403728900">https://twitter.com/deepfates/status/1410803671403728900</a>' %}{% include twitter.html content='<a href="https://twitter.com/deepfates/status/1410720938866270209">https://twitter.com/deepfates/status/1410720938866270209</a>' %}{% include twitter.html content='<a href="https://twitter.com/deepfates/status/1410678538903113737">https://twitter.com/deepfates/status/1410678538903113737</a>' %}{% include twitter.html content='<a href="https://twitter.com/deepfates/status/1410226877218840584">https://twitter.com/deepfates/status/1410226877218840584</a>' %}{% include twitter.html content='<a href="https://twitter.com/deepfates/status/1410009264878276617">https://twitter.com/deepfates/status/1410009264878276617</a>' %}{% include twitter.html content='<a href="https://twitter.com/deepfates/status/1409638480892764164">https://twitter.com/deepfates/status/1409638480892764164</a>' %}{% include twitter.html content='<a href="https://twitter.com/deepfates/status/1409587229228343296">https://twitter.com/deepfates/status/1409587229228343296</a>' %}{% include twitter.html content='<a href="https://twitter.com/deepfates/status/1409503937955127307">https://twitter.com/deepfates/status/1409503937955127307</a>' %}{% include twitter.html content='<a href="https://twitter.com/deepfates/status/1408798364221722631">https://twitter.com/deepfates/status/1408798364221722631</a>' %}{% include twitter.html content='<a href="https://twitter.com/deepfates/status/1408464068109914113">https://twitter.com/deepfates/status/1408464068109914113</a>' %}{% include twitter.html content='<a href="https://twitter.com/deepfates/status/1408441144980221954">https://twitter.com/deepfates/status/1408441144980221954</a>' %}{% include twitter.html content='<a href="https://twitter.com/deepfates/status/1407126152364232715">https://twitter.com/deepfates/status/1407126152364232715</a>' %}{% include twitter.html content='<a href="https://twitter.com/deepfates/status/1406361425400909831">https://twitter.com/deepfates/status/1406361425400909831</a>' %}{% include twitter.html content='<a href="https://twitter.com/deepfates/status/1406271555256999937">https://twitter.com/deepfates/status/1406271555256999937</a>' %}{% include twitter.html content='<a href="https://twitter.com/deepfates/status/1406271483014377472">https://twitter.com/deepfates/status/1406271483014377472</a>' %}{% include twitter.html content='<a href="https://twitter.com/deepfates/status/1406038473086144518">https://twitter.com/deepfates/status/1406038473086144518</a>' %}{% include twitter.html content='<a href="https://twitter.com/deepfates/status/1404506351842197507">https://twitter.com/deepfates/status/1404506351842197507</a>' %}{% include twitter.html content='<a href="https://twitter.com/deepfates/status/1403775419208417280">https://twitter.com/deepfates/status/1403775419208417280</a>' %}{% include twitter.html content='<a href="https://twitter.com/deepfates/status/1403402890237067271">https://twitter.com/deepfates/status/1403402890237067271</a>' %}{% include twitter.html content='<a href="https://twitter.com/deepfates/status/1403402638222368769">https://twitter.com/deepfates/status/1403402638222368769</a>' %}{% include twitter.html content='<a href="https://twitter.com/deepfates/status/1403402258017030144">https://twitter.com/deepfates/status/1403402258017030144</a>' %}{% include twitter.html content='<a href="https://twitter.com/deepfates/status/1403399900700815372">https://twitter.com/deepfates/status/1403399900700815372</a>' %}{% include twitter.html content='<a href="https://twitter.com/deepfates/status/1403399054940422148">https://twitter.com/deepfates/status/1403399054940422148</a>' %}{% include twitter.html content='<a href="https://twitter.com/deepfates/status/1403398569307029508">https://twitter.com/deepfates/status/1403398569307029508</a>' %}{% include twitter.html content='<a href="https://twitter.com/deepfates/status/1403397402145574914">https://twitter.com/deepfates/status/1403397402145574914</a>' %}{% include twitter.html content='<a href="https://twitter.com/deepfates/status/1403397093658705920">https://twitter.com/deepfates/status/1403397093658705920</a>' %}{% include twitter.html content='<a href="https://twitter.com/deepfates/status/1403396101030531080">https://twitter.com/deepfates/status/1403396101030531080</a>' %}{% include twitter.html content='<a href="https://twitter.com/deepfates/status/1403395199460589568">https://twitter.com/deepfates/status/1403395199460589568</a>' %}{% include twitter.html content='<a href="https://twitter.com/deepfates/status/1403393813335400449">https://twitter.com/deepfates/status/1403393813335400449</a>' %}{% include twitter.html content='<a href="https://twitter.com/deepfates/status/1403393455456456707">https://twitter.com/deepfates/status/1403393455456456707</a>' %}{% include twitter.html content='<a href="https://twitter.com/deepfates/status/1403393321494618115">https://twitter.com/deepfates/status/1403393321494618115</a>' %}{% include twitter.html content='<a href="https://twitter.com/deepfates/status/1403392693443629063">https://twitter.com/deepfates/status/1403392693443629063</a>' %}{% include twitter.html content='<a href="https://twitter.com/deepfates/status/1403391824216141826">https://twitter.com/deepfates/status/1403391824216141826</a>' %}{% include twitter.html content='<a href="https://twitter.com/deepfates/status/1403391239806980098">https://twitter.com/deepfates/status/1403391239806980098</a>' %}{% include twitter.html content='<a href="https://twitter.com/deepfates/status/1403390390913454080">https://twitter.com/deepfates/status/1403390390913454080</a>' %}{% include twitter.html content='<a href="https://twitter.com/deepfates/status/1403389374696415238">https://twitter.com/deepfates/status/1403389374696415238</a>' %}{% include twitter.html content='<a href="https://twitter.com/deepfates/status/1403388501924597760">https://twitter.com/deepfates/status/1403388501924597760</a>' %}{% include twitter.html content='<a href="https://twitter.com/deepfates/status/1403388500334891010">https://twitter.com/deepfates/status/1403388500334891010</a>' %}{% include twitter.html content='<a href="https://twitter.com/deepfates/status/1403388498804051968">https://twitter.com/deepfates/status/1403388498804051968</a>' %}{% include twitter.html content='<a href="https://twitter.com/deepfates/status/1402712065874092033">https://twitter.com/deepfates/status/1402712065874092033</a>' %}{% include twitter.html content='<a href="https://twitter.com/deepfates/status/1400591012834152454">https://twitter.com/deepfates/status/1400591012834152454</a>' %}{% include twitter.html content='<a href="https://twitter.com/deepfates/status/1400098818079686656">https://twitter.com/deepfates/status/1400098818079686656</a>' %}{% include twitter.html content='<a href="https://twitter.com/deepfates/status/1398863101735354373">https://twitter.com/deepfates/status/1398863101735354373</a>' %}{% include twitter.html content='<a href="https://twitter.com/deepfates/status/1398711971969593351">https://twitter.com/deepfates/status/1398711971969593351</a>' %}{% include twitter.html content='<a href="https://twitter.com/deepfates/status/1397960354416644097">https://twitter.com/deepfates/status/1397960354416644097</a>' %}{% include twitter.html content='<a href="https://twitter.com/deepfates/status/1396151620661137409">https://twitter.com/deepfates/status/1396151620661137409</a>' %}{% include twitter.html content='<a href="https://twitter.com/deepfates/status/1394312624121257992">https://twitter.com/deepfates/status/1394312624121257992</a>' %}{% include twitter.html content='<a href="https://twitter.com/deepfates/status/1389936983900758019">https://twitter.com/deepfates/status/1389936983900758019</a>' %}{% include twitter.html content='<a href="https://twitter.com/deepfates/status/1389585659581583365">https://twitter.com/deepfates/status/1389585659581583365</a>' %}{% include twitter.html content='<a href="https://twitter.com/deepfates/status/1388949801325133824">https://twitter.com/deepfates/status/1388949801325133824</a>' %}{% include twitter.html content='<a href="https://twitter.com/deepfates/status/1388900295325847552">https://twitter.com/deepfates/status/1388900295325847552</a>' %}{% include twitter.html content='<a href="https://twitter.com/deepfates/status/1388529423570272256">https://twitter.com/deepfates/status/1388529423570272256</a>' %}{% include twitter.html content='<a href="https://twitter.com/deepfates/status/1388498206783262725">https://twitter.com/deepfates/status/1388498206783262725</a>' %}{% include twitter.html content='<a href="https://twitter.com/deepfates/status/1387409599989383168">https://twitter.com/deepfates/status/1387409599989383168</a>' %}{% include twitter.html content='<a href="https://twitter.com/deepfates/status/1385370925793636354">https://twitter.com/deepfates/status/1385370925793636354</a>' %}{% include twitter.html content='<a href="https://twitter.com/deepfates/status/1384901122394107904">https://twitter.com/deepfates/status/1384901122394107904</a>' %}{% include twitter.html content='<a href="https://twitter.com/deepfates/status/1384885466542100483">https://twitter.com/deepfates/status/1384885466542100483</a>' %}{% include twitter.html content='<a href="https://twitter.com/deepfates/status/1384720364337438723">https://twitter.com/deepfates/status/1384720364337438723</a>' %}{% include twitter.html content='<a href="https://twitter.com/deepfates/status/1384243814672474124">https://twitter.com/deepfates/status/1384243814672474124</a>' %}{% include twitter.html content='<a href="https://twitter.com/deepfates/status/1382400028648480770">https://twitter.com/deepfates/status/1382400028648480770</a>' %}{% include twitter.html content='<a href="https://twitter.com/deepfates/status/1379645401503039492">https://twitter.com/deepfates/status/1379645401503039492</a>' %}{% include twitter.html content='<a href="https://twitter.com/deepfates/status/1378359302449139717">https://twitter.com/deepfates/status/1378359302449139717</a>' %}{% include twitter.html content='<a href="https://twitter.com/deepfates/status/1377661108559900673">https://twitter.com/deepfates/status/1377661108559900673</a>' %}{% include twitter.html content='<a href="https://twitter.com/deepfates/status/1365169415742922752">https://twitter.com/deepfates/status/1365169415742922752</a>' %}{% include twitter.html content='<a href="https://twitter.com/deepfates/status/1355758083079761921">https://twitter.com/deepfates/status/1355758083079761921</a>' %}{% include twitter.html content='<a href="https://twitter.com/deepfates/status/1348756926046162944">https://twitter.com/deepfates/status/1348756926046162944</a>' %}</p>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">twint</span>
+<span class="kn">import</span> <span class="nn">nest_asyncio</span>
+<span class="n">nest_asyncio</span><span class="o">.</span><span class="n">apply</span><span class="p">()</span>
+
+
+<span class="n">c</span> <span class="o">=</span> <span class="n">twint</span><span class="o">.</span><span class="n">Config</span><span class="p">()</span>
+
+<span class="n">c</span><span class="o">.</span><span class="n">Username</span> <span class="o">=</span> <span class="s1">&#39;deepfates&#39;</span>
+<span class="n">c</span><span class="o">.</span><span class="n">Popular_tweets</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">c</span><span class="o">.</span><span class="n">Limit</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">c</span><span class="o">.</span><span class="n">Min_likes</span> <span class="o">=</span> <span class="mi">130</span>
+<span class="n">tweets</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">c</span><span class="o">.</span><span class="n">Store_object</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">c</span><span class="o">.</span><span class="n">Store_object_tweets_list</span> <span class="o">=</span> <span class="n">tweets</span>
+
+
+<span class="n">twint</span><span class="o">.</span><span class="n">run</span><span class="o">.</span><span class="n">Search</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
 
 </div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tweets</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">datetime</span><span class="p">,</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+
+    </div>
 </div>
 </div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_include</span><span class="p">(</span><span class="n">link</span><span class="p">):</span>
+    <span class="k">return</span><span class="p">(</span><span class="s1">&#39;{</span><span class="si">% i</span><span class="s1">nclude twitter.html &#39;</span><span class="o">+</span><span class="sa">f</span><span class="s1">&#39;&#39;&#39;content=&#39;&lt;a href=&quot;</span><span class="si">{</span><span class="n">link</span><span class="si">}</span><span class="s1">&quot;&gt;</span><span class="si">{</span><span class="n">link</span><span class="si">}</span><span class="s1">&lt;/a&gt;&#39; &#39;&#39;&#39;</span><span class="o">+</span><span class="s1">&#39;%}&#39;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">get_md</span><span class="p">(</span><span class="n">includes</span><span class="p">):</span>
+    <span class="k">return</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;&#39;&#39;---</span>
+<span class="s1">layout: page</span>
+<span class="s1">title: Tweets</span>
+<span class="s1">permalink: /tweets/</span>
+<span class="s1">---</span>
+
+<span class="s1">I post memes, works-in-progress and shower thoughts on the social microblogging platform &quot;Twitter&quot;.</span>
+
+
+<span class="s1">Here are some of my recent popular posts (not my most popular posts, which I tend to delete when they make me anxious)</span><span class="se">\n</span><span class="s1"></span>
+<span class="s1">___</span>
+<span class="se">\n</span><span class="s1"></span>
+<span class="si">{</span><span class="n">includes</span><span class="si">}</span><span class="s1"></span>
+<span class="s1">&#39;&#39;&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">includes</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">get_include</span><span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">link</span><span class="p">)</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">tweets</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">md</span> <span class="o">=</span> <span class="n">get_md</span><span class="p">(</span><span class="n">includes</span><span class="p">)</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;../_pages/tweets.md&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">md</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">f</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
 </div>
  
 
