@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>https://deepfates.github.io/fastpages/markdown/2020/01/14/test-markdown-post.html</loc>
-<lastmod>2020-01-14T00:00:00-06:00</lastmod>
-</url>
-<url>
-<loc>https://deepfates.github.io/fastpages/jupyter/2020/02/20/test.html</loc>
-<lastmod>2020-02-20T00:00:00-06:00</lastmod>
-</url>
-<url>
 <loc>https://deepfates.github.io/fastpages/robot-face/2020/09/01/a-cybernetic-meadow.html</loc>
 <lastmod>2020-09-01T00:00:00-05:00</lastmod>
 </url>
@@ -69,23 +61,11 @@
 <lastmod>2021-06-10T00:00:00-05:00</lastmod>
 </url>
 <url>
-<loc>https://deepfates.github.io/fastpages/books/invisible-canon/2021/06/28/data-collation.html</loc>
+<loc>https://deepfates.github.io/fastpages/books/2021/06/28/data-collation.html</loc>
 <lastmod>2021-06-28T00:00:00-05:00</lastmod>
 </url>
 <url>
-<loc>https://deepfates.github.io/fastpages/2021/07/04/Untitled.html</loc>
-<lastmod>2021-07-04T00:00:00-05:00</lastmod>
-</url>
-<url>
-<loc>https://deepfates.github.io/fastpages/hacking/twitter/2021/07/04/popular-tweets.html</loc>
-<lastmod>2021-07-04T00:00:00-05:00</lastmod>
-</url>
-<url>
-<loc>https://deepfates.github.io/fastpages/hacking/twitter/2021/07/05/popular-tweets.html</loc>
-<lastmod>2021-07-05T00:00:00-05:00</lastmod>
-</url>
-<url>
-<loc>https://deepfates.github.io/fastpages/hacking/twitter/2021/07/05/twitter-test.html</loc>
+<loc>https://deepfates.github.io/fastpages/twitter/2021/07/05/popular-tweets.html</loc>
 <lastmod>2021-07-05T00:00:00-05:00</lastmod>
 </url>
 <url>
@@ -99,6 +79,9 @@
 </url>
 <url>
 <loc>https://deepfates.github.io/fastpages/categories/</loc>
+</url>
+<url>
+<loc>https://deepfates.github.io/fastpages/tweets/</loc>
 </url>
 <url>
 <loc>https://deepfates.github.io/fastpages/page2/</loc>
