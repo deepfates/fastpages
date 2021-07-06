@@ -6,7 +6,6 @@ toc: true
 badges: true
 comments: true
 categories: [books]
-image: images/popularity-prestige.png
 nb_path: _notebooks/2021-06-10-canon-curation.ipynb
 layout: notebook
 ---
