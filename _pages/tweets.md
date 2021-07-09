@@ -12,6 +12,8 @@ Here are some of my recent popular posts (not my most popular posts, which I ten
 ___
 
 
+{% include twitter.html content='<a href="https://twitter.com/deepfates/status/1413236300749053952">https://twitter.com/deepfates/status/1413236300749053952</a>' %}
+
 {% include twitter.html content='<a href="https://twitter.com/deepfates/status/1410720938866270209">https://twitter.com/deepfates/status/1410720938866270209</a>' %}
 
 {% include twitter.html content='<a href="https://twitter.com/deepfates/status/1410678538903113737">https://twitter.com/deepfates/status/1410678538903113737</a>' %}
