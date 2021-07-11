@@ -2,10 +2,12 @@
 layout: page
 title: Tweets
 permalink: /tweets/
+categories: [twitter]
 ---
 
-I post memes, works-in-progress and shower thoughts on the social microblogging platform "Twitter".
+I post a lot of tweets.
 
+![](../images/bird.jpg)
 
 Here are some of my recent popular posts (not my most popular posts, which I tend to delete when they make me anxious)
 
@@ -15,8 +17,6 @@ ___
 {% include twitter.html content='<a href="https://twitter.com/deepfates/status/1413236300749053952">https://twitter.com/deepfates/status/1413236300749053952</a>' %}
 
 {% include twitter.html content='<a href="https://twitter.com/deepfates/status/1410720938866270209">https://twitter.com/deepfates/status/1410720938866270209</a>' %}
-
-{% include twitter.html content='<a href="https://twitter.com/deepfates/status/1410678538903113737">https://twitter.com/deepfates/status/1410678538903113737</a>' %}
 
 {% include twitter.html content='<a href="https://twitter.com/deepfates/status/1410226877218840584">https://twitter.com/deepfates/status/1410226877218840584</a>' %}
 

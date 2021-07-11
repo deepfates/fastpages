@@ -4,7 +4,7 @@ description: How do books become classics?
 title: Canon Curation
 toc: true 
 badges: true
-categories: [writing, canon]
+categories: [books]
 nb_path: _notebooks/2021-06-10-canon-curation.ipynb
 layout: notebook
 ---
