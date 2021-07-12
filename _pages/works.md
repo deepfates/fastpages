@@ -11,7 +11,7 @@ I have made a lot of things, here are some of them.
 
 - [SIGNAL  magic book], published
 - SIGNAL novel, unpublished
-- Invisible Canon, a book data project
+- [Invisible Canon], a book data project
 
 ### [Robot Face] newsletter
 (infrequent)
@@ -21,7 +21,7 @@ I have made a lot of things, here are some of them.
 
 
 ## Code
-### libraries
+
 - memery - local image search
 - vibecheck - automatic remixing of songs, unpublished
 - legiblate - genre judger
@@ -44,6 +44,7 @@ I have made a lot of things, here are some of them.
 - biocosm.xyz
 - plantainproject.org
 - permafuture.github.io
+- this page
 
 ### bots
 - [Berduck](../bots/2020/12/15/Berduck.html) 
@@ -61,12 +62,14 @@ I have made a lot of things, here are some of them.
 - Chronolog 
 
 ### synthetic media
--  book cover GAN
--  plant GAN
--  root diagram GAN
--  summoning circles GAN
--  Unicode symbols GAN
--  four-letter word GAN
+- book cover GAN
+- plant GAN
+- root diagram GAN
+- summoning circles GAN
+- Unicode symbols GAN
+- four-letter word GAN
+- SIGNAL GAN
+- my face, projected
 
 ### synthetic text
 - Glitchcraft
@@ -86,7 +89,6 @@ I have made a lot of things, here are some of them.
 - vibechecked songs
 
 ### videos
-- Desert deepfake
 - daftmosh datamoshing
 - Wav2Lip
 
