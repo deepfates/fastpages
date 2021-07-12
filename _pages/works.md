@@ -9,14 +9,14 @@ I have made a lot of things, here are some of them.
 
 ## Write
 
-- SIGNAL  magic book, published
+- [SIGNAL  magic book], published
 - SIGNAL novel, unpublished
 - Invisible Canon, a book data project
 
-### Robot Face newsletter
+### [Robot Face] newsletter
 (infrequent)
 
-### SCIOPS  newsletter
+### [SCIOPS]  newsletter
 (finished)
 
 

@@ -425,5 +425,6 @@ pre code { font-size: 15px !important; }
 
 /*-----------------------------------*/
 /*----- ADD YOUR STYLES BELOW -------*/
+.site-header { border-top: 1px solid #424242; }
 
 /*# sourceMappingURL=style.css.map */

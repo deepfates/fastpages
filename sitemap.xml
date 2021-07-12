@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>https://deepfates.github.io/fastpages/writing/2014/10/31/signal-a-book-of-secrets.html</loc>
+<lastmod>2014-10-31T00:00:00-05:00</lastmod>
+</url>
+<url>
 <loc>https://deepfates.github.io/fastpages/bots/2016/10/31/VUCA.html</loc>
 <lastmod>2016-10-31T00:00:00-05:00</lastmod>
 </url>
@@ -569,6 +573,10 @@
 <lastmod>2020-08-24T00:00:00-05:00</lastmod>
 </url>
 <url>
+<loc>https://deepfates.github.io/fastpages/writing/robot-face/2020/09/01/robot-face.html</loc>
+<lastmod>2020-09-01T00:00:00-05:00</lastmod>
+</url>
+<url>
 <loc>https://deepfates.github.io/fastpages/robot-face/2020/09/01/a-cybernetic-meadow.html</loc>
 <lastmod>2020-09-01T00:00:00-05:00</lastmod>
 </url>
@@ -629,11 +637,11 @@
 <lastmod>2021-06-07T00:00:00-05:00</lastmod>
 </url>
 <url>
-<loc>https://deepfates.github.io/fastpages/writing/canon/2021/06/10/canon-curation.html</loc>
+<loc>https://deepfates.github.io/fastpages/canon/2021/06/10/canon-curation.html</loc>
 <lastmod>2021-06-10T00:00:00-05:00</lastmod>
 </url>
 <url>
-<loc>https://deepfates.github.io/fastpages/writing/canon/2021/06/28/data-collation.html</loc>
+<loc>https://deepfates.github.io/fastpages/canon/2021/06/28/data-collation.html</loc>
 <lastmod>2021-06-28T00:00:00-05:00</lastmod>
 </url>
 <url>
@@ -684,5 +692,23 @@
 </url>
 <url>
 <loc>https://deepfates.github.io/fastpages/page11/</loc>
+</url>
+<url>
+<loc>https://deepfates.github.io/fastpages/page12/</loc>
+</url>
+<url>
+<loc>https://deepfates.github.io/fastpages/page13/</loc>
+</url>
+<url>
+<loc>https://deepfates.github.io/fastpages/page14/</loc>
+</url>
+<url>
+<loc>https://deepfates.github.io/fastpages/page15/</loc>
+</url>
+<url>
+<loc>https://deepfates.github.io/fastpages/page16/</loc>
+</url>
+<url>
+<loc>https://deepfates.github.io/fastpages/page17/</loc>
 </url>
 </urlset>

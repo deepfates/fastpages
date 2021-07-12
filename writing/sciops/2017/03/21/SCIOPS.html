@@ -63,7 +63,7 @@ window.onload = wrap_img;
           </span>
         </label>
 
-        <div class="trigger"><a class="page-link" href="/fastpages/about/">About Me</a><a class="page-link" href="/fastpages/explore/">Explore</a><a class="page-link" href="/fastpages/pricing/">Pricing</a><a class="page-link" href="/fastpages/tweets/">Tweets</a></div>
+        <div class="trigger"><a class="page-link" href="/fastpages/about/">About</a><a class="page-link" href="/fastpages/explore/">Explore</a><a class="page-link" href="/fastpages/pricing/">Pricing</a><a class="page-link" href="/fastpages/tweets/">Tweets</a></div>
       </nav></div>
 </header>
 <main class="page-content" aria-label="Content">
@@ -84,10 +84,10 @@ window.onload = wrap_img;
     
       <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
       
-        <a class="category-tags-link" href="/fastpages/categories/#writing">writing</a>
+        <a class="category-tags-link" href="/fastpages/explore/#writing">writing</a>
         &nbsp;
       
-        <a class="category-tags-link" href="/fastpages/categories/#sciops">sciops</a>
+        <a class="category-tags-link" href="/fastpages/explore/#sciops">sciops</a>
         
       
       </p>
@@ -218,73 +218,6 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">msg</span> <span class="o">=</span> <span class="n">messages</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">title</span> <span class="o">=</span> <span class="n">msg</span><span class="p">[</span><span class="s1">&#39;subject&#39;</span><span class="p">]</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">slugify</span><span class="p">(</span><span class="n">title</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">)[</span><span class="mi">3</span><span class="p">:]))</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>10</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_slug</span><span class="p">(</span><span class="n">title</span><span class="p">):</span>
     <span class="n">short_title</span> <span class="o">=</span> <span class="s1">&#39;-&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">slugify</span><span class="p">(</span><span class="n">title</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">)[</span><span class="mi">3</span><span class="p">:])</span>
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">short_title</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
@@ -311,7 +244,7 @@ window.onload = wrap_img;
     <span class="n">desc</span> <span class="o">=</span> <span class="n">message</span><span class="p">[</span><span class="s1">&#39;snippet&#39;</span><span class="p">]</span>
     <span class="n">sent_date</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">fromtimestamp</span><span class="p">(</span><span class="n">message</span><span class="p">[</span><span class="s1">&#39;sent_at&#39;</span><span class="p">])</span>
     <span class="n">sent_date_str</span> <span class="o">=</span> <span class="n">sent_date</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)</span>
-    <span class="n">filename</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;../_posts/</span><span class="si">{</span><span class="n">sent_date_str</span><span class="si">}</span><span class="s1">-</span><span class="si">{</span><span class="n">get_slug</span><span class="p">(</span><span class="n">title</span><span class="p">)</span><span class="si">}</span><span class="s1">.md&#39;</span>
+    <span class="n">filename</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;../_posts/sciops/</span><span class="si">{</span><span class="n">sent_date_str</span><span class="si">}</span><span class="s1">-</span><span class="si">{</span><span class="n">get_slug</span><span class="p">(</span><span class="n">title</span><span class="p">)</span><span class="si">}</span><span class="s1">.md&#39;</span>
 <span class="c1">#     if os.path.exists(filename):</span>
 <span class="c1">#         return</span>
 
