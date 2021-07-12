@@ -22,7 +22,7 @@ I have made a lot of things, here are some of them.
 
 ## Code
 
-- memery - local image search
+- [memery] - local image search
 - vibecheck - automatic remixing of songs, unpublished
 - legiblate - genre judger
 - habeas - book summary dashboard
