@@ -24,7 +24,7 @@ categories: [sciops]
 
 
  So when I ran across a twitter bot that retweets any mention of Deleuze (
- [@diffandrep](www.twitter.com/diffandrep) 
+ [@diffandrep](https://www.twitter.com/diffandrep) 
  ), I thought it would help me find some other weirdos to talk about this obscure book with.
  
 

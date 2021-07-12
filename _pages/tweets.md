@@ -2,7 +2,6 @@
 layout: page
 title: Tweets
 permalink: /tweets/
-categories: [twitter]
 ---
 
 I post a lot of tweets.
@@ -13,6 +12,8 @@ Here are some of my recent popular posts (not my most popular posts, which I ten
 
 ___
 
+
+{% include twitter.html content='<a href="https://twitter.com/deepfates/status/1414278251908845576">https://twitter.com/deepfates/status/1414278251908845576</a>' %}
 
 {% include twitter.html content='<a href="https://twitter.com/deepfates/status/1413236300749053952">https://twitter.com/deepfates/status/1413236300749053952</a>' %}
 
