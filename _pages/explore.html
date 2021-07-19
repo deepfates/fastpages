@@ -27,7 +27,7 @@ search_exclude: true
 
   {% assign categories = "" | split:"" %}
   {% for c in site.categories %}
-    {% unless c == "sciops" %}
+    {% unless c contains "sciops" %}
       {% assign categories = categories | push: c[0] %}
     {% endunless %}
   {% endfor %}
