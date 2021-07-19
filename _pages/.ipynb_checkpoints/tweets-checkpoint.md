@@ -1,8 +1,7 @@
 ---
-layout: post
+layout: page
 title: Tweets
 permalink: /tweets/
-categories: [twitter]
 ---
 
 I post a lot of tweets.
@@ -10,9 +9,13 @@ I post a lot of tweets.
 ![](../images/bird.jpg)
 
 Here are some of my recent popular posts (not my most popular posts, which I tend to delete when they make me anxious)
-
+. Last updated 2021-07-19
 ___
 
+
+{% include twitter.html content='<a href="https://twitter.com/deepfates/status/1415702993220120581">https://twitter.com/deepfates/status/1415702993220120581</a>' %}
+
+{% include twitter.html content='<a href="https://twitter.com/deepfates/status/1414278251908845576">https://twitter.com/deepfates/status/1414278251908845576</a>' %}
 
 {% include twitter.html content='<a href="https://twitter.com/deepfates/status/1413236300749053952">https://twitter.com/deepfates/status/1413236300749053952</a>' %}
 

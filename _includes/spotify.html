@@ -1,0 +1,9 @@
+{% if include.content contains  "<code>" %}
+    {% assign url = include.content | remove: "<code>" | remove: "</code>" %}
+{% else %}
+    {% assign url = include.content | remove: "</a>" | split: ">" | last %}
+{% endif %}
+<center>
+    <iframe src="{{url}}" width="560" height="315" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+</center>
+    
