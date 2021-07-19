@@ -1,7 +1,7 @@
 ---
 keywords: fastai
 title: Popular tweets
-badges: false
+badges: true
 categories: [code, twitter]
 nb_path: _notebooks/2021-07-05-popular-tweets.ipynb
 layout: notebook
@@ -18,7 +18,7 @@ layout: notebook
         
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="This-is-the-code-I-use-to-generate-my-Tweets-page">This is the code I use to generate my <a href="../../../../tweets">Tweets</a> page<a class="anchor-link" href="#This-is-the-code-I-use-to-generate-my-Tweets-page"> </a></h2>
+<h2 id="This-is-the-code-I-use-to-generate-my-Tweets-page">This is the code I use to generate my <a href="../../../../../tweets">Tweets</a> page<a class="anchor-link" href="#This-is-the-code-I-use-to-generate-my-Tweets-page"> </a></h2>
 </div>
 </div>
 </div>
@@ -145,4 +145,8 @@ layout: notebook
 
 </div>
  
+
+<script type="application/vnd.jupyter.widget-state+json">
+{"state": {}, "version_major": 2, "version_minor": 0}
+</script>
 
