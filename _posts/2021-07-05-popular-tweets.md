@@ -113,7 +113,6 @@ layout: notebook
 <span class="s1">![](../images/bird.jpg)</span>
 
 <span class="s1">Here are some of my recent popular posts (not my most popular posts, which I tend to delete when they make me anxious)</span><span class="se">\n</span><span class="s1">. Last updated </span><span class="si">{</span><span class="n">today</span><span class="si">}</span><span class="s1"></span>
-<span class="s1">___</span>
 <span class="se">\n</span><span class="s1"></span>
 <span class="si">{</span><span class="n">includes</span><span class="si">}</span><span class="s1"></span>
 <span class="s1">&#39;&#39;&#39;</span><span class="p">)</span>

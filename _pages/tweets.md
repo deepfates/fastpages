@@ -9,8 +9,7 @@ I post a lot of tweets.
 ![](../images/bird.jpg)
 
 Here are some of my recent popular posts (not my most popular posts, which I tend to delete when they make me anxious)
-. Last updated 2021-07-19
-___
+. Last updated 2021-07-21
 
 
 {% include twitter.html content='<a href="https://twitter.com/deepfates/status/1415702993220120581">https://twitter.com/deepfates/status/1415702993220120581</a>' %}

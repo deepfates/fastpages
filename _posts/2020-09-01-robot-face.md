@@ -4,6 +4,8 @@ description: a newsletter about augmented intelligence
 title: Robot Face newsletter
 categories: [writing, robot-face]
 badges: false
+sticky_rank: 1
+author: Max Anton Brewer
 nb_path: _notebooks/2020-09-01-robot-face.ipynb
 layout: notebook
 ---
@@ -38,4 +40,8 @@ layout: notebook
 </div>
 </div>
  
+
+<script type="application/vnd.jupyter.widget-state+json">
+{"state": {}, "version_major": 2, "version_minor": 0}
+</script>
 
