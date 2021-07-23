@@ -26,10 +26,10 @@ I have made a lot of things, here are some of them.
 - vibecheck - automatic remixing of songs, unpublished (2020)
 - legiblate - genre judger (2020)
 - habeas - book summary dashboard (2020)
+- [solbuquerque] - wallpaper switching script (2018)
 
 ### experiments
 - acknowlogicon - experimental citation graph (2020)
-- solbuquerque - wallpaper switching script (2018)
 - forgot2vec - Forgotten Realms word vectors (2019)
 
 ### twitter
