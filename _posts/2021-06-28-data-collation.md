@@ -21,7 +21,7 @@ layout: notebook
         
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="How-can-I-access-a-huge-dataset?">How can I access a huge dataset?<a class="anchor-link" href="#How-can-I-access-a-huge-dataset?"> </a></h2><p>Some of my data, specifically the goodreads dataset and the Amazon sales ranks, are in huge JSON files that need to be converted to an appropriate ontology for a book. Loading this all into memory at once will crash my computer.</p>
+<h2 id="How-can-I-access-a-huge-dataset?">How can I access a huge dataset?<a class="anchor-link" href="#How-can-I-access-a-huge-dataset?"> </a></h2><p>Some of my data, specifically the goodreads dataset and the Amazon sales ranks, are in huge JSON files that need to be converted to an appropriate ontology for a book. Loading this all into memory at once will crash my computer. I have to grab the JSON file with the <code>chunksize</code> attribute, which will make a generator that only loads a certain amount of rows into memory at once.</p>
 
 </div>
 </div>
@@ -62,6 +62,13 @@ layout: notebook
 </div>
     {% endraw %}
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Just check that the data looks good in the first chunk:</p>
+
+</div>
+</div>
+</div>
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -71,43 +78,238 @@ layout: notebook
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">chunk</span> <span class="ow">in</span> <span class="n">books_json</span><span class="p">:</span>
     <span class="k">break</span>
+
+<span class="n">chunk</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>isbn</th>
+      <th>text_reviews_count</th>
+      <th>series</th>
+      <th>country_code</th>
+      <th>language_code</th>
+      <th>popular_shelves</th>
+      <th>asin</th>
+      <th>is_ebook</th>
+      <th>average_rating</th>
+      <th>kindle_asin</th>
+      <th>similar_books</th>
+      <th>description</th>
+      <th>format</th>
+      <th>link</th>
+      <th>authors</th>
+      <th>publisher</th>
+      <th>num_pages</th>
+      <th>publication_day</th>
+      <th>isbn13</th>
+      <th>publication_month</th>
+      <th>edition_information</th>
+      <th>publication_year</th>
+      <th>url</th>
+      <th>image_url</th>
+      <th>book_id</th>
+      <th>ratings_count</th>
+      <th>work_id</th>
+      <th>title</th>
+      <th>title_without_series</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>600</th>
+      <td></td>
+      <td>11</td>
+      <td>[935729]</td>
+      <td>US</td>
+      <td>en-GB</td>
+      <td>[{'count': '6', 'name': 'currently-reading'}, ...</td>
+      <td>B01GQONJZG</td>
+      <td>true</td>
+      <td>4.05</td>
+      <td>B01GQONJZG</td>
+      <td>[]</td>
+      <td>Heat sizzles during the winter...\nJohn Prince...</td>
+      <td></td>
+      <td>https://www.goodreads.com/book/show/30821261-o...</td>
+      <td>[{'author_id': '263660', 'role': ''}]</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>https://www.goodreads.com/book/show/30821261-o...</td>
+      <td>https://s.gr-assets.com/assets/nophoto/book/11...</td>
+      <td>30821261</td>
+      <td>34</td>
+      <td>51413481</td>
+      <td>One Cold Night (ARe Fearless #3)</td>
+      <td>One Cold Night (ARe Fearless #3)</td>
+    </tr>
+    <tr>
+      <th>601</th>
+      <td>9780985779</td>
+      <td>14</td>
+      <td>[449075]</td>
+      <td>US</td>
+      <td>en-US</td>
+      <td>[{'count': '497', 'name': 'to-read'}, {'count'...</td>
+      <td></td>
+      <td>false</td>
+      <td>3.77</td>
+      <td>B008LC1OK4</td>
+      <td>[27826531, 18888727, 25822644, 22911249, 15835...</td>
+      <td>Empty-nester Carol Andrews is thrilled when da...</td>
+      <td>Mass Market Paperback</td>
+      <td>https://www.goodreads.com/book/show/15837689-m...</td>
+      <td>[{'author_id': '3001335', 'role': ''}]</td>
+      <td>Baby Boomer Mysteries Press</td>
+      <td>237</td>
+      <td></td>
+      <td>9780985779900</td>
+      <td>7</td>
+      <td></td>
+      <td>2012</td>
+      <td>https://www.goodreads.com/book/show/15837689-m...</td>
+      <td>https://images.gr-assets.com/books/1355459200m...</td>
+      <td>15837689</td>
+      <td>32</td>
+      <td>21576715</td>
+      <td>Marriage Can Be Murder (Baby Boomer Mystery, #3)</td>
+      <td>Marriage Can Be Murder (Baby Boomer Mystery, #3)</td>
+    </tr>
+    <tr>
+      <th>602</th>
+      <td></td>
+      <td>1</td>
+      <td>[]</td>
+      <td>US</td>
+      <td></td>
+      <td>[{'count': '1', 'name': 'to-read'}]</td>
+      <td></td>
+      <td>true</td>
+      <td>2.00</td>
+      <td></td>
+      <td>[]</td>
+      <td></td>
+      <td></td>
+      <td>https://www.goodreads.com/book/show/19048323-d...</td>
+      <td>[{'author_id': '2770657', 'role': ''}]</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>9783455501629</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>https://www.goodreads.com/book/show/19048323-d...</td>
+      <td>https://s.gr-assets.com/assets/nophoto/book/11...</td>
+      <td>19048323</td>
+      <td>2</td>
+      <td>27073087</td>
+      <td>Der Gedanke lenkt den Körper: Körpersprache - ...</td>
+      <td>Der Gedanke lenkt den Körper: Körpersprache - ...</td>
+    </tr>
+    <tr>
+      <th>603</th>
+      <td></td>
+      <td>7</td>
+      <td>[542966]</td>
+      <td>US</td>
+      <td>fin</td>
+      <td>[{'count': '11777', 'name': 'to-read'}, {'coun...</td>
+      <td></td>
+      <td>false</td>
+      <td>3.54</td>
+      <td></td>
+      <td>[24044142, 18664985, 16281371, 17131859, 52261...</td>
+      <td>Alue X:n salaisuus raottuu\nEtelarajaan, halli...</td>
+      <td>Paperback</td>
+      <td>https://www.goodreads.com/book/show/25799070-h...</td>
+      <td>[{'author_id': '33919', 'role': ''}, {'author_...</td>
+      <td>Like</td>
+      <td>382</td>
+      <td>31</td>
+      <td>9789520112899</td>
+      <td>9</td>
+      <td></td>
+      <td>2015</td>
+      <td>https://www.goodreads.com/book/show/25799070-h...</td>
+      <td>https://images.gr-assets.com/books/1446633523m...</td>
+      <td>25799070</td>
+      <td>55</td>
+      <td>25384114</td>
+      <td>Hallinta (Eteläraja-trilogia, #2)</td>
+      <td>Hallinta (Eteläraja-trilogia, #2)</td>
+    </tr>
+    <tr>
+      <th>604</th>
+      <td></td>
+      <td>2</td>
+      <td>[]</td>
+      <td>US</td>
+      <td></td>
+      <td>[{'count': '64', 'name': 'to-read'}, {'count':...</td>
+      <td>B00CY2I1XK</td>
+      <td>true</td>
+      <td>3.77</td>
+      <td>B00CY2I1XK</td>
+      <td>[]</td>
+      <td>During the course of gaining a divorce from th...</td>
+      <td></td>
+      <td>https://www.goodreads.com/book/show/19048320-h...</td>
+      <td>[{'author_id': '3459410', 'role': ''}]</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>https://www.goodreads.com/book/show/19048320-h...</td>
+      <td>https://s.gr-assets.com/assets/nophoto/book/11...</td>
+      <td>19048320</td>
+      <td>20</td>
+      <td>25192239</td>
+      <td>His Brother's Widow</td>
+      <td>His Brother's Widow</td>
+    </tr>
+  </tbody>
+</table>
 </div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">chunk</span>
-</pre></div>
-
-    </div>
-</div>
 </div>
 
 </div>
-    {% endraw %}
 
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">chunk</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">395</span><span class="p">]</span>
-</pre></div>
-
-    </div>
 </div>
 </div>
 
@@ -135,20 +337,21 @@ layout: notebook
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>false    142
+true      58
+Name: is_ebook, dtype: int64</pre>
 </div>
-    {% endraw %}
 
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
+</div>
 
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-    </div>
 </div>
 </div>
 
@@ -172,6 +375,13 @@ layout: notebook
 </div>
     {% endraw %}
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>I want to get the biggest size of chunk that my memory can easily allow, to save time on processing.</p>
+
+</div>
+</div>
+</div>
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -198,11 +408,25 @@ layout: notebook
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">chunk</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">(</span><span class="nb">enumerate</span><span class="p">(</span><span class="n">books_json</span><span class="p">)):</span>
     <span class="n">filtered_chunk</span> <span class="o">=</span> <span class="n">chunk</span><span class="p">[</span><span class="n">chunk</span><span class="p">[</span><span class="s1">&#39;is_ebook&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;false&#39;</span><span class="p">]</span>
-    <span class="n">filtered_chunk</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;records/goodreads_books_</span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="si">}</span><span class="s1">.csv&#39;</span><span class="p">)</span>
+    <span class="n">filtered_chunk</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;../../records/goodreads_books_</span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="si">}</span><span class="s1">.csv&#39;</span><span class="p">)</span>
 <span class="c1">#     print(i, len(filtered_chunk))</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>24it [07:43, 19.33s/it]
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -211,8 +435,8 @@ layout: notebook
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Over <strong>TWO MILLION BOOKS</strong> in this dataset! How exciting.</p>
-<p>Now we need to do something with them. Specifically, it would be smart to look at a sample chunk and clean it up, then run that process across all the chunks. Then hopefully it will be small enough to hold in memory at once, and we can start doing transforms.</p>
+<p>Over <strong>TWO MILLION BOOKS</strong> in this dataset! How exciting. But a lot of that data may be dirty, or not useful to us. Let's do something about that.</p>
+<p>It's good practice to look at a sample chunk and clean it up filtering out any columns or rows that we don't want. Then run that process across all the chunks. Hopefully the final product will be small enough to hold in memory at once, and we can start doing transforms.</p>
 
 </div>
 </div>
@@ -224,7 +448,7 @@ layout: notebook
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;records/goodreads_books_0007.csv&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../../records/goodreads_books_0007.csv&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -234,6 +458,13 @@ layout: notebook
 </div>
     {% endraw %}
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Pandas has some functions for exploratory data analysis, but for a quick statistical overview we cna use the <code>pandas_profiling</code> library. Hopefully this will create widgets that transfer to the blog version...</p>
+
+</div>
+</div>
+</div>
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -322,10 +553,28 @@ layout: notebook
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dropped_df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;edition_information&#39;</span><span class="p">,</span><span class="s1">&#39;kindle_asin&#39;</span><span class="p">,</span> <span class="s1">&#39;country_code&#39;</span><span class="p">,</span> <span class="s1">&#39;is_ebook&#39;</span><span class="p">,</span> <span class="s1">&#39;publication_day&#39;</span><span class="p">,</span> <span class="s1">&#39;title_without_series&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">drop_idx</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;edition_information&#39;</span><span class="p">,</span><span class="s1">&#39;kindle_asin&#39;</span><span class="p">,</span> <span class="s1">&#39;country_code&#39;</span><span class="p">,</span> <span class="s1">&#39;is_ebook&#39;</span><span class="p">,</span> <span class="s1">&#39;publication_day&#39;</span><span class="p">,</span> <span class="s1">&#39;title_without_series&#39;</span><span class="p">]</span>
+<span class="n">dropped_df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">drop_idx</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="nb">len</span><span class="p">(</span><span class="n">dropped_df</span><span class="p">)</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>71081</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -340,27 +589,27 @@ layout: notebook
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">langs</span> <span class="o">=</span> <span class="p">[</span><span class="n">o</span> <span class="k">for</span> <span class="n">o</span> <span class="ow">in</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;language_code&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">index</span> <span class="k">if</span> <span class="n">o</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;eng&#39;</span><span class="p">,</span><span class="s1">&#39;en-US&#39;</span><span class="p">,</span><span class="s1">&#39;en-GB&#39;</span><span class="p">,</span><span class="s1">&#39;en-CA&#39;</span><span class="p">]]</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">eng_df</span> <span class="o">=</span> <span class="n">dropped_df</span><span class="p">[</span><span class="o">~</span><span class="n">dropped_df</span><span class="p">[</span><span class="s1">&#39;language_code&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">langs</span><span class="p">)]</span>
+<span class="n">eng_df</span> <span class="o">=</span> <span class="n">dropped_df</span><span class="p">[</span><span class="o">~</span><span class="n">dropped_df</span><span class="p">[</span><span class="s1">&#39;language_code&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">langs</span><span class="p">)]</span>
 <span class="nb">len</span><span class="p">(</span><span class="n">eng_df</span><span class="p">)</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>53984</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -375,28 +624,27 @@ layout: notebook
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">formats</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Audio CD&#39;</span><span class="p">,</span> <span class="s1">&#39;Audiobook&#39;</span><span class="p">,</span> <span class="s1">&#39;Audible Audio&#39;</span><span class="p">,</span> <span class="s1">&#39;Audio&#39;</span><span class="p">,</span> <span class="s1">&#39;audio cd&#39;</span><span class="p">,</span> <span class="s1">&#39;Audio Cassette&#39;</span><span class="p">,</span> <span class="s1">&#39;MP3 CD&#39;</span><span class="p">,</span> <span class="s1">&#39;CD-ROM&#39;</span><span class="p">,</span> <span class="s1">&#39;Podiobook&#39;</span><span class="p">,</span> <span class="s1">&#39;Audio Play&#39;</span><span class="p">,</span> <span class="s1">&#39;MP3&#39;</span><span class="p">,</span> <span class="s1">&#39;audio&#39;</span><span class="p">]</span>
-
 <span class="n">paper_df</span> <span class="o">=</span> <span class="n">eng_df</span><span class="p">[</span><span class="o">~</span><span class="n">eng_df</span><span class="p">[</span><span class="s1">&#39;format&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">formats</span><span class="p">)]</span>
+<span class="nb">len</span><span class="p">(</span><span class="n">paper_df</span><span class="p">)</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>51176</pre>
 </div>
-    {% endraw %}
 
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
+</div>
 
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">paper_df</span><span class="p">)</span>
-</pre></div>
-
-    </div>
 </div>
 </div>
 
@@ -411,8 +659,7 @@ layout: notebook
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">clean_df</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
-    
-    <span class="n">dropped_df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;edition_information&#39;</span><span class="p">,</span><span class="s1">&#39;kindle_asin&#39;</span><span class="p">,</span> <span class="s1">&#39;country_code&#39;</span><span class="p">,</span> <span class="s1">&#39;is_ebook&#39;</span><span class="p">,</span> <span class="s1">&#39;publication_day&#39;</span><span class="p">,</span> <span class="s1">&#39;title_without_series&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">dropped_df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">drop_idx</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
     <span class="n">eng_df</span> <span class="o">=</span> <span class="n">dropped_df</span><span class="p">[</span><span class="o">~</span><span class="n">dropped_df</span><span class="p">[</span><span class="s1">&#39;language_code&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">langs</span><span class="p">)]</span>
     <span class="n">paper_df</span> <span class="o">=</span> <span class="n">eng_df</span><span class="p">[</span><span class="o">~</span><span class="n">eng_df</span><span class="p">[</span><span class="s1">&#39;format&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">formats</span><span class="p">)]</span>
     <span class="k">return</span><span class="p">(</span><span class="n">paper_df</span><span class="p">)</span>
@@ -440,19 +687,29 @@ layout: notebook
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>51176</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
     {% endraw %}
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Seems to work. Let's run it over each one sequentially, appending it to an overall dataframe from inside a context manager</p>
+<h2 id="How-can-I-collate-the-data-into-an-accessible-format?">How can I collate the data into an accessible format?<a class="anchor-link" href="#How-can-I-collate-the-data-into-an-accessible-format?"> </a></h2><p>I do want all the data in one dataframe. Let's save it as a CSV, which will probably be large but not nearly as bad as the JSON that we started with.</p>
 
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="How-can-I-collate-the-data-into-an-accessible-format?">How can I collate the data into an accessible format?<a class="anchor-link" href="#How-can-I-collate-the-data-into-an-accessible-format?"> </a></h2>
 </div>
 </div>
 </div>
@@ -481,9 +738,9 @@ layout: notebook
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">24</span><span class="p">)):</span>
-    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;records/goodreads_books_</span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="si">}</span><span class="s1">.csv&#39;</span><span class="p">)</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;../../records/goodreads_books_</span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="si">}</span><span class="s1">.csv&#39;</span><span class="p">)</span>
     <span class="n">cleaned_df</span> <span class="o">=</span> <span class="n">clean_df</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">cleaned_df</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">total_df</span><span class="p">))</span>
+<span class="c1">#     print(len(cleaned_df), len(total_df))</span>
     <span class="n">total_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">total_df</span><span class="p">,</span><span class="n">cleaned_df</span><span class="p">],</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 
@@ -491,6 +748,20 @@ layout: notebook
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>100%|██████████| 24/24 [01:12&lt;00:00,  3.01s/it]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     {% endraw %}
 
@@ -501,13 +772,210 @@ layout: notebook
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">total_df</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">total_df</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Unnamed: 0</th>
+      <th>isbn</th>
+      <th>text_reviews_count</th>
+      <th>series</th>
+      <th>language_code</th>
+      <th>popular_shelves</th>
+      <th>asin</th>
+      <th>average_rating</th>
+      <th>similar_books</th>
+      <th>description</th>
+      <th>format</th>
+      <th>link</th>
+      <th>authors</th>
+      <th>publisher</th>
+      <th>num_pages</th>
+      <th>isbn13</th>
+      <th>publication_month</th>
+      <th>publication_year</th>
+      <th>url</th>
+      <th>image_url</th>
+      <th>book_id</th>
+      <th>ratings_count</th>
+      <th>work_id</th>
+      <th>title</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1215978</th>
+      <td>2360645</td>
+      <td>0689852959</td>
+      <td>1.0</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>[{'count': '22', 'name': 'to-read'}, {'count':...</td>
+      <td>NaN</td>
+      <td>4.36</td>
+      <td>[]</td>
+      <td>One of the most popular series ever published ...</td>
+      <td>Paperback</td>
+      <td>https://www.goodreads.com/book/show/331839.Jac...</td>
+      <td>[{'author_id': '10681', 'role': ''}, {'author_...</td>
+      <td>Aladdin</td>
+      <td>176.0</td>
+      <td>9780689852954</td>
+      <td>9.0</td>
+      <td>2002.0</td>
+      <td>https://www.goodreads.com/book/show/331839.Jac...</td>
+      <td>https://s.gr-assets.com/assets/nophoto/book/11...</td>
+      <td>331839</td>
+      <td>18.0</td>
+      <td>25313618.0</td>
+      <td>Jacqueline Kennedy Onassis: Friend of the Arts</td>
+    </tr>
+    <tr>
+      <th>1215979</th>
+      <td>2360647</td>
+      <td>0373126476</td>
+      <td>9.0</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>[{'count': '78', 'name': 'to-read'}, {'count':...</td>
+      <td>NaN</td>
+      <td>3.42</td>
+      <td>['2200344', '695337', '10333421', '1934240', '...</td>
+      <td>Blackmailed into marriage to save her family, ...</td>
+      <td>Paperback</td>
+      <td>https://www.goodreads.com/book/show/2685097-th...</td>
+      <td>[{'author_id': '319441', 'role': ''}]</td>
+      <td>Harlequin</td>
+      <td>192.0</td>
+      <td>9780373126477</td>
+      <td>7.0</td>
+      <td>2007.0</td>
+      <td>https://www.goodreads.com/book/show/2685097-th...</td>
+      <td>https://s.gr-assets.com/assets/nophoto/book/11...</td>
+      <td>2685097</td>
+      <td>112.0</td>
+      <td>2710420.0</td>
+      <td>The Spaniard's Blackmailed Bride</td>
+    </tr>
+    <tr>
+      <th>1215980</th>
+      <td>2360651</td>
+      <td>178092870X</td>
+      <td>2.0</td>
+      <td>[]</td>
+      <td>eng</td>
+      <td>[{'count': '702', 'name': 'to-read'}, {'count'...</td>
+      <td>NaN</td>
+      <td>3.50</td>
+      <td>['12064253', '25017213', '571796', '27306126',...</td>
+      <td>Sir Arthur Conan Doyle is brought back to life...</td>
+      <td>Paperback</td>
+      <td>https://www.goodreads.com/book/show/26168430-s...</td>
+      <td>[{'author_id': '2448', 'role': ''}, {'author_i...</td>
+      <td>MX Publishing</td>
+      <td>148.0</td>
+      <td>9781780928708</td>
+      <td>8.0</td>
+      <td>2015.0</td>
+      <td>https://www.goodreads.com/book/show/26168430-s...</td>
+      <td>https://images.gr-assets.com/books/1440592011m...</td>
+      <td>26168430</td>
+      <td>6.0</td>
+      <td>46130263.0</td>
+      <td>Sherlock Holmes and the July Crisis</td>
+    </tr>
+    <tr>
+      <th>1215981</th>
+      <td>2360652</td>
+      <td>0765197456</td>
+      <td>6.0</td>
+      <td>[]</td>
+      <td>NaN</td>
+      <td>[{'count': '37', 'name': 'to-read'}, {'count':...</td>
+      <td>NaN</td>
+      <td>4.00</td>
+      <td>[]</td>
+      <td>Gathers poems by William Blake, Emily Bronte, ...</td>
+      <td>Hardcover</td>
+      <td>https://www.goodreads.com/book/show/2342551.Th...</td>
+      <td>[{'author_id': '82312', 'role': 'Editor'}]</td>
+      <td>Smithmark Publishers</td>
+      <td>96.0</td>
+      <td>9780765197450</td>
+      <td>8.0</td>
+      <td>1996.0</td>
+      <td>https://www.goodreads.com/book/show/2342551.Th...</td>
+      <td>https://s.gr-assets.com/assets/nophoto/book/11...</td>
+      <td>2342551</td>
+      <td>36.0</td>
+      <td>2349247.0</td>
+      <td>The Children's Classic Poetry Collection</td>
+    </tr>
+    <tr>
+      <th>1215982</th>
+      <td>2360653</td>
+      <td>162378140X</td>
+      <td>17.0</td>
+      <td>['658195']</td>
+      <td>eng</td>
+      <td>[{'count': '56', 'name': 'to-read'}, {'count':...</td>
+      <td>NaN</td>
+      <td>4.37</td>
+      <td>['23562786', '13548289', '26094541', '20570173...</td>
+      <td>Volume One contains: "Claimed," "Tainted," and...</td>
+      <td>Paperback</td>
+      <td>https://www.goodreads.com/book/show/22017381-1...</td>
+      <td>[{'author_id': '7789809', 'role': ''}]</td>
+      <td>Guerrilla Wordfare</td>
+      <td>306.0</td>
+      <td>9781623781408</td>
+      <td>4.0</td>
+      <td>2014.0</td>
+      <td>https://www.goodreads.com/book/show/22017381-1...</td>
+      <td>https://images.gr-assets.com/books/1398621236m...</td>
+      <td>22017381</td>
+      <td>70.0</td>
+      <td>41332799.0</td>
+      <td>101 Nights: Volume One (101 Nights, #1-3)</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
     {% endraw %}
 
@@ -518,7 +986,7 @@ layout: notebook
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">total_df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;records/cleaned_goodreads_books.csv&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">total_df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;../../records/cleaned_goodreads_books.csv&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -530,13 +998,8 @@ layout: notebook
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Explore">Explore<a class="anchor-link" href="#Explore"> </a></h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Find-top-genre-for-each-book">Find top genre for each book<a class="anchor-link" href="#Find-top-genre-for-each-book"> </a></h2>
+<h1 id="Explore">Explore<a class="anchor-link" href="#Explore"> </a></h1><p>We're down to 1.2 million books, in a 4GB CSV file instead of a 9GB JSON! :sweat_smile: Here I restart my notebook environment and load the <code>total_df</code> to clear out some memory, though.</p>
+
 </div>
 </div>
 </div>
@@ -547,7 +1010,9 @@ layout: notebook
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">total_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;records/cleaned_goodreads_books.csv&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s2">&quot;display.max_columns&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -564,7 +1029,24 @@ layout: notebook
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">total_df</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">total_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../../records/cleaned_goodreads_books.csv&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">total_df</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -625,176 +1107,8 @@ layout: notebook
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
-      <td>0</td>
-      <td>0</td>
-      <td>0312853122</td>
-      <td>1.0</td>
-      <td>[]</td>
-      <td>NaN</td>
-      <td>[{'count': '3', 'name': 'to-read'}, {'count': ...</td>
-      <td>NaN</td>
-      <td>4.00</td>
-      <td>[]</td>
-      <td>NaN</td>
-      <td>Paperback</td>
-      <td>https://www.goodreads.com/book/show/5333265-w-...</td>
-      <td>[{'author_id': '604031', 'role': ''}]</td>
-      <td>St. Martin's Press</td>
-      <td>256.0</td>
-      <td>9780312853129</td>
-      <td>9.0</td>
-      <td>1984.0</td>
-      <td>https://www.goodreads.com/book/show/5333265-w-...</td>
-      <td>https://images.gr-assets.com/books/1310220028m...</td>
-      <td>5333265</td>
-      <td>3.0</td>
-      <td>5400751.0</td>
-      <td>W.C. Fields: A Life on Film</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>1</td>
-      <td>2</td>
-      <td>NaN</td>
-      <td>7.0</td>
-      <td>['189911']</td>
-      <td>eng</td>
-      <td>[{'count': '58', 'name': 'to-read'}, {'count':...</td>
-      <td>B00071IKUY</td>
-      <td>4.03</td>
-      <td>['19997', '828466', '1569323', '425389', '1176...</td>
-      <td>Omnibus book club edition containing the Ladie...</td>
-      <td>Hardcover</td>
-      <td>https://www.goodreads.com/book/show/7327624-th...</td>
-      <td>[{'author_id': '10333', 'role': ''}]</td>
-      <td>Nelson Doubleday, Inc.</td>
-      <td>600.0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>1987.0</td>
-      <td>https://www.goodreads.com/book/show/7327624-th...</td>
-      <td>https://images.gr-assets.com/books/1304100136m...</td>
-      <td>7327624</td>
-      <td>140.0</td>
-      <td>8948723.0</td>
-      <td>The Unschooled Wizard (Sun Wolf and Starhawk, ...</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>2</td>
-      <td>3</td>
-      <td>0743294297</td>
-      <td>3282.0</td>
-      <td>[]</td>
-      <td>eng</td>
-      <td>[{'count': '7615', 'name': 'to-read'}, {'count...</td>
-      <td>NaN</td>
-      <td>3.49</td>
-      <td>['6604176', '6054190', '2285777', '82641', '75...</td>
-      <td>Addie Downs and Valerie Adler were eight when ...</td>
-      <td>Hardcover</td>
-      <td>https://www.goodreads.com/book/show/6066819-be...</td>
-      <td>[{'author_id': '9212', 'role': ''}]</td>
-      <td>Atria Books</td>
-      <td>368.0</td>
-      <td>9780743294294</td>
-      <td>7.0</td>
-      <td>2009.0</td>
-      <td>https://www.goodreads.com/book/show/6066819-be...</td>
-      <td>https://s.gr-assets.com/assets/nophoto/book/11...</td>
-      <td>6066819</td>
-      <td>51184.0</td>
-      <td>6243154.0</td>
-      <td>Best Friends Forever</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>3</td>
-      <td>4</td>
-      <td>0850308712</td>
-      <td>5.0</td>
-      <td>[]</td>
-      <td>NaN</td>
-      <td>[{'count': '32', 'name': 'to-read'}, {'count':...</td>
-      <td>NaN</td>
-      <td>3.40</td>
-      <td>[]</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>https://www.goodreads.com/book/show/287140.Run...</td>
-      <td>[{'author_id': '149918', 'role': ''}]</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>9780850308716</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>https://www.goodreads.com/book/show/287140.Run...</td>
-      <td>https://images.gr-assets.com/books/1413219371m...</td>
-      <td>287140</td>
-      <td>15.0</td>
-      <td>278577.0</td>
-      <td>Runic Astrology: Starcraft and Timekeeping in ...</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>4</td>
-      <td>5</td>
-      <td>1599150603</td>
-      <td>7.0</td>
-      <td>[]</td>
-      <td>NaN</td>
-      <td>[{'count': '56', 'name': 'to-read'}, {'count':...</td>
-      <td>NaN</td>
-      <td>4.13</td>
-      <td>[]</td>
-      <td>Relates in vigorous prose the tale of Aeneas, ...</td>
-      <td>Paperback</td>
-      <td>https://www.goodreads.com/book/show/287141.The...</td>
-      <td>[{'author_id': '3041852', 'role': ''}]</td>
-      <td>Yesterday's Classics</td>
-      <td>162.0</td>
-      <td>9781599150604</td>
-      <td>9.0</td>
-      <td>2006.0</td>
-      <td>https://www.goodreads.com/book/show/287141.The...</td>
-      <td>https://s.gr-assets.com/assets/nophoto/book/11...</td>
-      <td>287141</td>
-      <td>46.0</td>
-      <td>278578.0</td>
-      <td>The Aeneid for Boys and Girls</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>1216067</th>
-      <td>1216067</td>
+      <th>1215978</th>
+      <td>1215978</td>
       <td>2360645</td>
       <td>0689852959</td>
       <td>1.0</td>
@@ -821,8 +1135,8 @@ layout: notebook
       <td>Jacqueline Kennedy Onassis: Friend of the Arts</td>
     </tr>
     <tr>
-      <th>1216068</th>
-      <td>1216068</td>
+      <th>1215979</th>
+      <td>1215979</td>
       <td>2360647</td>
       <td>0373126476</td>
       <td>9.0</td>
@@ -849,8 +1163,8 @@ layout: notebook
       <td>The Spaniard's Blackmailed Bride</td>
     </tr>
     <tr>
-      <th>1216069</th>
-      <td>1216069</td>
+      <th>1215980</th>
+      <td>1215980</td>
       <td>2360651</td>
       <td>178092870X</td>
       <td>2.0</td>
@@ -877,8 +1191,8 @@ layout: notebook
       <td>Sherlock Holmes and the July Crisis</td>
     </tr>
     <tr>
-      <th>1216070</th>
-      <td>1216070</td>
+      <th>1215981</th>
+      <td>1215981</td>
       <td>2360652</td>
       <td>0765197456</td>
       <td>6.0</td>
@@ -905,8 +1219,8 @@ layout: notebook
       <td>The Children's Classic Poetry Collection</td>
     </tr>
     <tr>
-      <th>1216071</th>
-      <td>1216071</td>
+      <th>1215982</th>
+      <td>1215982</td>
       <td>2360653</td>
       <td>162378140X</td>
       <td>17.0</td>
@@ -934,7 +1248,6 @@ layout: notebook
     </tr>
   </tbody>
 </table>
-<p>1216072 rows × 25 columns</p>
 </div>
 </div>
 
@@ -946,6 +1259,13 @@ layout: notebook
 </div>
     {% endraw %}
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Find-top-genre-for-each-book">Find top genre for each book<a class="anchor-link" href="#Find-top-genre-for-each-book"> </a></h2><p>The <code>popular_shelves</code> column has a list of which "shelves", or tags really, have been associated with this book, and how many times. We can use this to extract a categorical <code>top_genre</code> feature.</p>
+
+</div>
+</div>
+</div>
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -970,6 +1290,13 @@ layout: notebook
 </div>
     {% endraw %}
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Make sure to wrap the function in a generator here, so that it will lazy-load each row rather than grab the entire <code>popular_shelves</code> column at once</p>
+
+</div>
+</div>
+</div>
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -1057,8 +1384,8 @@ layout: notebook
   </thead>
   <tbody>
     <tr>
-      <th>1216067</th>
-      <td>1216067</td>
+      <th>1215978</th>
+      <td>1215978</td>
       <td>2360645</td>
       <td>0689852959</td>
       <td>1.0</td>
@@ -1086,8 +1413,8 @@ layout: notebook
       <td>biography</td>
     </tr>
     <tr>
-      <th>1216068</th>
-      <td>1216068</td>
+      <th>1215979</th>
+      <td>1215979</td>
       <td>2360647</td>
       <td>0373126476</td>
       <td>9.0</td>
@@ -1115,8 +1442,8 @@ layout: notebook
       <td>harlequin</td>
     </tr>
     <tr>
-      <th>1216069</th>
-      <td>1216069</td>
+      <th>1215980</th>
+      <td>1215980</td>
       <td>2360651</td>
       <td>178092870X</td>
       <td>2.0</td>
@@ -1144,8 +1471,8 @@ layout: notebook
       <td>mystery</td>
     </tr>
     <tr>
-      <th>1216070</th>
-      <td>1216070</td>
+      <th>1215981</th>
+      <td>1215981</td>
       <td>2360652</td>
       <td>0765197456</td>
       <td>6.0</td>
@@ -1173,8 +1500,8 @@ layout: notebook
       <td>poetry</td>
     </tr>
     <tr>
-      <th>1216071</th>
-      <td>1216071</td>
+      <th>1215982</th>
+      <td>1215982</td>
       <td>2360653</td>
       <td>162378140X</td>
       <td>17.0</td>
@@ -1214,6 +1541,13 @@ layout: notebook
 </div>
     {% endraw %}
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Getting bonus indexes from pandas lol. I know there's a smart way to load things without this problem but I forgot to do it. To save time from loading again I'll just drop those columns.</p>
+
+</div>
+</div>
+</div>
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -1221,7 +1555,7 @@ layout: notebook
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">total_df</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;Unnamed: 0&#39;</span><span class="p">,</span> <span class="s1">&#39;Unnamed: 0.1&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">total_df</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;Unnamed: 0&#39;</span><span class="p">,</span> <span class="s1">&#39;Unnamed: 0.1&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -1281,169 +1615,7 @@ layout: notebook
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
-      <td>0312853122</td>
-      <td>1.0</td>
-      <td>[]</td>
-      <td>NaN</td>
-      <td>[{'count': '3', 'name': 'to-read'}, {'count': ...</td>
-      <td>NaN</td>
-      <td>4.00</td>
-      <td>[]</td>
-      <td>NaN</td>
-      <td>Paperback</td>
-      <td>https://www.goodreads.com/book/show/5333265-w-...</td>
-      <td>[{'author_id': '604031', 'role': ''}]</td>
-      <td>St. Martin's Press</td>
-      <td>256.0</td>
-      <td>9780312853129</td>
-      <td>9.0</td>
-      <td>1984.0</td>
-      <td>https://www.goodreads.com/book/show/5333265-w-...</td>
-      <td>https://images.gr-assets.com/books/1310220028m...</td>
-      <td>5333265</td>
-      <td>3.0</td>
-      <td>5400751.0</td>
-      <td>W.C. Fields: A Life on Film</td>
-      <td>p</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>NaN</td>
-      <td>7.0</td>
-      <td>['189911']</td>
-      <td>eng</td>
-      <td>[{'count': '58', 'name': 'to-read'}, {'count':...</td>
-      <td>B00071IKUY</td>
-      <td>4.03</td>
-      <td>['19997', '828466', '1569323', '425389', '1176...</td>
-      <td>Omnibus book club edition containing the Ladie...</td>
-      <td>Hardcover</td>
-      <td>https://www.goodreads.com/book/show/7327624-th...</td>
-      <td>[{'author_id': '10333', 'role': ''}]</td>
-      <td>Nelson Doubleday, Inc.</td>
-      <td>600.0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>1987.0</td>
-      <td>https://www.goodreads.com/book/show/7327624-th...</td>
-      <td>https://images.gr-assets.com/books/1304100136m...</td>
-      <td>7327624</td>
-      <td>140.0</td>
-      <td>8948723.0</td>
-      <td>The Unschooled Wizard (Sun Wolf and Starhawk, ...</td>
-      <td>fantasy</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>0743294297</td>
-      <td>3282.0</td>
-      <td>[]</td>
-      <td>eng</td>
-      <td>[{'count': '7615', 'name': 'to-read'}, {'count...</td>
-      <td>NaN</td>
-      <td>3.49</td>
-      <td>['6604176', '6054190', '2285777', '82641', '75...</td>
-      <td>Addie Downs and Valerie Adler were eight when ...</td>
-      <td>Hardcover</td>
-      <td>https://www.goodreads.com/book/show/6066819-be...</td>
-      <td>[{'author_id': '9212', 'role': ''}]</td>
-      <td>Atria Books</td>
-      <td>368.0</td>
-      <td>9780743294294</td>
-      <td>7.0</td>
-      <td>2009.0</td>
-      <td>https://www.goodreads.com/book/show/6066819-be...</td>
-      <td>https://s.gr-assets.com/assets/nophoto/book/11...</td>
-      <td>6066819</td>
-      <td>51184.0</td>
-      <td>6243154.0</td>
-      <td>Best Friends Forever</td>
-      <td>chick-lit</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>0850308712</td>
-      <td>5.0</td>
-      <td>[]</td>
-      <td>NaN</td>
-      <td>[{'count': '32', 'name': 'to-read'}, {'count':...</td>
-      <td>NaN</td>
-      <td>3.40</td>
-      <td>[]</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>https://www.goodreads.com/book/show/287140.Run...</td>
-      <td>[{'author_id': '149918', 'role': ''}]</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>9780850308716</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>https://www.goodreads.com/book/show/287140.Run...</td>
-      <td>https://images.gr-assets.com/books/1413219371m...</td>
-      <td>287140</td>
-      <td>15.0</td>
-      <td>278577.0</td>
-      <td>Runic Astrology: Starcraft and Timekeeping in ...</td>
-      <td>runes</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>1599150603</td>
-      <td>7.0</td>
-      <td>[]</td>
-      <td>NaN</td>
-      <td>[{'count': '56', 'name': 'to-read'}, {'count':...</td>
-      <td>NaN</td>
-      <td>4.13</td>
-      <td>[]</td>
-      <td>Relates in vigorous prose the tale of Aeneas, ...</td>
-      <td>Paperback</td>
-      <td>https://www.goodreads.com/book/show/287141.The...</td>
-      <td>[{'author_id': '3041852', 'role': ''}]</td>
-      <td>Yesterday's Classics</td>
-      <td>162.0</td>
-      <td>9781599150604</td>
-      <td>9.0</td>
-      <td>2006.0</td>
-      <td>https://www.goodreads.com/book/show/287141.The...</td>
-      <td>https://s.gr-assets.com/assets/nophoto/book/11...</td>
-      <td>287141</td>
-      <td>46.0</td>
-      <td>278578.0</td>
-      <td>The Aeneid for Boys and Girls</td>
-      <td>history</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>1216067</th>
+      <th>1215978</th>
       <td>0689852959</td>
       <td>1.0</td>
       <td>[]</td>
@@ -1470,7 +1642,7 @@ layout: notebook
       <td>biography</td>
     </tr>
     <tr>
-      <th>1216068</th>
+      <th>1215979</th>
       <td>0373126476</td>
       <td>9.0</td>
       <td>[]</td>
@@ -1497,7 +1669,7 @@ layout: notebook
       <td>harlequin</td>
     </tr>
     <tr>
-      <th>1216069</th>
+      <th>1215980</th>
       <td>178092870X</td>
       <td>2.0</td>
       <td>[]</td>
@@ -1524,7 +1696,7 @@ layout: notebook
       <td>mystery</td>
     </tr>
     <tr>
-      <th>1216070</th>
+      <th>1215981</th>
       <td>0765197456</td>
       <td>6.0</td>
       <td>[]</td>
@@ -1551,7 +1723,7 @@ layout: notebook
       <td>poetry</td>
     </tr>
     <tr>
-      <th>1216071</th>
+      <th>1215982</th>
       <td>162378140X</td>
       <td>17.0</td>
       <td>['658195']</td>
@@ -1579,46 +1751,11 @@ layout: notebook
     </tr>
   </tbody>
 </table>
-<p>1216072 rows × 24 columns</p>
 </div>
 </div>
 
 </div>
 
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">total_df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;records/cleaned_goodreads_books.csv&#39;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">total_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;records/cleaned_goodreads_books.csv&#39;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
 </div>
 </div>
 
@@ -1627,7 +1764,7 @@ layout: notebook
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Get-author-data">Get author data<a class="anchor-link" href="#Get-author-data"> </a></h2><p>It's in a different JSON file, we'll have to copy the data in somehow</p>
+<h2 id="Get-author-data">Get author data<a class="anchor-link" href="#Get-author-data"> </a></h2><p>I want the author for each work. Their names are associated with their author ids in a different JSON file, we'll have to copy the data in somehow</p>
 
 </div>
 </div>
@@ -1838,12 +1975,12 @@ layout: notebook
 3                      [{&#39;author_id&#39;: &#39;149918&#39;, &#39;role&#39;: &#39;&#39;}]
 4                     [{&#39;author_id&#39;: &#39;3041852&#39;, &#39;role&#39;: &#39;&#39;}]
                                  ...                        
-1216067    [{&#39;author_id&#39;: &#39;10681&#39;, &#39;role&#39;: &#39;&#39;}, {&#39;author_...
-1216068                [{&#39;author_id&#39;: &#39;319441&#39;, &#39;role&#39;: &#39;&#39;}]
-1216069    [{&#39;author_id&#39;: &#39;2448&#39;, &#39;role&#39;: &#39;&#39;}, {&#39;author_i...
-1216070           [{&#39;author_id&#39;: &#39;82312&#39;, &#39;role&#39;: &#39;Editor&#39;}]
-1216071               [{&#39;author_id&#39;: &#39;7789809&#39;, &#39;role&#39;: &#39;&#39;}]
-Name: authors, Length: 1216072, dtype: object</pre>
+1215978    [{&#39;author_id&#39;: &#39;10681&#39;, &#39;role&#39;: &#39;&#39;}, {&#39;author_...
+1215979                [{&#39;author_id&#39;: &#39;319441&#39;, &#39;role&#39;: &#39;&#39;}]
+1215980    [{&#39;author_id&#39;: &#39;2448&#39;, &#39;role&#39;: &#39;&#39;}, {&#39;author_i...
+1215981           [{&#39;author_id&#39;: &#39;82312&#39;, &#39;role&#39;: &#39;Editor&#39;}]
+1215982               [{&#39;author_id&#39;: &#39;7789809&#39;, &#39;role&#39;: &#39;&#39;}]
+Name: authors, Length: 1215983, dtype: object</pre>
 </div>
 
 </div>
@@ -1945,164 +2082,6 @@ Name: 604031, dtype: object</pre>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>  3%|▎         | 31308/1216072 [00:04&lt;02:32, 7771.24it/s]
-
-
-
-
-
-
-
-
- 14%|█▍        | 170558/1216072 [00:22&lt;02:14, 7792.28it/s]A</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>list index out of range
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre> 27%|██▋       | 332791/1216072 [00:42&lt;01:53, 7754.12it/s]</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>list index out of range
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre> 34%|███▍      | 415285/1216072 [00:53&lt;01:42, 7836.99it/s]</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>list index out of range
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre> 35%|███▍      | 423153/1216072 [00:54&lt;01:40, 7882.49it/s]</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>list index out of range
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre> 38%|███▊      | 466594/1216072 [01:00&lt;01:40, 7424.44it/s]</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>list index out of range
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre> 43%|████▎     | 522876/1216072 [01:07&lt;01:29, 7718.93it/s]</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>list index out of range
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre> 47%|████▋     | 577099/1216072 [01:14&lt;01:22, 7752.83it/s]</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>list index out of range
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre> 55%|█████▍    | 663032/1216072 [01:25&lt;01:14, 7387.21it/s]</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>list index out of range
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre> 96%|█████████▌| 1163852/1216072 [02:30&lt;00:06, 7686.75it/s]</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>list index out of range
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>100%|██████████| 1216072/1216072 [02:37&lt;00:00, 7721.25it/s]
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
     {% endraw %}
 
@@ -2120,6 +2099,20 @@ Name: 604031, dtype: object</pre>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>  0%|          | 0/1215983 [04:12&lt;?, ?it/s]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     {% endraw %}
 
@@ -2130,7 +2123,7 @@ Name: 604031, dtype: object</pre>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">total_df</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">total_df</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -2164,7 +2157,6 @@ Name: 604031, dtype: object</pre>
       <th></th>
       <th>Unnamed: 0</th>
       <th>Unnamed: 0.1</th>
-      <th>Unnamed: 0.1.1</th>
       <th>isbn</th>
       <th>text_reviews_count</th>
       <th>series</th>
@@ -2194,195 +2186,8 @@ Name: 604031, dtype: object</pre>
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0312853122</td>
-      <td>1.0</td>
-      <td>[]</td>
-      <td>NaN</td>
-      <td>[{'count': '3', 'name': 'to-read'}, {'count': ...</td>
-      <td>NaN</td>
-      <td>4.00</td>
-      <td>[]</td>
-      <td>NaN</td>
-      <td>Paperback</td>
-      <td>https://www.goodreads.com/book/show/5333265-w-...</td>
-      <td>[{'author_id': '604031', 'role': ''}]</td>
-      <td>St. Martin's Press</td>
-      <td>256.0</td>
-      <td>9780312853129</td>
-      <td>9.0</td>
-      <td>1984.0</td>
-      <td>https://www.goodreads.com/book/show/5333265-w-...</td>
-      <td>https://images.gr-assets.com/books/1310220028m...</td>
-      <td>5333265</td>
-      <td>3.0</td>
-      <td>5400751.0</td>
-      <td>W.C. Fields: A Life on Film</td>
-      <td>p</td>
-      <td>Ronald J. Fields</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>1</td>
-      <td>1</td>
-      <td>2</td>
-      <td>NaN</td>
-      <td>7.0</td>
-      <td>['189911']</td>
-      <td>eng</td>
-      <td>[{'count': '58', 'name': 'to-read'}, {'count':...</td>
-      <td>B00071IKUY</td>
-      <td>4.03</td>
-      <td>['19997', '828466', '1569323', '425389', '1176...</td>
-      <td>Omnibus book club edition containing the Ladie...</td>
-      <td>Hardcover</td>
-      <td>https://www.goodreads.com/book/show/7327624-th...</td>
-      <td>[{'author_id': '10333', 'role': ''}]</td>
-      <td>Nelson Doubleday, Inc.</td>
-      <td>600.0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>1987.0</td>
-      <td>https://www.goodreads.com/book/show/7327624-th...</td>
-      <td>https://images.gr-assets.com/books/1304100136m...</td>
-      <td>7327624</td>
-      <td>140.0</td>
-      <td>8948723.0</td>
-      <td>The Unschooled Wizard (Sun Wolf and Starhawk, ...</td>
-      <td>fantasy</td>
-      <td>Barbara Hambly</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>2</td>
-      <td>2</td>
-      <td>3</td>
-      <td>0743294297</td>
-      <td>3282.0</td>
-      <td>[]</td>
-      <td>eng</td>
-      <td>[{'count': '7615', 'name': 'to-read'}, {'count...</td>
-      <td>NaN</td>
-      <td>3.49</td>
-      <td>['6604176', '6054190', '2285777', '82641', '75...</td>
-      <td>Addie Downs and Valerie Adler were eight when ...</td>
-      <td>Hardcover</td>
-      <td>https://www.goodreads.com/book/show/6066819-be...</td>
-      <td>[{'author_id': '9212', 'role': ''}]</td>
-      <td>Atria Books</td>
-      <td>368.0</td>
-      <td>9780743294294</td>
-      <td>7.0</td>
-      <td>2009.0</td>
-      <td>https://www.goodreads.com/book/show/6066819-be...</td>
-      <td>https://s.gr-assets.com/assets/nophoto/book/11...</td>
-      <td>6066819</td>
-      <td>51184.0</td>
-      <td>6243154.0</td>
-      <td>Best Friends Forever</td>
-      <td>chick-lit</td>
-      <td>Jennifer Weiner</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>3</td>
-      <td>3</td>
-      <td>4</td>
-      <td>0850308712</td>
-      <td>5.0</td>
-      <td>[]</td>
-      <td>NaN</td>
-      <td>[{'count': '32', 'name': 'to-read'}, {'count':...</td>
-      <td>NaN</td>
-      <td>3.40</td>
-      <td>[]</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>https://www.goodreads.com/book/show/287140.Run...</td>
-      <td>[{'author_id': '149918', 'role': ''}]</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>9780850308716</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>https://www.goodreads.com/book/show/287140.Run...</td>
-      <td>https://images.gr-assets.com/books/1413219371m...</td>
-      <td>287140</td>
-      <td>15.0</td>
-      <td>278577.0</td>
-      <td>Runic Astrology: Starcraft and Timekeeping in ...</td>
-      <td>runes</td>
-      <td>Nigel Pennick</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>4</td>
-      <td>4</td>
-      <td>5</td>
-      <td>1599150603</td>
-      <td>7.0</td>
-      <td>[]</td>
-      <td>NaN</td>
-      <td>[{'count': '56', 'name': 'to-read'}, {'count':...</td>
-      <td>NaN</td>
-      <td>4.13</td>
-      <td>[]</td>
-      <td>Relates in vigorous prose the tale of Aeneas, ...</td>
-      <td>Paperback</td>
-      <td>https://www.goodreads.com/book/show/287141.The...</td>
-      <td>[{'author_id': '3041852', 'role': ''}]</td>
-      <td>Yesterday's Classics</td>
-      <td>162.0</td>
-      <td>9781599150604</td>
-      <td>9.0</td>
-      <td>2006.0</td>
-      <td>https://www.goodreads.com/book/show/287141.The...</td>
-      <td>https://s.gr-assets.com/assets/nophoto/book/11...</td>
-      <td>287141</td>
-      <td>46.0</td>
-      <td>278578.0</td>
-      <td>The Aeneid for Boys and Girls</td>
-      <td>history</td>
-      <td>Alfred J. Church</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>1216067</th>
-      <td>1216067</td>
-      <td>1216067</td>
+      <th>1215978</th>
+      <td>1215978</td>
       <td>2360645</td>
       <td>0689852959</td>
       <td>1.0</td>
@@ -2411,9 +2216,8 @@ Name: 604031, dtype: object</pre>
       <td>Beatrice Gormley</td>
     </tr>
     <tr>
-      <th>1216068</th>
-      <td>1216068</td>
-      <td>1216068</td>
+      <th>1215979</th>
+      <td>1215979</td>
       <td>2360647</td>
       <td>0373126476</td>
       <td>9.0</td>
@@ -2442,9 +2246,8 @@ Name: 604031, dtype: object</pre>
       <td>Trish Morey</td>
     </tr>
     <tr>
-      <th>1216069</th>
-      <td>1216069</td>
-      <td>1216069</td>
+      <th>1215980</th>
+      <td>1215980</td>
       <td>2360651</td>
       <td>178092870X</td>
       <td>2.0</td>
@@ -2473,9 +2276,8 @@ Name: 604031, dtype: object</pre>
       <td>Arthur Conan Doyle</td>
     </tr>
     <tr>
-      <th>1216070</th>
-      <td>1216070</td>
-      <td>1216070</td>
+      <th>1215981</th>
+      <td>1215981</td>
       <td>2360652</td>
       <td>0765197456</td>
       <td>6.0</td>
@@ -2504,9 +2306,8 @@ Name: 604031, dtype: object</pre>
       <td>Nicola Baxter</td>
     </tr>
     <tr>
-      <th>1216071</th>
-      <td>1216071</td>
-      <td>1216071</td>
+      <th>1215982</th>
+      <td>1215982</td>
       <td>2360653</td>
       <td>162378140X</td>
       <td>17.0</td>
@@ -2536,29 +2337,11 @@ Name: 604031, dtype: object</pre>
     </tr>
   </tbody>
 </table>
-<p>1216072 rows × 28 columns</p>
 </div>
 </div>
 
 </div>
 
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">total_df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;records/cleaned_goodreads_books.csv&#39;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
 </div>
 </div>
 
@@ -2587,12 +2370,12 @@ Name: 604031, dtype: object</pre>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>Index([&#39;Unnamed: 0&#39;, &#39;Unnamed: 0.1&#39;, &#39;Unnamed: 0.1.1&#39;, &#39;isbn&#39;,
-       &#39;text_reviews_count&#39;, &#39;series&#39;, &#39;language_code&#39;, &#39;popular_shelves&#39;,
-       &#39;asin&#39;, &#39;average_rating&#39;, &#39;similar_books&#39;, &#39;description&#39;, &#39;format&#39;,
-       &#39;link&#39;, &#39;authors&#39;, &#39;publisher&#39;, &#39;num_pages&#39;, &#39;isbn13&#39;,
-       &#39;publication_month&#39;, &#39;publication_year&#39;, &#39;url&#39;, &#39;image_url&#39;, &#39;book_id&#39;,
-       &#39;ratings_count&#39;, &#39;work_id&#39;, &#39;title&#39;, &#39;top_genre&#39;, &#39;author_name&#39;],
+<pre>Index([&#39;Unnamed: 0&#39;, &#39;Unnamed: 0.1&#39;, &#39;isbn&#39;, &#39;text_reviews_count&#39;, &#39;series&#39;,
+       &#39;language_code&#39;, &#39;popular_shelves&#39;, &#39;asin&#39;, &#39;average_rating&#39;,
+       &#39;similar_books&#39;, &#39;description&#39;, &#39;format&#39;, &#39;link&#39;, &#39;authors&#39;,
+       &#39;publisher&#39;, &#39;num_pages&#39;, &#39;isbn13&#39;, &#39;publication_month&#39;,
+       &#39;publication_year&#39;, &#39;url&#39;, &#39;image_url&#39;, &#39;book_id&#39;, &#39;ratings_count&#39;,
+       &#39;work_id&#39;, &#39;title&#39;, &#39;top_genre&#39;, &#39;author_name&#39;],
       dtype=&#39;object&#39;)</pre>
 </div>
 
@@ -2604,6 +2387,30 @@ Name: 604031, dtype: object</pre>
 </div>
     {% endraw %}
 
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">total_df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;../../records/cleaned_goodreads_books.csv&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Extract-a-subset-of-data-for-graphing">Extract a subset of data for graphing<a class="anchor-link" href="#Extract-a-subset-of-data-for-graphing"> </a></h2><p>Not all of the columns will cluster nicely for graphing. Here we can extract a smaller dataset, with just continuous and categorical variables that are useful for exploratory data analysis.</p>
+
+</div>
+</div>
+</div>
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -2646,6 +2453,25 @@ Name: 604031, dtype: object</pre>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>/home/mage/.local/lib/python3.7/site-packages/ipykernel_launcher.py:1: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  &#34;&#34;&#34;Entry point for launching an IPython kernel.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     {% endraw %}
 
@@ -2656,7 +2482,143 @@ Name: 604031, dtype: object</pre>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">graph_df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;records/to_graph.csv&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">graph_df</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>title</th>
+      <th>author_name</th>
+      <th>top_genre</th>
+      <th>publisher</th>
+      <th>publication_year</th>
+      <th>format</th>
+      <th>num_pages</th>
+      <th>average_rating</th>
+      <th>ratings_count</th>
+      <th>text_reviews_count</th>
+      <th>description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1215978</th>
+      <td>Jacqueline Kennedy Onassis: Friend of the Arts</td>
+      <td>Beatrice Gormley</td>
+      <td>biography</td>
+      <td>Aladdin</td>
+      <td>2002.0</td>
+      <td>Paperback</td>
+      <td>176.0</td>
+      <td>4.36</td>
+      <td>18.0</td>
+      <td>1.0</td>
+      <td>One of the most popular series ever published ...</td>
+    </tr>
+    <tr>
+      <th>1215979</th>
+      <td>The Spaniard's Blackmailed Bride</td>
+      <td>Trish Morey</td>
+      <td>harlequin</td>
+      <td>Harlequin</td>
+      <td>2007.0</td>
+      <td>Paperback</td>
+      <td>192.0</td>
+      <td>3.42</td>
+      <td>112.0</td>
+      <td>9.0</td>
+      <td>Blackmailed into marriage to save her family, ...</td>
+    </tr>
+    <tr>
+      <th>1215980</th>
+      <td>Sherlock Holmes and the July Crisis</td>
+      <td>Arthur Conan Doyle</td>
+      <td>mystery</td>
+      <td>MX Publishing</td>
+      <td>2015.0</td>
+      <td>Paperback</td>
+      <td>148.0</td>
+      <td>3.50</td>
+      <td>6.0</td>
+      <td>2.0</td>
+      <td>Sir Arthur Conan Doyle is brought back to life...</td>
+    </tr>
+    <tr>
+      <th>1215981</th>
+      <td>The Children's Classic Poetry Collection</td>
+      <td>Nicola Baxter</td>
+      <td>poetry</td>
+      <td>Smithmark Publishers</td>
+      <td>1996.0</td>
+      <td>Hardcover</td>
+      <td>96.0</td>
+      <td>4.00</td>
+      <td>36.0</td>
+      <td>6.0</td>
+      <td>Gathers poems by William Blake, Emily Bronte, ...</td>
+    </tr>
+    <tr>
+      <th>1215982</th>
+      <td>101 Nights: Volume One (101 Nights, #1-3)</td>
+      <td>S.E. Reign</td>
+      <td>erotica</td>
+      <td>Guerrilla Wordfare</td>
+      <td>2014.0</td>
+      <td>Paperback</td>
+      <td>306.0</td>
+      <td>4.37</td>
+      <td>70.0</td>
+      <td>17.0</td>
+      <td>Volume One contains: "Claimed," "Tainted," and...</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">graph_df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;../../records/to_graph.csv&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -2668,4 +2630,8 @@ Name: 604031, dtype: object</pre>
 
 </div>
  
+
+<script type="application/vnd.jupyter.widget-state+json">
+{"state": {}, "version_major": 2, "version_minor": 0}
+</script>
 
