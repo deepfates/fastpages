@@ -2227,20 +2227,6 @@ Postcolonial Studies
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>100%|██████████| 130/130 [02:25&lt;00:00,  1.12s/it]75%|███████▌  | 150/200 [02:14&lt;00:52,  1.05s/it] 74%|███████▍  | 149/200 [02:13&lt;00:54,  1.07s/it] 74%|███████▍  | 148/200 [02:12&lt;00:48,  1.08it/s] 74%|███████▎  | 147/200 [02:11&lt;00:47,  1.13it/s] 73%|███████▎  | 146/200 [02:10&lt;00:49,  1.09it/s] 72%|███████▎  | 145/200 [02:10&lt;01:02,  1.13s/it] 72%|███████▏  | 144/200 [02:09&lt;01:20,  1.44s/it] 72%|███████▏  | 143/200 [02:08&lt;01:21,  1.44s/it] 71%|███████   | 142/200 [02:06&lt;01:07,  1.17s/it] 70%|███████   | 141/200 [02:05&lt;01:08,  1.16s/it] 70%|███████   | 140/200 [02:03&lt;01:02,  1.04s/it] 70%|██████▉   | 139/200 [02:02&lt;01:06,  1.09s/it] 69%|██████▉   | 138/200 [02:01&lt;01:07,  1.09s/it] 68%|██████▊   | 137/200 [02:00&lt;01:01,  1.03it/s] 68%|██████▊   | 136/200 [01:59&lt;01:05,  1.02s/it] 68%|██████▊   | 135/200 [01:58&lt;01:16,  1.18s/it] 67%|██████▋   | 134/200 [01:57&lt;01:15,  1.14s/it] 66%|██████▋   | 133/200 [01:56&lt;01:18,  1.17s/it] 66%|██████▌   | 132/200 [01:55&lt;01:13,  1.09s/it] 61%|██████    | 122/200 [01:41&lt;01:01,  1.27it/s] 60%|██████    | 121/200 [01:41&lt;01:02,  1.26it/s] 60%|██████    | 120/200 [01:40&lt;01:15,  1.06it/s] 60%|█████▉    | 119/200 [01:39&lt;01:07,  1.20it/s] 57%|█████▊    | 115/200 [01:36&lt;01:26,  1.02s/it] 57%|█████▋    | 114/200 [01:35&lt;01:19,  1.08it/s] 56%|█████▋    | 113/200 [01:34&lt;01:34,  1.08s/it] 56%|█████▌    | 112/200 [01:33&lt;01:30,  1.02s/it] 56%|█████▌    | 111/200 [01:32&lt;01:27,  1.02it/s] 55%|█████▌    | 110/200 [01:31&lt;01:44,  1.16s/it] 55%|█████▍    | 109/200 [01:30&lt;02:07,  1.40s/it] 54%|█████▍    | 108/200 [01:29&lt;01:58,  1.29s/it] 54%|█████▎    | 107/200 [01:28&lt;02:02,  1.32s/it] 53%|█████▎    | 106/200 [01:26&lt;02:01,  1.29s/it] 52%|█████▎    | 105/200 [01:25&lt;02:05,  1.32s/it] 52%|█████▏    | 104/200 [01:23&lt;01:49,  1.14s/it] 52%|█████▏    | 103/200 [01:21&lt;01:23,  1.16it/s] 51%|█████     | 102/200 [01:21&lt;01:42,  1.05s/it] 50%|█████     | 101/200 [01:20&lt;01:27,  1.13it/s] 50%|█████     | 100/200 [01:19&lt;01:21,  1.22it/s]
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
     {% endraw %}
 
@@ -5765,7 +5751,25 @@ Postcolonial Studies
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">counts_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[:</span><span class="mi">50</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">counts_df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Title&#39;</span><span class="p">,</span> <span class="s1">&#39;Listed count&#39;</span><span class="p">]</span>
+<span class="n">counts_df</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">counts_df</span><span class="o">.</span><span class="n">index</span> <span class="o">+</span> <span class="mi">1</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">counts_df</span>
 </pre></div>
 
     </div>
@@ -5797,268 +5801,69 @@ Postcolonial Studies
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>0</th>
-      <th>1</th>
+      <th>Title</th>
+      <th>Listed count</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
+      <th>1</th>
       <td>Ulysses</td>
       <td>51.0</td>
     </tr>
     <tr>
-      <th>1</th>
+      <th>2</th>
       <td>The Great Gatsby</td>
       <td>50.0</td>
     </tr>
     <tr>
-      <th>2</th>
+      <th>3</th>
       <td>One Hundred Years of Solitude</td>
       <td>44.0</td>
     </tr>
     <tr>
-      <th>3</th>
+      <th>4</th>
       <td>Lolita</td>
       <td>43.0</td>
     </tr>
     <tr>
-      <th>4</th>
+      <th>5</th>
       <td>Nineteen Eighty Four</td>
       <td>42.0</td>
     </tr>
     <tr>
-      <th>5</th>
-      <td>Don Quixote</td>
-      <td>42.0</td>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
     </tr>
     <tr>
-      <th>6</th>
-      <td>Moby Dick</td>
-      <td>42.0</td>
+      <th>4410</th>
+      <td>Decline of the West</td>
+      <td>1.0</td>
     </tr>
     <tr>
-      <th>7</th>
-      <td>The Catcher in the Rye</td>
-      <td>41.0</td>
+      <th>4411</th>
+      <td>The History of the Standard Oil Company</td>
+      <td>1.0</td>
     </tr>
     <tr>
-      <th>8</th>
-      <td>In Search of Lost Time</td>
-      <td>41.0</td>
+      <th>4412</th>
+      <td>Theory of Games and Economic Behavior</td>
+      <td>1.0</td>
     </tr>
     <tr>
-      <th>9</th>
-      <td>Pride and Prejudice</td>
-      <td>39.0</td>
+      <th>4413</th>
+      <td>AA Big Book</td>
+      <td>1.0</td>
     </tr>
     <tr>
-      <th>10</th>
-      <td>The Grapes of Wrath</td>
-      <td>39.0</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>The Adventures of Huckleberry Finn</td>
-      <td>38.0</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>Beloved</td>
-      <td>37.0</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>Heart of Darkness</td>
-      <td>37.0</td>
-    </tr>
-    <tr>
-      <th>14</th>
-      <td>War and Peace</td>
-      <td>37.0</td>
-    </tr>
-    <tr>
-      <th>15</th>
-      <td>Catch-22</td>
-      <td>36.0</td>
-    </tr>
-    <tr>
-      <th>16</th>
-      <td>Madame Bovary</td>
-      <td>35.0</td>
-    </tr>
-    <tr>
-      <th>17</th>
-      <td>The Odyssey</td>
-      <td>35.0</td>
-    </tr>
-    <tr>
-      <th>18</th>
-      <td>Wuthering Heights</td>
-      <td>34.0</td>
-    </tr>
-    <tr>
-      <th>19</th>
-      <td>The Iliad</td>
-      <td>33.0</td>
-    </tr>
-    <tr>
-      <th>20</th>
-      <td>The Divine Comedy</td>
-      <td>33.0</td>
-    </tr>
-    <tr>
-      <th>21</th>
-      <td>Crime and Punishment</td>
-      <td>33.0</td>
-    </tr>
-    <tr>
-      <th>22</th>
-      <td>Invisible Man</td>
-      <td>33.0</td>
-    </tr>
-    <tr>
-      <th>23</th>
-      <td>The Sound and the Fury</td>
-      <td>31.0</td>
-    </tr>
-    <tr>
-      <th>24</th>
-      <td>Alice's Adventures in Wonderland</td>
-      <td>31.0</td>
-    </tr>
-    <tr>
-      <th>25</th>
-      <td>The Bible</td>
-      <td>30.0</td>
-    </tr>
-    <tr>
-      <th>26</th>
-      <td>To Kill a Mockingbird</td>
-      <td>30.0</td>
-    </tr>
-    <tr>
-      <th>27</th>
-      <td>Anna Karenina</td>
-      <td>29.0</td>
-    </tr>
-    <tr>
-      <th>28</th>
-      <td>Brave New World</td>
-      <td>28.0</td>
-    </tr>
-    <tr>
-      <th>29</th>
-      <td>The Stranger</td>
-      <td>28.0</td>
-    </tr>
-    <tr>
-      <th>30</th>
-      <td>The Brothers Karamazov</td>
-      <td>28.0</td>
-    </tr>
-    <tr>
-      <th>31</th>
-      <td>Midnight's Children</td>
-      <td>28.0</td>
-    </tr>
-    <tr>
-      <th>32</th>
-      <td>Frankenstein</td>
-      <td>27.0</td>
-    </tr>
-    <tr>
-      <th>33</th>
-      <td>On the Road</td>
-      <td>26.0</td>
-    </tr>
-    <tr>
-      <th>34</th>
-      <td>Jane Eyre</td>
-      <td>26.0</td>
-    </tr>
-    <tr>
-      <th>35</th>
-      <td>Great Expectations</td>
-      <td>26.0</td>
-    </tr>
-    <tr>
-      <th>36</th>
-      <td>To the Lighthouse</td>
-      <td>26.0</td>
-    </tr>
-    <tr>
-      <th>37</th>
-      <td>The Trial</td>
-      <td>25.0</td>
-    </tr>
-    <tr>
-      <th>38</th>
-      <td>Gulliver's Travels</td>
-      <td>25.0</td>
-    </tr>
-    <tr>
-      <th>39</th>
-      <td>The Sun Also Rises</td>
-      <td>25.0</td>
-    </tr>
-    <tr>
-      <th>40</th>
-      <td>Middlemarch</td>
-      <td>24.0</td>
-    </tr>
-    <tr>
-      <th>41</th>
-      <td>David Copperfield</td>
-      <td>23.0</td>
-    </tr>
-    <tr>
-      <th>42</th>
-      <td>A Passage to India</td>
-      <td>23.0</td>
-    </tr>
-    <tr>
-      <th>43</th>
-      <td>Animal Farm</td>
-      <td>22.0</td>
-    </tr>
-    <tr>
-      <th>44</th>
-      <td>As I Lay Dying</td>
-      <td>22.0</td>
-    </tr>
-    <tr>
-      <th>45</th>
-      <td>Mrs. Dalloway</td>
-      <td>22.0</td>
-    </tr>
-    <tr>
-      <th>46</th>
-      <td>The Lord of the Rings</td>
-      <td>21.0</td>
-    </tr>
-    <tr>
-      <th>47</th>
-      <td>The Color Purple</td>
-      <td>21.0</td>
-    </tr>
-    <tr>
-      <th>48</th>
-      <td>Absalom, Absalom!</td>
-      <td>21.0</td>
-    </tr>
-    <tr>
-      <th>49</th>
-      <td>One Thousand and One Nights</td>
-      <td>21.0</td>
-    </tr>
-    <tr>
-      <th>50</th>
-      <td>A Portrait of the Artist as a Young Man</td>
-      <td>21.0</td>
+      <th>4414</th>
+      <td>Behaviorism</td>
+      <td>1.0</td>
     </tr>
   </tbody>
 </table>
+<p>4414 rows × 2 columns</p>
 </div>
 </div>
 
@@ -6072,11 +5877,29 @@ Postcolonial Studies
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>That looks like the classics, all right... :roll_eyes:</p>
+<p>That looks like the classics, all right... :shrug:</p>
+<p>I'll save this too, and upload to my website so you can peruse it yourself. Find it <a href="/fastpages/assets/2021-07-27-found-canon.csv">here</a></p>
 
 </div>
 </div>
 </div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">counts_df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;../assets/2021-07-27-found-canon.csv&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
 </div>
  
 
