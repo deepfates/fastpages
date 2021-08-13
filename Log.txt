@@ -1,0 +1,68 @@
+[8:17 PM] Game changed to 'Pathfinder: Kingmaker'.
+[8:17 PM] Game path '/home/mage/.steam/steam/steamapps/common/Pathfinder Kingmaker'.
+[8:17 PM] Checking for updates.
+[8:17 PM] No updates.
+[8:17 PM] Unpacking 'BetterVendors-2-0-8.zip' - SUCCESS.
+[8:20 PM] Deleting 'Respec' - SUCCESS.
+[8:21 PM] Deleting 'BetterVendors' - SUCCESS.
+[8:21 PM] Deleting 'Cleaner' - SUCCESS.
+[8:21 PM] Unpacking 'Cleaner-1-3-2.zip' - SUCCESS.
+[8:21 PM] =======================================
+[8:21 PM] Removing patch...
+[8:21 PM] Deleting files from game...
+[8:21 PM]   0Harmony.dll
+[8:21 PM]   0Harmony12.dll
+[8:21 PM]   0Harmony-1.2.dll
+[8:21 PM]   dnlib.dll
+[8:21 PM]   System.Xml.dll
+[8:21 PM]   UnityModManager.dll
+[8:21 PM]   UnityModManager.xml
+[8:21 PM] Deleting configs...
+[8:21 PM]   Config.xml
+[8:21 PM] Removal was successful.
+[8:21 PM] =======================================
+[8:21 PM] Applying patch to 'UnityEngine.UIModule.dll'...
+[8:21 PM] Copying files to game...
+[8:21 PM]   0Harmony.dll
+[8:21 PM]   0Harmony12.dll
+[8:21 PM]   0Harmony-1.2.dll
+[8:21 PM]   dnlib.dll
+[8:21 PM]   System.Xml.dll
+[8:21 PM]   UnityModManager.dll
+[8:21 PM]   UnityModManager.xml
+[8:21 PM] Creating configs...
+[8:21 PM]   Config.xml
+[8:21 PM] Installation was successful.
+[8:23 PM] System.ComponentModel.Win32Exception (0x80004005): Cannot find the specified file
+  at System.Diagnostics.Process.StartWithShellExecuteEx (System.Diagnostics.ProcessStartInfo startInfo) [0x00102] in <1af2426e91d1474d92e5d471c4ca8f95>:0 
+  at System.Diagnostics.Process.Start () [0x00032] in <1af2426e91d1474d92e5d471c4ca8f95>:0 
+  at (wrapper remoting-invoke-with-check) System.Diagnostics.Process.Start()
+  at System.Diagnostics.Process.Start (System.Diagnostics.ProcessStartInfo startInfo) [0x0001b] in <1af2426e91d1474d92e5d471c4ca8f95>:0 
+  at System.Diagnostics.Process.Start (System.String fileName) [0x00006] in <1af2426e91d1474d92e5d471c4ca8f95>:0 
+  at UnityModManagerNet.Installer.UnityModManagerForm.btnDownloadUpdate_Click (System.Object sender, System.EventArgs e) [0x00028] in <75c92998f13b4b3286fb005a60ec031a>:0 
+[8:25 PM] =======================================
+[8:25 PM] Removing patch...
+[8:25 PM] Deleting files from game...
+[8:25 PM]   0Harmony.dll
+[8:25 PM]   0Harmony12.dll
+[8:25 PM]   0Harmony-1.2.dll
+[8:25 PM]   dnlib.dll
+[8:25 PM]   System.Xml.dll
+[8:25 PM]   UnityModManager.dll
+[8:25 PM]   UnityModManager.xml
+[8:25 PM] Deleting configs...
+[8:25 PM]   Config.xml
+[8:25 PM] Removal was successful.
+[8:25 PM] =======================================
+[8:25 PM] Applying patch to 'UnityEngine.UIModule.dll'...
+[8:25 PM] Copying files to game...
+[8:25 PM]   0Harmony.dll
+[8:25 PM]   0Harmony12.dll
+[8:25 PM]   0Harmony-1.2.dll
+[8:25 PM]   dnlib.dll
+[8:25 PM]   System.Xml.dll
+[8:25 PM]   UnityModManager.dll
+[8:25 PM]   UnityModManager.xml
+[8:25 PM] Creating configs...
+[8:25 PM]   Config.xml
+[8:25 PM] Installation was successful.
