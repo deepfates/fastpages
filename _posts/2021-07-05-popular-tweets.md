@@ -38,7 +38,7 @@ layout: notebook
 
 <span class="n">c</span><span class="o">.</span><span class="n">Username</span> <span class="o">=</span> <span class="s1">&#39;deepfates&#39;</span>
 <span class="n">c</span><span class="o">.</span><span class="n">Popular_tweets</span> <span class="o">=</span> <span class="kc">True</span>
-<span class="n">c</span><span class="o">.</span><span class="n">Limit</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="c1"># c.Limit = 1</span>
 <span class="n">c</span><span class="o">.</span><span class="n">Min_likes</span> <span class="o">=</span> <span class="mi">130</span>
 <span class="n">tweets</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="n">c</span><span class="o">.</span><span class="n">Store_object</span> <span class="o">=</span> <span class="kc">True</span>
@@ -150,7 +150,23 @@ layout: notebook
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">md</span> <span class="o">=</span> <span class="n">get_md</span><span class="p">(</span><span class="n">includes</span><span class="p">)</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;../_pages/tweets.md&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;../_pages/tweets.md&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">md</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">f</span><span class="p">)</span>
 </pre></div>
 
