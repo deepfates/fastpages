@@ -7198,12 +7198,23 @@
   
 
   
+      ,"page6": {
+          "title": "Tweets",
+          "content": "I post a lot of tweets. . . Here are some of my recent popular posts (not my most popular posts, which I tend to delete when they make me anxious) . Last updated 2021-08-14 . {% include twitter.html content=’https://twitter.com/deepfates/status/1426246548589977602’ %} . {% include twitter.html content=’https://twitter.com/deepfates/status/1426245547132784640’ %} . {% include twitter.html content=’https://twitter.com/deepfates/status/1426186822523174913’ %} . {% include twitter.html content=’https://twitter.com/deepfates/status/1419843330435817473’ %} . {% include twitter.html content=’https://twitter.com/deepfates/status/1419345705479544833’ %} . {% include twitter.html content=’https://twitter.com/deepfates/status/1419338925022326798’ %} . {% include twitter.html content=’https://twitter.com/deepfates/status/1418280877902028800’ %} . {% include twitter.html content=’https://twitter.com/deepfates/status/1418177474534416387’ %} . {% include twitter.html content=’https://twitter.com/deepfates/status/1415702993220120581’ %} . {% include twitter.html content=’https://twitter.com/deepfates/status/1414278251908845576’ %} . {% include twitter.html content=’https://twitter.com/deepfates/status/1413236300749053952’ %} . {% include twitter.html content=’https://twitter.com/deepfates/status/1410720938866270209’ %} . {% include twitter.html content=’https://twitter.com/deepfates/status/1410226877218840584’ %} . {% include twitter.html content=’https://twitter.com/deepfates/status/1410009264878276617’ %} . {% include twitter.html content=’https://twitter.com/deepfates/status/1409503937955127307’ %} . {% include twitter.html content=’https://twitter.com/deepfates/status/1408798364221722631’ %} . {% include twitter.html content=’https://twitter.com/deepfates/status/1408464068109914113’ %} . {% include twitter.html content=’https://twitter.com/deepfates/status/1406271483014377472’ %} . {% include twitter.html content=’https://twitter.com/deepfates/status/1406038473086144518’ %} . {% include twitter.html content=’https://twitter.com/deepfates/status/1403775419208417280’ %} . {% include twitter.html content=’https://twitter.com/deepfates/status/1403402890237067271’ %} . {% include twitter.html content=’https://twitter.com/deepfates/status/1403402638222368769’ %} . {% include twitter.html content=’https://twitter.com/deepfates/status/1403399900700815372’ %} . {% include twitter.html content=’https://twitter.com/deepfates/status/1403397402145574914’ %} . {% include twitter.html content=’https://twitter.com/deepfates/status/1403397093658705920’ %} . {% include twitter.html content=’https://twitter.com/deepfates/status/1403396101030531080’ %} . {% include twitter.html content=’https://twitter.com/deepfates/status/1403393455456456707’ %} . {% include twitter.html content=’https://twitter.com/deepfates/status/1403393321494618115’ %} . {% include twitter.html content=’https://twitter.com/deepfates/status/1403391239806980098’ %} . {% include twitter.html content=’https://twitter.com/deepfates/status/1403388501924597760’ %} . {% include twitter.html content=’https://twitter.com/deepfates/status/1403388500334891010’ %} . {% include twitter.html content=’https://twitter.com/deepfates/status/1403388498804051968’ %} . {% include twitter.html content=’https://twitter.com/deepfates/status/1402712065874092033’ %} . {% include twitter.html content=’https://twitter.com/deepfates/status/1400591012834152454’ %} . {% include twitter.html content=’https://twitter.com/deepfates/status/1400098818079686656’ %} . {% include twitter.html content=’https://twitter.com/deepfates/status/1398863101735354373’ %} . {% include twitter.html content=’https://twitter.com/deepfates/status/1397960354416644097’ %} . {% include twitter.html content=’https://twitter.com/deepfates/status/1396151620661137409’ %} . {% include twitter.html content=’https://twitter.com/deepfates/status/1394312624121257992’ %} . {% include twitter.html content=’https://twitter.com/deepfates/status/1389585659581583365’ %} . {% include twitter.html content=’https://twitter.com/deepfates/status/1388949801325133824’ %} . {% include twitter.html content=’https://twitter.com/deepfates/status/1388529423570272256’ %} . {% include twitter.html content=’https://twitter.com/deepfates/status/1388498206783262725’ %} . {% include twitter.html content=’https://twitter.com/deepfates/status/1387409599989383168’ %} . {% include twitter.html content=’https://twitter.com/deepfates/status/1385370925793636354’ %} . {% include twitter.html content=’https://twitter.com/deepfates/status/1384901122394107904’ %} . {% include twitter.html content=’https://twitter.com/deepfates/status/1384885466542100483’ %} . {% include twitter.html content=’https://twitter.com/deepfates/status/1384243814672474124’ %} . {% include twitter.html content=’https://twitter.com/deepfates/status/1382400028648480770’ %} . {% include twitter.html content=’https://twitter.com/deepfates/status/1378359302449139717’ %} . {% include twitter.html content=’https://twitter.com/deepfates/status/1377661108559900673’ %} . {% include twitter.html content=’https://twitter.com/deepfates/status/1365169415742922752’ %} . {% include twitter.html content=’https://twitter.com/deepfates/status/1355758083079761921’ %} . {% include twitter.html content=’https://twitter.com/deepfates/status/1348756926046162944’ %} .",
+          "url": "https://deepfates.github.io/fastpages/tweets/",
+          "relUrl": "/tweets/",
+          "date": ""
+      }
+      
   
 
   
   
 
   
+  
+
+  
 
   
 
@@ -7337,7 +7348,7 @@
   
 
   
-      ,"page74": {
+      ,"page75": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://deepfates.github.io/fastpages/robots.txt",
