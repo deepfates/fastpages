@@ -20,7 +20,7 @@ layout: notebook
         
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="A-bot-that-retweets-concepts-from-Deleuze-and-Guattari.-Status:-active.-Find-Smooth-Spaces-on-twitter.">A bot that retweets concepts from Deleuze and Guattari. Status: active. Find <a href="twitter.com/deterrnement">Smooth Spaces on twitter</a>.<a class="anchor-link" href="#A-bot-that-retweets-concepts-from-Deleuze-and-Guattari.-Status:-active.-Find-Smooth-Spaces-on-twitter."> </a></h2><p><em>Built with</em> <code>Annoy</code>, <code>textacy</code> <em>and</em> <code>tweepy</code>.</p>
+<h2 id="A-bot-that-retweets-concepts-from-Deleuze-and-Guattari.-Status:-active.-Find-Smooth-Spaces-on-twitter.">A bot that retweets concepts from Deleuze and Guattari. Status: active. Find <a href="https://twitter.com/deterrnement">Smooth Spaces on twitter</a>.<a class="anchor-link" href="#A-bot-that-retweets-concepts-from-Deleuze-and-Guattari.-Status:-active.-Find-Smooth-Spaces-on-twitter."> </a></h2><p><em>Built with</em> <code>Annoy</code>, <code>textacy</code> <em>and</em> <code>tweepy</code>.</p>
 
 </div>
 </div>
@@ -34,4 +34,8 @@ layout: notebook
 </div>
 </div>
  
+
+<script type="application/vnd.jupyter.widget-state+json">
+{"state": {}, "version_major": 2, "version_minor": 0}
+</script>
 
