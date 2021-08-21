@@ -27,7 +27,7 @@ layout: notebook
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Read more about this project in <a href="/fastpages/sciops/2020/02/19/machinic-assemblage.html">SCIOPS 04.06: Machinic Assemblage</a></p>
+<p>Read more about this project in <a href="/sciops/2020/02/19/machinic-assemblage.html">SCIOPS 04.06: Machinic Assemblage</a></p>
 
 </div>
 </div>

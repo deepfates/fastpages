@@ -71,7 +71,7 @@ layout: notebook
 <p>In these articles, the digital humanities scholars of the Literary Lab have empirically measured the canon and archive (of literature) and found trends that correlate with their deep domain knowledge. I intend to follow recklessly in the direction they headed, and explore new terrain.</p>
 <p>The thesis developed in these papers is, first, that the canon can be taken as a superset of all canons put forth by individuals or groups, and secondly that you can project features of these books into a "space" that correlates to their canonicity.</p>
 <p>The authors test several different features, but prefer a framing of Popularity vs Prestige: market success vs academic success, roughly. This diagram, from Pamphlet 17, shows the use:</p>
-<p><img src="/fastpages/images/copied_from_nb/../images/popularity-prestige.png" alt="a scatter plot of genres with popularity on the x and prestige on the y axis"></p>
+<p><img src="/fastpages/images/copied_from_nb/popularity-prestige.png" alt="a scatter plot of genres with popularity on the x and prestige on the y axis"></p>
 <p>Popularity here is measured by number of reviews on Goodreads, and prestige by number of "Primary Subject Author" citations in the MLA database. To the right, something is more marketable, and to upward more well-regarded by academia. Up and to the right, therefore, is the direction of canon.</p>
 <p>This tracks with my own anecdotal evidence: the four most popular categories, Fiction, Sci-Fi, Kids, and Mystery/Thriller, are among the bestselling categories in my store.</p>
 <p>This brings up a good point: my audience is specific, and so my curation must be as well.</p>
@@ -88,4 +88,8 @@ layout: notebook
 </div>
 </div>
  
+
+<script type="application/vnd.jupyter.widget-state+json">
+{"state": {}, "version_major": 2, "version_minor": 0}
+</script>
 

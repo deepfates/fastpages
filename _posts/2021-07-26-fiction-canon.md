@@ -5878,7 +5878,7 @@ Postcolonial Studies
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>That looks like the classics, all right... :shrug:</p>
-<p>I'll save this too, and upload to my website so you can peruse it yourself. Find it <a href="/fastpages/assets/2021-07-27-found-canon.csv">here</a></p>
+<p>I'll save this too, and upload to my website so you can peruse it yourself. Find it <a href="/assets/2021-07-27-found-canon.csv">here</a> (CSV)</p>
 
 </div>
 </div>

@@ -5,5 +5,5 @@ permalink: /about/
 ---
 
 
-![](../images/about.jpeg)
+![](/images/about.jpeg)
 

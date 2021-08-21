@@ -15,7 +15,7 @@ The original marketing materials and link:
 
 ---
 
-![](/fastpages/images/signal-excerpt.png)
+![](/images/signal-excerpt.png)
 
 >SIGNAL is a dictionary-dream, a catalog for an ethereal Library, a virus of language. It may be read front to back or side to side.
 >
@@ -35,7 +35,7 @@ This proved my memetic engineering thesis to my satisfaction, but it also drew u
 
 The following sample has been selected for its relative safety. Nonetheless, please exercise caution when viewing it, especially for long periods.
 
-![](/fastpages/images/signal.gif)
+![](/images/signal.gif)
 
 ---
 
