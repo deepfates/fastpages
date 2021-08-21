@@ -35,7 +35,7 @@ This proved my memetic engineering thesis to my satisfaction, but it also drew u
 
 The following sample has been selected for its relative safety. Nonetheless, please exercise caution when viewing it, especially for long periods.
 
-![](/images/signal.gif)
+![]({{ site.baseurl }}/images/signal.gif)
 
 ---
 
