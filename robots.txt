@@ -1,1 +1,1 @@
-Sitemap: https://deepfates.com/sitemap.xml
+Sitemap: http://deepfates.com/sitemap.xml
