@@ -114,7 +114,7 @@ layout: notebook
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>7057</pre>
+<pre>362</pre>
 </div>
 
 </div>
@@ -164,33 +164,33 @@ layout: notebook
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>(&#39;1426180149029085188&#39;,
- &#39;2021-08-13&#39;,
- &#39;2021-08-13 07:53:39 MDT&#39;,
- 1426180149029085188,
- 55,
- &#39;https://twitter.com/deepfates/status/1426180149029085188&#39;,
+<pre>(&#39;1428962834507997184&#39;,
+ &#39;2021-08-21&#39;,
+ &#39;2021-08-21 09:15:20 MDT&#39;,
+ 1429099809449955328,
+ 1,
+ &#39;https://twitter.com/deepfates/status/1429099809449955328&#39;,
  [],
- [&#39;https://pbs.twimg.com/media/E8rPSWwX0AYVBW5.jpg&#39;],
+ [],
  &#39;&#39;,
- 5,
- [],
+ 0,
+ [{&#39;screen_name&#39;: &#39;YosarianTwo&#39;, &#39;name&#39;: &#39;Yosarian2&#39;, &#39;id&#39;: &#39;3116120941&#39;}],
  False,
  &#39;&#39;,
  &#39;&#39;,
- 4,
+ 0,
  &#39;&#39;,
- &#39;https://pbs.twimg.com/media/E8rPSWwX0AYVBW5.jpg&#39;,
- &#39;07:53:39&#39;,
+ &#39;&#39;,
+ &#39;09:15:20&#39;,
  &#39;-0600&#39;,
- &#34;yeah babe, I&#39;m almost ready to go. Just let me get my boots on  https://t.co/QByQNB0H0W&#34;,
+ &#39;@YosarianTwo true! true!&#39;,
  [],
  3315205122,
  &#39;3315205122&#39;,
  &#39;&#39;,
  &#39;&#39;,
  &#39;deepfates&#39;,
- 1)</pre>
+ 0)</pre>
 </div>
 
 </div>
@@ -320,9 +320,8 @@ layout: notebook
 
 
 <div class="output_markdown rendered_html output_subarea output_execute_result">
-<h4 id="*07:53:39*"><a href="https://twitter.com/deepfates/status/1426180149029085188">*07:53:39*</a><a class="anchor-link" href="#*07:53:39*"> </a></h4><p><font size="5">yeah babe, I'm almost ready to go. Just let me get my boots on  https://t.co/QByQNB0H0W</font></p>
-<p><img src="/fastpages//images/E8rPSWwX0AYVBW5.jpg" alt="image from twitter"></p>
-<p>🗨️ 5 ♺ 4 🤍  55</p>
+<h4 id="*09:15:20*"><a href="https://twitter.com/deepfates/status/1429099809449955328">*09:15:20*</a><a class="anchor-link" href="#*09:15:20*"> </a></h4><p><font size="5">@YosarianTwo true! true!</font></p>
+<p>🗨️ 0 ♺ 0 🤍  1</p>
 <hr>
 
 </div>
@@ -369,7 +368,7 @@ layout: notebook
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>220</pre>
+<pre>0</pre>
 </div>
 
 </div>
@@ -526,7 +525,7 @@ layout: notebook
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>7057</pre>
+<pre>362</pre>
 </div>
 
 </div>
@@ -559,7 +558,7 @@ layout: notebook
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>43</pre>
+<pre>0</pre>
 </div>
 
 </div>
@@ -642,7 +641,7 @@ layout: notebook
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>100%|██████████| 480/480 [05:21&lt;00:00,  1.49it/s]
+<pre>100%|██████████| 9/9 [00:25&lt;00:00,  2.89s/it]
 </pre>
 </div>
 </div>
