@@ -114,7 +114,7 @@ layout: notebook
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>362</pre>
+<pre>368</pre>
 </div>
 
 </div>
@@ -164,26 +164,28 @@ layout: notebook
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>(&#39;1428962834507997184&#39;,
+<pre>(&#39;1429127838419099649&#39;,
  &#39;2021-08-21&#39;,
- &#39;2021-08-21 09:15:20 MDT&#39;,
- 1429099809449955328,
- 1,
- &#39;https://twitter.com/deepfates/status/1429099809449955328&#39;,
+ &#39;2021-08-21 11:22:58 MDT&#39;,
+ 1429131930042261508,
+ 0,
+ &#39;https://twitter.com/deepfates/status/1429131930042261508&#39;,
  [],
  [],
  &#39;&#39;,
  0,
- [{&#39;screen_name&#39;: &#39;YosarianTwo&#39;, &#39;name&#39;: &#39;Yosarian2&#39;, &#39;id&#39;: &#39;3116120941&#39;}],
+ [{&#39;screen_name&#39;: &#39;max1231235564&#39;,
+   &#39;name&#39;: &#39;Firstname Bunchofnumbers&#39;,
+   &#39;id&#39;: &#39;1409998134885847041&#39;}],
  False,
  &#39;&#39;,
  &#39;&#39;,
  0,
  &#39;&#39;,
  &#39;&#39;,
- &#39;09:15:20&#39;,
+ &#39;11:22:58&#39;,
  &#39;-0600&#39;,
- &#39;@YosarianTwo true! true!&#39;,
+ &#39;@max1231235564 I think a lot of people have realize that disasters happen and we should prep for it in the last couple years. hopefully they have too  &amp;amp;often people need to feel that they have come to a conclusion independently. remember to give them space to think   💪 deep breaths, u got this&#39;,
  [],
  3315205122,
  &#39;3315205122&#39;,
@@ -238,7 +240,7 @@ layout: notebook
         <span class="k">return</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
     
 <span class="k">def</span> <span class="nf">image_template</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
-    <span class="k">return</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;![image from twitter](/fastpages/</span><span class="si">{</span><span class="n">filename</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span><span class="si">}</span><span class="s1">)</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="k">return</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;![image from twitter](/</span><span class="si">{</span><span class="n">filename</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span><span class="si">}</span><span class="s1">)</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
 
     
 <span class="k">def</span> <span class="nf">get_tweet</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
@@ -320,8 +322,8 @@ layout: notebook
 
 
 <div class="output_markdown rendered_html output_subarea output_execute_result">
-<h4 id="*09:15:20*"><a href="https://twitter.com/deepfates/status/1429099809449955328">*09:15:20*</a><a class="anchor-link" href="#*09:15:20*"> </a></h4><p><font size="5">@YosarianTwo true! true!</font></p>
-<p>🗨️ 0 ♺ 0 🤍  1</p>
+<h4 id="*11:22:58*"><a href="https://twitter.com/deepfates/status/1429131930042261508">*11:22:58*</a><a class="anchor-link" href="#*11:22:58*"> </a></h4><p><font size="5">@max1231235564 I think a lot of people have realize that disasters happen and we should prep for it in the last couple years. hopefully they have too  &amp;often people need to feel that they have come to a conclusion independently. remember to give them space to think   💪 deep breaths, u got this</font></p>
+<p>🗨️ 0 ♺ 0 🤍  0</p>
 <hr>
 
 </div>
@@ -368,7 +370,7 @@ layout: notebook
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>0</pre>
+<pre>12</pre>
 </div>
 
 </div>
@@ -525,7 +527,7 @@ layout: notebook
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>362</pre>
+<pre>368</pre>
 </div>
 
 </div>
@@ -558,7 +560,7 @@ layout: notebook
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>0</pre>
+<pre>2</pre>
 </div>
 
 </div>
@@ -641,7 +643,7 @@ layout: notebook
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>100%|██████████| 9/9 [00:25&lt;00:00,  2.89s/it]
+<pre>100%|██████████| 10/10 [00:27&lt;00:00,  2.71s/it]
 </pre>
 </div>
 </div>
@@ -655,7 +657,7 @@ layout: notebook
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>I would also liek to do analysis to see how often I tweet. And make a big list of links. Maybe next time.</p>
-<p>For now you can find these secret tweet archives by searching in the <a href="/fastpages/explore">Explore</a> page</p>
+<p>For now you can find these secret tweet archives by searching in the <a href="/explore">Explore</a> page</p>
 
 </div>
 </div>
