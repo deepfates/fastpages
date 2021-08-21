@@ -1,1 +1,1 @@
-Sitemap: https://deepfates.github.io/fastpages/sitemap.xml
+Sitemap: https://deepfates.com/sitemap.xml
