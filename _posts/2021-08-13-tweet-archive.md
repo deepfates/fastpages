@@ -32,20 +32,42 @@ layout: notebook
 
 <div class="inner_cell">
     <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="n">out_dir</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;../_posts/tweets/&#39;</span><span class="p">)</span>
+<span class="n">posts</span> <span class="o">=</span> <span class="p">[</span><span class="n">o</span><span class="o">.</span><span class="n">name</span> <span class="k">for</span> <span class="n">o</span> <span class="ow">in</span> <span class="n">out_dir</span><span class="o">.</span><span class="n">iterdir</span><span class="p">()]</span>
+
+<span class="n">last_date</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">posts</span><span class="p">)[</span><span class="o">-</span><span class="mi">2</span><span class="p">][:</span><span class="mi">10</span><span class="p">]</span>
+
+<span class="n">last_date</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">twint</span>
 <span class="kn">import</span> <span class="nn">nest_asyncio</span>
 <span class="n">nest_asyncio</span><span class="o">.</span><span class="n">apply</span><span class="p">()</span>
 
 
 <span class="n">c</span> <span class="o">=</span> <span class="n">twint</span><span class="o">.</span><span class="n">Config</span><span class="p">()</span>
-
-<span class="n">c</span><span class="o">.</span><span class="n">Search</span> <span class="o">=</span> <span class="s1">&#39;from:deepfates exclude:replies&#39;</span>
+<span class="n">c</span><span class="o">.</span><span class="n">Username</span> <span class="o">=</span> <span class="s1">&#39;deepfates&#39;</span>
 <span class="n">tweets</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="n">c</span><span class="o">.</span><span class="n">Store_object</span> <span class="o">=</span> <span class="kc">True</span>
 <span class="n">c</span><span class="o">.</span><span class="n">Store_object_tweets_list</span> <span class="o">=</span> <span class="n">tweets</span>
+<span class="n">c</span><span class="o">.</span><span class="n">Since</span> <span class="o">=</span> <span class="n">last_date</span>
 
-
-<span class="n">twint</span><span class="o">.</span><span class="n">run</span><span class="o">.</span><span class="n">Search</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+<span class="n">twint</span><span class="o">.</span><span class="n">run</span><span class="o">.</span><span class="n">Profile</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -62,44 +84,7 @@ layout: notebook
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pickle</span>
-
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;../assets/tweets.pkl&#39;</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-    <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">tweets</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">self_tweets</span> <span class="o">=</span> <span class="p">[</span><span class="n">t</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">tweets</span> <span class="k">if</span> <span class="s2">&quot;@&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">t</span><span class="o">.</span><span class="n">tweet</span><span class="p">]</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">self_tweets</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">tweets</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -114,7 +99,7 @@ layout: notebook
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>260</pre>
+<pre>709</pre>
 </div>
 
 </div>
@@ -132,7 +117,7 @@ layout: notebook
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="n">tweets</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="n">tweets</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 </pre></div>
 
     </div>
@@ -164,26 +149,29 @@ layout: notebook
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>(&#39;1429118664876376076&#39;,
- &#39;2021-08-21&#39;,
- &#39;2021-08-21 10:30:16 MDT&#39;,
- 1429118664876376076,
- 44,
- &#39;https://twitter.com/deepfates/status/1429118664876376076&#39;,
+<pre>(&#39;1428537725116813315&#39;,
+ &#39;2021-08-20&#39;,
+ &#39;2021-08-20 01:18:58 MDT&#39;,
+ 1428617540423593986,
+ 1,
+ &#39;https://twitter.com/deepfates/status/1428617540423593986&#39;,
  [],
  [],
  &#39;&#39;,
- 6,
- [],
+ 0,
+ [{&#39;screen_name&#39;: &#39;blisstweeting&#39;, &#39;name&#39;: &#39;Phil Filippak&#39;, &#39;id&#39;: &#39;378114947&#39;},
+  {&#39;screen_name&#39;: &#39;no_compute&#39;,
+   &#39;name&#39;: &#39;(((o_c)))&#39;,
+   &#39;id&#39;: &#39;721715626679533568&#39;}],
  False,
  &#39;&#39;,
  &#39;&#39;,
  0,
  &#39;&#39;,
  &#39;&#39;,
- &#39;10:30:16&#39;,
+ &#39;01:18:58&#39;,
  &#39;-0600&#39;,
- &#39;staggering to me that people switch jobs every two years in the tech industry. imagine what power a company could have if they merely held on to the same brains for a decade or two&#39;,
+ &#39;@blisstweeting @no_compute very much so&#39;,
  [],
  3315205122,
  &#39;3315205122&#39;,
@@ -263,7 +251,7 @@ layout: notebook
 <span class="k">def</span> <span class="nf">get_md</span><span class="p">(</span><span class="n">tweets</span><span class="p">,</span> <span class="n">date</span><span class="p">):</span>
     <span class="n">tweets_text</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">t</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">tweets</span><span class="p">)</span>
     <span class="k">return</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;&#39;&#39;---</span>
-<span class="s1">title: Tweets for </span><span class="si">{</span><span class="n">date</span><span class="si">}</span><span class="s1"></span>
+<span class="s1">title: deepfates log </span><span class="si">{</span><span class="n">date</span><span class="si">}</span><span class="s1"></span>
 <span class="s1">layout: post</span>
 <span class="s1">toc: true</span>
 <span class="s1">comments: false</span>
@@ -306,7 +294,7 @@ layout: notebook
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Markdown</span><span class="p">(</span><span class="n">get_tweet</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Markdown</span><span class="p">(</span><span class="n">get_tweet</span><span class="p">([</span><span class="n">tw</span> <span class="k">for</span> <span class="n">tw</span> <span class="ow">in</span> <span class="n">tweets</span> <span class="k">if</span> <span class="n">tw</span><span class="o">.</span><span class="n">datestamp</span> <span class="o">==</span> <span class="n">yesterday</span><span class="p">][</span><span class="mi">18</span><span class="p">]))</span>
 </pre></div>
 
     </div>
@@ -320,8 +308,9 @@ layout: notebook
 
 
 <div class="output_markdown rendered_html output_subarea output_execute_result">
-<h4 id="*10:30:16*"><a href="https://twitter.com/deepfates/status/1429118664876376076">*10:30:16*</a><a class="anchor-link" href="#*10:30:16*"> </a></h4><p><font size="5">staggering to me that people switch jobs every two years in the tech industry. imagine what power a company could have if they merely held on to the same brains for a decade or two</font></p>
-<p>🗨️ 6 ♺ 0 🤍  44</p>
+<h4 id="*23:00:19*"><a href="https://twitter.com/deepfates/status/1428945035723214852">*23:00:19*</a><a class="anchor-link" href="#*23:00:19*"> </a></h4><p><font size="5">this has to be cozy right  https://t.co/aagGFaUKSr</font></p>
+<p><img src="/./images/E9Sh7xpWEAEc5Jq.png" alt="image from twitter"></p>
+<p>🗨️ 1 ♺ 1 🤍  3</p>
 <hr>
 
 </div>
@@ -341,7 +330,7 @@ layout: notebook
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">yesterday</span> <span class="o">=</span> <span class="s1">&#39;2021-08-20&#39;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">yesterday</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">datestamp</span>
 <span class="n">y_tweets</span> <span class="o">=</span> <span class="p">[</span><span class="n">tw</span> <span class="k">for</span> <span class="n">tw</span> <span class="ow">in</span> <span class="n">tweets</span> <span class="k">if</span> <span class="n">tw</span><span class="o">.</span><span class="n">datestamp</span> <span class="o">==</span> <span class="n">yesterday</span><span class="p">]</span>
 <span class="nb">len</span><span class="p">(</span><span class="n">y_tweets</span><span class="p">)</span>
 </pre></div>
@@ -358,7 +347,7 @@ layout: notebook
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>31</pre>
+<pre>284</pre>
 </div>
 
 </div>
@@ -405,39 +394,6 @@ layout: notebook
 </pre></div>
 
     </div>
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">y_md</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&#39;---\ntitle: Tweets for 2021-08-20\nlayout: post\ntoc: true\ncomments: false\nsearch_exclude: false\ncategories: [tweets]\n---\n\n\n#### &lt;a href = &#34;https://twitter.com/deepfates/status/1428619480108867589&#34;&gt;*01:26:41*&lt;/a&gt;\n\n&lt;font size=&#34;5&#34;&gt;one day you\&#39;ll find out there really is no corner of Twitter. but by then it will be too late&lt;/font&gt;\n\n\n\n🗨️ 3 ♺ 2 \U0001f90d  41   \n\n---\n    \n#### &lt;a href = &#34;https://twitter.com/deepfates/status/1428622106514833410&#34;&gt;*01:37:07*&lt;/a&gt;\n\n&lt;font size=&#34;5&#34;&gt;whoa. how did they know  https://t.co/F1O5sOkkqQ&lt;/font&gt;\n\n![image from twitter](/./images/E9N8OvJXMAYIaCl.png)\n\n\n🗨️ 3 ♺ 0 \U0001f90d  16   \n\n---\n    \n#### &lt;a href = &#34;https://twitter.com/deepfates/status/1428738515593056264&#34;&gt;*09:19:41*&lt;/a&gt;\n\n&lt;font size=&#34;5&#34;&gt;I realizing that I may never go back and rewrite the goofy novel I wrote in my mid-20s. For some reason I always thought I would fix it up, turn it into something better once I knew more and had more talent. but will I?  maybe I should just post it on the internet for free lol&lt;/font&gt;\n\n\n\n🗨️ 8 ♺ 0 \U0001f90d  28   \n\n---\n    \n#### &lt;a href = &#34;https://twitter.com/deepfates/status/1428738941876940802&#34;&gt;*09:21:23*&lt;/a&gt;\n\n&lt;font size=&#34;5&#34;&gt;I like the dialectic of nerds making new ways to detect images and other nerds immediately making new ways to defeat those detectors. Just for fun.  tech critics seem to think this is evidence of tech failure. to me it looks like... evolution   https://t.co/6puIVOvtjm&lt;/font&gt;\n\n\n\n🗨️ 0 ♺ 0 \U0001f90d  8   \n\n---\n    \n#### &lt;a href = &#34;https://twitter.com/deepfates/status/1428761736996392964&#34;&gt;*10:51:57*&lt;/a&gt;\n\n&lt;font size=&#34;5&#34;&gt;wow people do become boring as soon as they become millionaires huh&lt;/font&gt;\n\n\n\n🗨️ 14 ♺ 1 \U0001f90d  56   \n\n---\n    \n#### &lt;a href = &#34;https://twitter.com/deepfates/status/1428761910095273986&#34;&gt;*10:52:39*&lt;/a&gt;\n\n&lt;font size=&#34;5&#34;&gt;*maniacal laughter*&lt;/font&gt;\n\n\n\n🗨️ 1 ♺ 0 \U0001f90d  6   \n\n---\n    \n#### &lt;a href = &#34;https://twitter.com/deepfates/status/1428779202405355520&#34;&gt;*12:01:21*&lt;/a&gt;\n\n&lt;font size=&#34;5&#34;&gt;GF can probably not imagine what a mess I am when she\&#39;s not around. considering what a mess I am when she is around. but it\&#39;s a considerable leap in magnitude&lt;/font&gt;\n\n\n\n🗨️ 4 ♺ 1 \U0001f90d  29   \n\n---\n    \n#### &lt;a href = &#34;https://twitter.com/deepfates/status/1428780182295437318&#34;&gt;*12:05:15*&lt;/a&gt;\n\n&lt;font size=&#34;5&#34;&gt;I think the environmental impact of covering the desert in solar panels is underrated. And probably good&lt;/font&gt;\n\n\n\n🗨️ 3 ♺ 0 \U0001f90d  11   \n\n---\n    \n#### &lt;a href = &#34;https://twitter.com/deepfates/status/1428780758253121545&#34;&gt;*12:07:32*&lt;/a&gt;\n\n&lt;font size=&#34;5&#34;&gt;thinking of becoming more earnest. anybody know how to cultivate naivete&lt;/font&gt;\n\n\n\n🗨️ 34 ♺ 10 \U0001f90d  137   \n\n---\n    \n#### &lt;a href = &#34;https://twitter.com/deepfates/status/1428808321038012419&#34;&gt;*13:57:04*&lt;/a&gt;\n\n&lt;font size=&#34;5&#34;&gt;me&lt;/font&gt;\n\n\n\n🗨️ 1 ♺ 0 \U0001f90d  23   \n\n---\n    \n#### &lt;a href = &#34;https://twitter.com/deepfates/status/1428810548876038146&#34;&gt;*14:05:55*&lt;/a&gt;\n\n&lt;font size=&#34;5&#34;&gt;these are the Kegan stages everyone\&#39;s been talking about?  https://t.co/mHbNRDKxDE&lt;/font&gt;\n\n![image from twitter](/./images/E9QnnzyX0AEvlQH.jpg)\n\n\n🗨️ 9 ♺ 3 \U0001f90d  60   \n\n---\n    \n#### &lt;a href = &#34;https://twitter.com/deepfates/status/1428828710199648258&#34;&gt;*15:18:05*&lt;/a&gt;\n\n&lt;font size=&#34;5&#34;&gt;I like to think I have &#34;some guy&#34; energy&lt;/font&gt;\n\n\n\n🗨️ 3 ♺ 1 \U0001f90d  19   \n\n---\n    \n#### &lt;a href = &#34;https://twitter.com/deepfates/status/1428840780442083331&#34;&gt;*16:06:03*&lt;/a&gt;\n\n&lt;font size=&#34;5&#34;&gt;A nontrivial number of people are drawn to Montessori primarily because Montessori is beautiful and they believe there is power in beauty.&lt;/font&gt;\n\n\n\n🗨️ 3 ♺ 1 \U0001f90d  19   \n\n---\n    \n#### &lt;a href = &#34;https://twitter.com/deepfates/status/1428842737755885568&#34;&gt;*16:13:49*&lt;/a&gt;\n\n&lt;font size=&#34;5&#34;&gt;have you tried becoming the problem?&lt;/font&gt;\n\n\n\n🗨️ 15 ♺ 14 \U0001f90d  82   \n\n---\n    \n#### &lt;a href = &#34;https://twitter.com/deepfates/status/1428844672659697667&#34;&gt;*16:21:31*&lt;/a&gt;\n\n&lt;font size=&#34;5&#34;&gt;vibing while the world burns&lt;/font&gt;\n\n\n\n🗨️ 0 ♺ 3 \U0001f90d  24   \n\n---\n    \n#### &lt;a href = &#34;https://twitter.com/deepfates/status/1428848193803104263&#34;&gt;*16:35:30*&lt;/a&gt;\n\n&lt;font size=&#34;5&#34;&gt;they\&#39;re letting Richard Powers write ANOTHER BOOK?!&lt;/font&gt;\n\n\n\n🗨️ 2 ♺ 0 \U0001f90d  5   \n\n---\n    \n#### &lt;a href = &#34;https://twitter.com/deepfates/status/1428870634298355712&#34;&gt;*18:04:41*&lt;/a&gt;\n\n&lt;font size=&#34;5&#34;&gt;Who made the planning fallacy recursive? I bet that seemed like a great hack at the time&lt;/font&gt;\n\n\n\n🗨️ 2 ♺ 0 \U0001f90d  11   \n\n---\n    \n#### &lt;a href = &#34;https://twitter.com/deepfates/status/1428871698821091330&#34;&gt;*18:08:54*&lt;/a&gt;\n\n&lt;font size=&#34;5&#34;&gt;I\&#39;m at the intersection of Art and Technology. are... did you guys pick a different place to meet or... ?  It was Friday right?&lt;/font&gt;\n\n\n\n🗨️ 2 ♺ 3 \U0001f90d  28   \n\n---\n    \n#### &lt;a href = &#34;https://twitter.com/deepfates/status/1428895473721516032&#34;&gt;*19:43:23*&lt;/a&gt;\n\n&lt;font size=&#34;5&#34;&gt;Not everyone in the world is just so gorgeous and beautiful and wonderful. When are the people on Instagram going to accept that all of their friends are of mediocre hotness&lt;/font&gt;\n\n\n\n🗨️ 0 ♺ 0 \U0001f90d  6   \n\n---\n    \n#### &lt;a href = &#34;https://twitter.com/deepfates/status/1428896827936415746&#34;&gt;*19:48:46*&lt;/a&gt;\n\n&lt;font size=&#34;5&#34;&gt;anytime I listen to 4:44 I get an earworm of the melody from Caught Their Eyes. is this just because it\&#39;s so out of key? or is it possibly actually good?&lt;/font&gt;\n\n\n\n🗨️ 1 ♺ 0 \U0001f90d  3   \n\n---\n    \n#### &lt;a href = &#34;https://twitter.com/deepfates/status/1428902835157016581&#34;&gt;*20:12:38*&lt;/a&gt;\n\n&lt;font size=&#34;5&#34;&gt;Well I dropped the bike. but I\&#39;m fine!   apparently you can\&#39;t do 20 mi an hour around a corner like that.  little scrape on my hand. Not even bleeding. The right pedal took most of the damage too lol  It was bound to happen. Glad I got it out of the way early&lt;/font&gt;\n\n\n\n🗨️ 3 ♺ 0 \U0001f90d  15   \n\n---\n    \n#### &lt;a href = &#34;https://twitter.com/deepfates/status/1428903273726054402&#34;&gt;*20:14:22*&lt;/a&gt;\n\n&lt;font size=&#34;5&#34;&gt;some of y\&#39;all should worry less about your BMI and more about your GMI&lt;/font&gt;\n\n\n\n🗨️ 4 ♺ 4 \U0001f90d  40   \n\n---\n    \n#### &lt;a href = &#34;https://twitter.com/deepfates/status/1428915223688192000&#34;&gt;*21:01:51*&lt;/a&gt;\n\n&lt;font size=&#34;5&#34;&gt;A fun thing about being shirtless at home is spilling a &#34;sexy amount\&#39; of mustard on your body&lt;/font&gt;\n\n\n\n🗨️ 2 ♺ 6 \U0001f90d  28   \n\n---\n    \n#### &lt;a href = &#34;https://twitter.com/deepfates/status/1428925537901334530&#34;&gt;*21:42:51*&lt;/a&gt;\n\n&lt;font size=&#34;5&#34;&gt;I live on a road that used to be the colonial trail to the farthest edges of New Spain.   It has seen continuous traffic and human activity since the 1500s.   A sedan just drove by blasting &#34;In The End&#34; by Linkin Park&lt;/font&gt;\n\n\n\n🗨️ 1 ♺ 0 \U0001f90d  20   \n\n---\n    \n#### &lt;a href = &#34;https://twitter.com/deepfates/status/1428926282620878850&#34;&gt;*21:45:48*&lt;/a&gt;\n\n&lt;font size=&#34;5&#34;&gt;incredible sentence. maybe I do need whimsy in my life again&lt;/font&gt;\n\n\n\n🗨️ 1 ♺ 0 \U0001f90d  4   \n\n---\n    \n#### &lt;a href = &#34;https://twitter.com/deepfates/status/1428929183988781057&#34;&gt;*21:57:20*&lt;/a&gt;\n\n&lt;font size=&#34;5&#34;&gt;This is the worst thing I\&#39;ve ever heard and it makes me hate programming and myself. truly a cursed experience which I will never want to hear again and yet will be compelled to listen to until it drives me insane&lt;/font&gt;\n\n\n\n🗨️ 3 ♺ 1 \U0001f90d  15   \n\n---\n    \n#### &lt;a href = &#34;https://twitter.com/deepfates/status/1428933509079609345&#34;&gt;*22:14:31*&lt;/a&gt;\n\n&lt;font size=&#34;5&#34;&gt;the internet of beefs is way more fun if you have an automatic meme cannon&lt;/font&gt;\n\n\n\n🗨️ 0 ♺ 0 \U0001f90d  6   \n\n---\n    \n#### &lt;a href = &#34;https://twitter.com/deepfates/status/1428935074960003072&#34;&gt;*22:20:44*&lt;/a&gt;\n\n&lt;font size=&#34;5&#34;&gt;twitter can be a really fun game to play but it doesn\&#39;t have a map. games are cooler with maps, i know that much.  what do you think twitter\&#39;s map would look like&lt;/font&gt;\n\n\n\n🗨️ 11 ♺ 3 \U0001f90d  48   \n\n---\n    \n#### &lt;a href = &#34;https://twitter.com/deepfates/status/1428944006445248515&#34;&gt;*22:56:14*&lt;/a&gt;\n\n&lt;font size=&#34;5&#34;&gt;is this cozy  https://t.co/dHeZTuikap&lt;/font&gt;\n\n![image from twitter](/./images/E9Sg_dUXEAsAXvQ.png)\n\n\n🗨️ 1 ♺ 0 \U0001f90d  17   \n\n---\n    \n#### &lt;a href = &#34;https://twitter.com/deepfates/status/1428946230869176322&#34;&gt;*23:05:04*&lt;/a&gt;\n\n&lt;font size=&#34;5&#34;&gt;nobody likes this image  https://t.co/89i7gw4cPh&lt;/font&gt;\n\n![image from twitter](/./images/E9SjBU-XEAM19no.png)\n\n\n🗨️ 0 ♺ 1 \U0001f90d  12   \n\n---\n    \n#### &lt;a href = &#34;https://twitter.com/deepfates/status/1428950171208110086&#34;&gt;*23:20:44*&lt;/a&gt;\n\n&lt;font size=&#34;5&#34;&gt;i\&#39;m just saying...  https://t.co/uTjIZKL0z2&lt;/font&gt;\n\n![image from twitter](/./images/E9SmmqaWYAUXa7I.png)\n\n\n🗨️ 8 ♺ 2 \U0001f90d  55   \n\n---\n    \n            &#39;</pre>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -500,23 +456,8 @@ layout: notebook
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">self_tweets</span> <span class="o">=</span> <span class="p">[</span><span class="n">t</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">tweets</span> <span class="k">if</span> <span class="s2">&quot;@&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">t</span><span class="o">.</span><span class="n">tweet</span><span class="p">]</span>
-</pre></div>
 
-    </div>
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">self_tweets</span><span class="p">)</span>
+<span class="nb">len</span><span class="p">(</span><span class="n">self_tweets</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -531,61 +472,11 @@ layout: notebook
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>260</pre>
+<pre>129</pre>
 </div>
 
 </div>
 
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">len</span><span class="p">([</span><span class="n">tw</span> <span class="k">for</span> <span class="n">tw</span> <span class="ow">in</span> <span class="n">self_tweets</span> <span class="k">if</span> <span class="n">tw</span><span class="o">.</span><span class="n">datestamp</span> <span class="o">==</span> <span class="n">yesterday</span><span class="p">])</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>31</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">write_day_page</span><span class="p">(</span><span class="n">yesterday</span><span class="p">,</span> <span class="n">self_tweets</span><span class="p">)</span>
-</pre></div>
-
-    </div>
 </div>
 </div>
 
@@ -600,9 +491,27 @@ layout: notebook
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">days</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="n">t</span><span class="o">.</span><span class="n">datestamp</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">self_tweets</span><span class="p">])</span>
+
+<span class="nb">len</span><span class="p">(</span><span class="n">days</span><span class="p">)</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>4</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -647,7 +556,7 @@ layout: notebook
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>100%|██████████| 10/10 [00:05&lt;00:00,  1.86it/s]
+<pre>100%|██████████| 4/4 [00:05&lt;00:00,  1.40s/it]
 </pre>
 </div>
 </div>
@@ -688,107 +597,9 @@ layout: notebook
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>{&#39;2021-08-12&#39;,
- &#39;2021-08-13&#39;,
- &#39;2021-08-14&#39;,
- &#39;2021-08-15&#39;,
- &#39;2021-08-16&#39;,
- &#39;2021-08-17&#39;,
- &#39;2021-08-18&#39;,
- &#39;2021-08-19&#39;,
- &#39;2021-08-20&#39;,
- &#39;2021-08-21&#39;}</pre>
+<pre>{&#39;2021-08-20&#39;, &#39;2021-08-21&#39;, &#39;2021-08-22&#39;, &#39;2021-08-23&#39;}</pre>
 </div>
 
-</div>
-
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">*</span><span class="n">Sometimes</span> <span class="n">I</span> <span class="n">have</span> <span class="n">to</span> <span class="n">edit</span> <span class="n">the</span> <span class="n">files</span> <span class="n">printed</span> <span class="n">before</span><span class="p">,</span> <span class="n">because</span> <span class="n">twint</span> <span class="n">only</span> <span class="n">reaches</span> <span class="n">back</span> <span class="n">so</span> <span class="n">far</span><span class="o">*</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-cyan-fg">  File </span><span class="ansi-green-fg">&#34;&lt;ipython-input-102-3dfcbe7a94c7&gt;&#34;</span><span class="ansi-cyan-fg">, line </span><span class="ansi-green-fg">1</span>
-<span class="ansi-red-fg">    *Sometimes I have to edit the files printed before, because twint only reaches back so far*</span>
-               ^
-<span class="ansi-red-fg">SyntaxError</span><span class="ansi-red-fg">:</span> invalid syntax
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">(</span><span class="n">Path</span><span class="p">(</span><span class="s1">&#39;../_posts/tweets&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">iterdir</span><span class="p">()):</span>
-    <span class="k">if</span> <span class="n">file</span><span class="o">.</span><span class="n">suffix</span> <span class="o">==</span> <span class="s1">&#39;.md&#39;</span><span class="p">:</span>
-        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-            <span class="n">text</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-        <span class="n">cleantext</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;/fastpages/&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
-        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="n">cleantext</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">f</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>489it [00:00, 9396.94it/s]
-</pre>
-</div>
 </div>
 
 </div>

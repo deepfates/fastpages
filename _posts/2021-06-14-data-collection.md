@@ -5,7 +5,7 @@ title: Data collection
 toc: true 
 badges: true
 comments: true
-categories: [books, invisible-canon]
+categories: [canon]
 image: images/popularity-prestige.png
 nb_path: _notebooks/2021-06-14-data-collection.ipynb
 layout: notebook
