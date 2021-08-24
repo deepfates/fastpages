@@ -25,6 +25,184 @@ layout: notebook
 </div>
 </div>
 </div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Markdown</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="n">in_dir</span> <span class="o">=</span> <span class="s1">&#39;book_gan_images&#39;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Markdown</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="sa">f</span><span class="s1">&#39;![book cover generated with GAN](</span><span class="si">{</span><span class="n">in_dir</span><span class="si">}</span><span class="s1">/</span><span class="si">{</span><span class="n">file</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s1">)&#39;</span> <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">Path</span><span class="p">(</span><span class="n">in_dir</span><span class="p">)</span><span class="o">.</span><span class="n">iterdir</span><span class="p">()]))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea output_execute_result">
+<p><img src="book_gan_images/95-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/74-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/117-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/99-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/48-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/59-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/62-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/20-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/23-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/69-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/43-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/58-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/87-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/81-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/24-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/61-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/35-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/14-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/34-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/119-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/73-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/31-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/98-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/78-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/75-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/29-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/125-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/122-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/7-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/1-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/97-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/85-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/19-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/57-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/100-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/56-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/104-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/76-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/4-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/79-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/49-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/30-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/60-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/96-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/63-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/55-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/84-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/40-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/105-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/103-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/18-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/54-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/77-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/115-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/53-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/113-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/67-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/46-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/27-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/22-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/89-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/116-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/111-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/small" alt="book cover generated with GAN">
+<img src="book_gan_images/91-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/50-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/12-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/72-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/36-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/17-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/13-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/33-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/118-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/120-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/80-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/90-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/106-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/112-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/47-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/71-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/38-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/37-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/10-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/52-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/88-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/11-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/123-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/16-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/42-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/121-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/94-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/110-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/101-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/5-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/65-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/70-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/124-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/102-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/9-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/68-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/44-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/109-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/114-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/26-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/64-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/41-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/8-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/107-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/51-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/39-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/25-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/82-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/2-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/3-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/6-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/0-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/15-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/32-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/92-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/86-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/108-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/66-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/21-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/83-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/28-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/93-ema.jpg" alt="book cover generated with GAN">
+<img src="book_gan_images/45-ema.jpg" alt="book cover generated with GAN"></p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
 </div>
  
 

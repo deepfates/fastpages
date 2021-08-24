@@ -63,12 +63,12 @@ I have made a lot of things, here are some of them.
 - Chronolog  (2017)
 
 ### synthetic media
-- book cover GAN (2020)
+- [book cover GAN] (2020)
 - plant GAN (2020)
 - root diagram GAN (2020)
 - summoning circles GAN (2021)
-- Unicode symbols GAN (2021)
-- four-letter word GAN (2021)
+- Unicode symbols GAN (language arts 1) (2021)
+- four-letter word GAN (language arts 2) (2021)
 - SIGNAL GAN (2021)
 - my face, projected (2021)
 
