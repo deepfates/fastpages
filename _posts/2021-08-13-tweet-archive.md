@@ -45,6 +45,22 @@ layout: notebook
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;2021-08-22&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
     {% endraw %}
 
@@ -66,7 +82,7 @@ layout: notebook
 <span class="n">c</span><span class="o">.</span><span class="n">Store_object</span> <span class="o">=</span> <span class="kc">True</span>
 <span class="n">c</span><span class="o">.</span><span class="n">Store_object_tweets_list</span> <span class="o">=</span> <span class="n">tweets</span>
 <span class="n">c</span><span class="o">.</span><span class="n">Since</span> <span class="o">=</span> <span class="n">last_date</span>
-
+<span class="n">c</span><span class="o">.</span><span class="n">Hide_output</span> <span class="o">=</span> <span class="kc">True</span>
 <span class="n">twint</span><span class="o">.</span><span class="n">run</span><span class="o">.</span><span class="n">Profile</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
 </pre></div>
 
@@ -99,7 +115,7 @@ layout: notebook
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>709</pre>
+<pre>1506</pre>
 </div>
 
 </div>
@@ -149,29 +165,28 @@ layout: notebook
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>(&#39;1428537725116813315&#39;,
- &#39;2021-08-20&#39;,
- &#39;2021-08-20 01:18:58 MDT&#39;,
- 1428617540423593986,
- 1,
- &#39;https://twitter.com/deepfates/status/1428617540423593986&#39;,
+<pre>(&#39;1429291862033002498&#39;,
+ &#39;2021-08-22&#39;,
+ &#39;2021-08-22 00:38:35 MDT&#39;,
+ 1429332153171529729,
+ 2,
+ &#39;https://twitter.com/deepfates/status/1429332153171529729&#39;,
  [],
  [],
  &#39;&#39;,
  0,
- [{&#39;screen_name&#39;: &#39;blisstweeting&#39;, &#39;name&#39;: &#39;Phil Filippak&#39;, &#39;id&#39;: &#39;378114947&#39;},
-  {&#39;screen_name&#39;: &#39;no_compute&#39;,
-   &#39;name&#39;: &#39;(((o_c)))&#39;,
-   &#39;id&#39;: &#39;721715626679533568&#39;}],
+ [{&#39;screen_name&#39;: &#39;reconfigurthing&#39;,
+   &#39;name&#39;: &#34;elias. that&#39;s it. ⏳⌛&#34;,
+   &#39;id&#39;: &#39;1158132886983401474&#39;}],
  False,
  &#39;&#39;,
  &#39;&#39;,
  0,
  &#39;&#39;,
  &#39;&#39;,
- &#39;01:18:58&#39;,
+ &#39;00:38:35&#39;,
  &#39;-0600&#39;,
- &#39;@blisstweeting @no_compute very much so&#39;,
+ &#39;@reconfigurthing Hawkeye (pictured)&#39;,
  [],
  3315205122,
  &#39;3315205122&#39;,
@@ -294,42 +309,6 @@ layout: notebook
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Markdown</span><span class="p">(</span><span class="n">get_tweet</span><span class="p">([</span><span class="n">tw</span> <span class="k">for</span> <span class="n">tw</span> <span class="ow">in</span> <span class="n">tweets</span> <span class="k">if</span> <span class="n">tw</span><span class="o">.</span><span class="n">datestamp</span> <span class="o">==</span> <span class="n">yesterday</span><span class="p">][</span><span class="mi">18</span><span class="p">]))</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_markdown rendered_html output_subarea output_execute_result">
-<h4 id="*23:00:19*"><a href="https://twitter.com/deepfates/status/1428945035723214852">*23:00:19*</a><a class="anchor-link" href="#*23:00:19*"> </a></h4><p><font size="5">this has to be cozy right  https://t.co/aagGFaUKSr</font></p>
-<p><img src="/./images/E9Sh7xpWEAEc5Jq.png" alt="image from twitter"></p>
-<p>🗨️ 1 ♺ 1 🤍  3</p>
-<hr>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">yesterday</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">datestamp</span>
 <span class="n">y_tweets</span> <span class="o">=</span> <span class="p">[</span><span class="n">tw</span> <span class="k">for</span> <span class="n">tw</span> <span class="ow">in</span> <span class="n">tweets</span> <span class="k">if</span> <span class="n">tw</span><span class="o">.</span><span class="n">datestamp</span> <span class="o">==</span> <span class="n">yesterday</span><span class="p">]</span>
 <span class="nb">len</span><span class="p">(</span><span class="n">y_tweets</span><span class="p">)</span>
@@ -347,7 +326,42 @@ layout: notebook
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>284</pre>
+<pre>143</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Markdown</span><span class="p">(</span><span class="n">get_tweet</span><span class="p">([</span><span class="n">tw</span> <span class="k">for</span> <span class="n">tw</span> <span class="ow">in</span> <span class="n">tweets</span> <span class="k">if</span> <span class="n">tw</span><span class="o">.</span><span class="n">datestamp</span> <span class="o">==</span> <span class="n">yesterday</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea output_execute_result">
+<h4 id="*00:38:35*"><a href="https://twitter.com/deepfates/status/1429332153171529729">*00:38:35*</a><a class="anchor-link" href="#*00:38:35*"> </a></h4><p><font size="5">@reconfigurthing Hawkeye (pictured)</font></p>
+<p>🗨️ 0 ♺ 0 🤍  2</p>
+<hr>
+
 </div>
 
 </div>
@@ -472,7 +486,7 @@ layout: notebook
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>129</pre>
+<pre>278</pre>
 </div>
 
 </div>
@@ -507,7 +521,7 @@ layout: notebook
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>4</pre>
+<pre>11</pre>
 </div>
 
 </div>
@@ -556,7 +570,7 @@ layout: notebook
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>100%|██████████| 4/4 [00:05&lt;00:00,  1.40s/it]
+<pre>100%|██████████| 11/11 [00:09&lt;00:00,  1.10it/s]
 </pre>
 </div>
 </div>
@@ -597,7 +611,17 @@ layout: notebook
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>{&#39;2021-08-20&#39;, &#39;2021-08-21&#39;, &#39;2021-08-22&#39;, &#39;2021-08-23&#39;}</pre>
+<pre>{&#39;2021-08-22&#39;,
+ &#39;2021-08-23&#39;,
+ &#39;2021-08-24&#39;,
+ &#39;2021-08-25&#39;,
+ &#39;2021-08-26&#39;,
+ &#39;2021-08-27&#39;,
+ &#39;2021-08-28&#39;,
+ &#39;2021-08-29&#39;,
+ &#39;2021-08-30&#39;,
+ &#39;2021-08-31&#39;,
+ &#39;2021-09-01&#39;}</pre>
 </div>
 
 </div>
