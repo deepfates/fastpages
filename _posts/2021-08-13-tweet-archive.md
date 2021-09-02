@@ -53,7 +53,7 @@ layout: notebook
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&#39;2021-08-22&#39;</pre>
+<pre>&#39;2021-08-31&#39;</pre>
 </div>
 
 </div>
@@ -107,22 +107,6 @@ layout: notebook
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>1506</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
     {% endraw %}
 
@@ -154,50 +138,6 @@ layout: notebook
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>(&#39;1429291862033002498&#39;,
- &#39;2021-08-22&#39;,
- &#39;2021-08-22 00:38:35 MDT&#39;,
- 1429332153171529729,
- 2,
- &#39;https://twitter.com/deepfates/status/1429332153171529729&#39;,
- [],
- [],
- &#39;&#39;,
- 0,
- [{&#39;screen_name&#39;: &#39;reconfigurthing&#39;,
-   &#39;name&#39;: &#34;elias. that&#39;s it. ⏳⌛&#34;,
-   &#39;id&#39;: &#39;1158132886983401474&#39;}],
- False,
- &#39;&#39;,
- &#39;&#39;,
- 0,
- &#39;&#39;,
- &#39;&#39;,
- &#39;00:38:35&#39;,
- &#39;-0600&#39;,
- &#39;@reconfigurthing Hawkeye (pictured)&#39;,
- [],
- 3315205122,
- &#39;3315205122&#39;,
- &#39;&#39;,
- &#39;&#39;,
- &#39;deepfates&#39;,
- 0)</pre>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -319,22 +259,6 @@ layout: notebook
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>143</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
     {% endraw %}
 
@@ -349,24 +273,6 @@ layout: notebook
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_markdown rendered_html output_subarea output_execute_result">
-<h4 id="*00:38:35*"><a href="https://twitter.com/deepfates/status/1429332153171529729">*00:38:35*</a><a class="anchor-link" href="#*00:38:35*"> </a></h4><p><font size="5">@reconfigurthing Hawkeye (pictured)</font></p>
-<p>🗨️ 0 ♺ 0 🤍  2</p>
-<hr>
-
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -479,22 +385,6 @@ layout: notebook
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>278</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
     {% endraw %}
 
@@ -511,22 +401,6 @@ layout: notebook
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>11</pre>
-</div>
-
-</div>
-
 </div>
 </div>
 
