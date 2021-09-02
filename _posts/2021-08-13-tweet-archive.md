@@ -240,6 +240,7 @@ layout: notebook
     <span class="k">else</span><span class="p">:</span>
         <span class="k">return</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
     
+<span class="c1"># hacky thing uses [1:] to shave the first &#39;.&#39; off the filename</span>
 <span class="k">def</span> <span class="nf">image_template</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
     <span class="k">return</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;![image from twitter](/</span><span class="si">{</span><span class="n">filename</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span><span class="si">}</span><span class="s1">)</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
 
