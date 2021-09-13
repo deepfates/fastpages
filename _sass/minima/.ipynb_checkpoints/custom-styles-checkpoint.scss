@@ -148,7 +148,9 @@
 .highlight .vm { color: #336699 } /* Name.Variable.Magic */
 .highlight .il { color: #0000DD; font-weight: bold } /* Literal.Number.Integer.Long */
 
-
+pre, code {
+  background-color: #f4fff4;
+}
 
 p code{
   font-size: 19px;

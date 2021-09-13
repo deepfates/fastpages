@@ -22,12 +22,12 @@ layout: notebook
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Rationale">Rationale<a class="anchor-link" href="#Rationale"> </a></h2><p>I want another piece of information for the books in my dataset: their sales rank. I know it's possible to get this number from Amazon, because I have used professional bookseller software. However, this software requires a licensing agreement from Amazon, and it can only display sales rank data about one book ata time. So I need a different way to get it for a lot of books at once.</p>
 <p>A starting point is the sales rank data available from Jianmo Ni's project here:</p>
-<blockquote><p><a href="https://nijianmo.github.io/amazon/index.html">https://nijianmo.github.io/amazon/index.html</a></p>
-<ul>
-<li>Image-based recommendations on styles and substitutes, 
-<pre><code>  J. McAuley, C. Targett, J. Shi, A. van den Hengel
+<blockquote><ul>
+<li><p>Image-based recommendations on styles and substitutes, 
+  J. McAuley, C. Targett, J. Shi, A. van den Hengel
   SIGIR, 2015
-  draft</code></pre>
+  draft</p>
+<p><a href="https://nijianmo.github.io/amazon/index.html">https://nijianmo.github.io/amazon/index.html</a></p>
 </li>
 </ul>
 </blockquote>
