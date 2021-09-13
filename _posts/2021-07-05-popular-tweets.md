@@ -3,6 +3,7 @@ keywords: fastai
 title: Popular tweets
 badges: true
 categories: [code, twitter]
+hide: true
 nb_path: _notebooks/2021-07-05-popular-tweets.ipynb
 layout: notebook
 ---
