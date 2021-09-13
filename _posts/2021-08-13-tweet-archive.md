@@ -53,7 +53,7 @@ layout: notebook
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&#39;2021-08-31&#39;</pre>
+<pre>&#39;2021-09-01&#39;</pre>
 </div>
 
 </div>
@@ -107,6 +107,22 @@ layout: notebook
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>1133</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
     {% endraw %}
 
@@ -138,6 +154,48 @@ layout: notebook
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(&#39;1432830872894390283&#39;,
+ &#39;2021-09-01&#39;,
+ &#39;2021-09-01 06:43:24 MDT&#39;,
+ 1433047838628491266,
+ 0,
+ &#39;https://twitter.com/deepfates/status/1433047838628491266&#39;,
+ [],
+ [],
+ &#39;&#39;,
+ 0,
+ [{&#39;screen_name&#39;: &#39;aaron_clarey&#39;, &#39;name&#39;: &#39;Aaron Clarey&#39;, &#39;id&#39;: &#39;303940211&#39;}],
+ False,
+ &#39;&#39;,
+ &#39;&#39;,
+ 0,
+ &#39;&#39;,
+ &#39;&#39;,
+ &#39;06:43:24&#39;,
+ &#39;-0600&#39;,
+ &#39;@aaron_clarey 2010 i think&#39;,
+ [],
+ 3315205122,
+ &#39;3315205122&#39;,
+ &#39;&#39;,
+ &#39;&#39;,
+ &#39;deepfates&#39;,
+ 0)</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -259,6 +317,22 @@ layout: notebook
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>151</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
     {% endraw %}
 
@@ -273,6 +347,24 @@ layout: notebook
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea output_execute_result">
+<h4 id="*06:43:24*"><a href="https://twitter.com/deepfates/status/1433047838628491266">*06:43:24*</a><a class="anchor-link" href="#*06:43:24*"> </a></h4><p><font size="5">@aaron_clarey 2010 i think</font></p>
+<p>🗨️ 0 ♺ 0 🤍  0</p>
+<hr>
+
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -315,6 +407,39 @@ layout: notebook
 </pre></div>
 
     </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">y_md</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>5909</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -385,6 +510,22 @@ layout: notebook
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>238</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
     {% endraw %}
 
@@ -401,6 +542,22 @@ layout: notebook
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>13</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -445,7 +602,7 @@ layout: notebook
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>100%|██████████| 11/11 [00:09&lt;00:00,  1.10it/s]
+<pre>100%|██████████| 13/13 [00:08&lt;00:00,  1.53it/s]
 </pre>
 </div>
 </div>
@@ -486,17 +643,19 @@ layout: notebook
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>{&#39;2021-08-22&#39;,
- &#39;2021-08-23&#39;,
- &#39;2021-08-24&#39;,
- &#39;2021-08-25&#39;,
- &#39;2021-08-26&#39;,
- &#39;2021-08-27&#39;,
- &#39;2021-08-28&#39;,
- &#39;2021-08-29&#39;,
- &#39;2021-08-30&#39;,
- &#39;2021-08-31&#39;,
- &#39;2021-09-01&#39;}</pre>
+<pre>{&#39;2021-09-01&#39;,
+ &#39;2021-09-02&#39;,
+ &#39;2021-09-03&#39;,
+ &#39;2021-09-04&#39;,
+ &#39;2021-09-05&#39;,
+ &#39;2021-09-06&#39;,
+ &#39;2021-09-07&#39;,
+ &#39;2021-09-08&#39;,
+ &#39;2021-09-09&#39;,
+ &#39;2021-09-10&#39;,
+ &#39;2021-09-11&#39;,
+ &#39;2021-09-12&#39;,
+ &#39;2021-09-13&#39;}</pre>
 </div>
 
 </div>
