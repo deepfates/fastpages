@@ -4,6 +4,7 @@ layout: post
 toc: false
 badges: false
 image: /images/book_cover_gan/95-ema.jpg
+sticky_rank: 3
 categories: [synthetic-media]
 ---
 

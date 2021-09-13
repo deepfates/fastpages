@@ -5,6 +5,7 @@ title: Invisible Canon
 toc: true 
 badges: true
 categories: [writing, canon]
+sticky_rank: 5
 image: images/popularity-prestige.png
 nb_path: _notebooks/2021-06-07-building-a-canon.ipynb
 layout: notebook

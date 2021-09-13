@@ -5,6 +5,7 @@ layout: post
 toc: false
 comments: false
 search_exclude: false
+hide: true
 categories: [sciops]
 ---
 
