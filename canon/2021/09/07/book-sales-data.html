@@ -8,15 +8,15 @@
 <meta name="generator" content="Jekyll v4.1.1" />
 <meta property="og:title" content="Book sales data collection" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="this is the homepage of max anton brewer. copyright 2021" />
-<meta property="og:description" content="this is the homepage of max anton brewer. copyright 2021" />
+<meta name="description" content="this is the homepage of max anton brewer" />
+<meta property="og:description" content="this is the homepage of max anton brewer" />
 <link rel="canonical" href="http://deepfates.com/canon/2021/09/07/book-sales-data.html" />
 <meta property="og:url" content="http://deepfates.com/canon/2021/09/07/book-sales-data.html" />
 <meta property="og:site_name" content="deepfates website" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2021-09-07T00:00:00-05:00" />
 <script type="application/ld+json">
-{"url":"http://deepfates.com/canon/2021/09/07/book-sales-data.html","@type":"BlogPosting","headline":"Book sales data collection","dateModified":"2021-09-07T00:00:00-05:00","datePublished":"2021-09-07T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://deepfates.com/canon/2021/09/07/book-sales-data.html"},"description":"this is the homepage of max anton brewer. copyright 2021","@context":"https://schema.org"}</script>
+{"url":"http://deepfates.com/canon/2021/09/07/book-sales-data.html","@type":"BlogPosting","headline":"Book sales data collection","dateModified":"2021-09-07T00:00:00-05:00","datePublished":"2021-09-07T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://deepfates.com/canon/2021/09/07/book-sales-data.html"},"description":"this is the homepage of max anton brewer","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="http://deepfates.com/feed.xml" title="deepfates website" /><link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -63,7 +63,7 @@ window.onload = wrap_img;
           </span>
         </label>
 
-        <div class="trigger"><a class="page-link" href="/about/">About</a><a class="page-link" href="/index/">Index</a><a class="page-link" href="/tweets/">Tweets</a></div>
+        <div class="trigger"><a class="page-link" href="/about/">About</a><a class="page-link" href="/index/">Index</a></div>
       </nav></div>
 </header>
 <main class="page-content" aria-label="Content">
@@ -131,12 +131,13 @@ window.onload = wrap_img;
 <p>I want another piece of information for the books in my dataset: their sales rank. I know it's possible to get this number from Amazon, because I have used professional bookseller software. However, this software requires a licensing agreement from Amazon, and it can only display sales rank data about one book ata time. So I need a different way to get it for a lot of books at once.</p>
 <p>A starting point is the sales rank data available from Jianmo Ni's project here:</p>
 <blockquote>
-<p><a href="https://nijianmo.github.io/amazon/index.html">https://nijianmo.github.io/amazon/index.html</a></p>
 <ul>
-<li>Image-based recommendations on styles and substitutes, 
-<pre><code>  J. McAuley, C. Targett, J. Shi, A. van den Hengel
+<li>
+<p>Image-based recommendations on styles and substitutes, 
+  J. McAuley, C. Targett, J. Shi, A. van den Hengel
   SIGIR, 2015
-  draft</code></pre>
+  draft</p>
+<p><a href="https://nijianmo.github.io/amazon/index.html">https://nijianmo.github.io/amazon/index.html</a></p>
 </li>
 </ul>
 </blockquote>
@@ -1095,7 +1096,7 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">full_df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="sa">f</span><span class="s1">'../../records/books-with-salesrank.csv'</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -1132,7 +1133,7 @@ window.onload = wrap_img;
         </p>
       </div>
       <div class="footer-col">
-        <p>this is the homepage of max anton brewer. copyright 2021</p>
+        <p>this is the homepage of max anton brewer</p>
       </div>
     </div>
 

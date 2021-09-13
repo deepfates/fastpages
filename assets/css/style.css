@@ -180,9 +180,9 @@ pre > code { border: 0; padding-right: 0; padding-left: 0; }
 .highlighter-rouge .highlight { background: #eeeeff; }
 
 /** Wrapper */
-.wrapper { max-width: calc(1000px - (30px)); margin-right: auto; margin-left: auto; padding-right: 15px; padding-left: 15px; }
+.wrapper { max-width: calc(900px - (30px)); margin-right: auto; margin-left: auto; padding-right: 15px; padding-left: 15px; }
 
-@media screen and (min-width: 1200px) { .wrapper { max-width: calc(1000px - (30px * 2)); padding-right: 30px; padding-left: 30px; } }
+@media screen and (min-width: 1200px) { .wrapper { max-width: calc(900px - (30px * 2)); padding-right: 30px; padding-left: 30px; } }
 
 /** Clearfix */
 .wrapper:after { content: ""; display: table; clear: both; }
@@ -425,6 +425,14 @@ pre code { font-size: 15px !important; }
 
 /*-----------------------------------*/
 /*----- ADD YOUR STYLES BELOW -------*/
+.post-card { display: flex; justify-content: space-between; }
+
+.image-preview { max-height: 10rem; }
+
+.wrapper { max-width: calc(900px - (30px)); margin-right: auto; margin-left: auto; padding-right: 15px; padding-left: 15px; }
+
+@media screen and (min-width: 1200px) { .wrapper { max-width: calc(900px - (30px * 2)); padding-right: 30px; padding-left: 30px; } }
+
 .language-python + .language-plaintext { border-left: 1px solid grey; margin-left: 1rem !important; }
 
 .language-python + .language-plaintext code { background-color: white !important; }
@@ -645,6 +653,8 @@ pre code { font-size: 15px !important; }
 .highlight .il { color: #0000DD; font-weight: bold; }
 
 /* Literal.Number.Integer.Long */
+pre, code { background-color: #f4fff4; }
+
 p code { font-size: 19px; }
 
 /*# sourceMappingURL=style.css.map */
