@@ -6,6 +6,8 @@ toc: false
 comments: true
 search_exclude: false
 categories: [robot-face]
+image: images/robot_face/autocomplete-everywhere.jpeg
+sticky_rank: 5
 ---
 **Previously,**
 

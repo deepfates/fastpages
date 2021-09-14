@@ -5,6 +5,7 @@ title: Canon Curation
 toc: true 
 badges: true
 categories: [canon]
+image: /images/section-performance-log.png
 nb_path: _notebooks/2021-06-10-canon-curation.ipynb
 layout: notebook
 ---
@@ -561,4 +562,8 @@ layout: notebook
 </div>
 </div>
  
+
+<script type="application/vnd.jupyter.widget-state+json">
+{"state": {}, "version_major": 2, "version_minor": 0}
+</script>
 

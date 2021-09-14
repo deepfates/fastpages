@@ -1,6 +1,6 @@
 ---
 keywords: fastai
-description: How do books become classics?
+description: I think I got too much data. Can you hold this for a second?
 title: Data Collation
 toc: true 
 badges: true

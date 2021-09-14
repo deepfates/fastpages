@@ -2,10 +2,10 @@
 keywords: fastai
 description: a newsletter about augmented intelligence
 title: Robot Face newsletter
-sticky_rank: 1 
 categories: [writing, robot-face]
 badges: false
 author: Max Anton Brewer
+image: /images/robot-face-logo.png
 nb_path: _notebooks/2020-09-01-robot-face.ipynb
 layout: notebook
 ---

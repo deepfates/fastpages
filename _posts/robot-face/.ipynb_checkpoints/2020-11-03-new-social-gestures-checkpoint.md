@@ -6,6 +6,7 @@ toc: false
 comments: true
 search_exclude: false
 categories: [robot-face]
+image: /images/new-social-gestures.jpeg
 ---
 *I’m not writing about the election today. I’m sure you’ve got plenty of that already. This is a newsletter about human-computer interfaces, as always. Take care of yourselves.*
 

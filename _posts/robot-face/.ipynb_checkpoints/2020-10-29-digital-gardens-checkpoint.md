@@ -6,6 +6,7 @@ toc: false
 comments: true
 search_exclude: false
 categories: [robot-face]
+image: /images/digital-garden.png
 ---
 **Previously,**
 

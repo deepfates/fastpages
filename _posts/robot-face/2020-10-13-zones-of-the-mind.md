@@ -6,6 +6,7 @@ toc: false
 comments: true
 search_exclude: false
 categories: [robot-face]
+image: images/robot_face/zones-of-the-mind.png
 ---
 **Previously,**
 

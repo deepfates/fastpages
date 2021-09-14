@@ -4,6 +4,7 @@ title: Invisible Movies
 categories: [sounds]
 layout: post
 sticky_rank: 4
+image: /images/invisible-movies.png
 ---
 
 ## A series of soundtracks you can watch. 
