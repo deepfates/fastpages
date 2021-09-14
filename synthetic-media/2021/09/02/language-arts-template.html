@@ -77,7 +77,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      5 min read
+      4 min read
     
 </span></p>
 
@@ -91,6 +91,21 @@ window.onload = wrap_img;
     
 
     
+      
+        <div class="pb-5 d-flex flex-wrap flex-justify-end">
+          
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/deepfates/fastpages/master?filepath=_notebooks%2F2021-09-02-language-arts-template.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/deepfates/fastpages/blob/master/_notebooks/2021-09-02-language-arts-template.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+        </div>
       </header>
 
   <div class="post-content e-content" itemprop="articleBody">
@@ -141,23 +156,6 @@ window.onload = wrap_img;
 </div>
 </div>
 </div>
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    
-
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -276,23 +274,6 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">date</span> <span class="o">=</span> <span class="s1">&#39;2020-11-28&#39;</span>
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;../_posts/language-arts/</span><span class="si">{</span><span class="n">date</span><span class="si">}</span><span class="s1">-</span><span class="si">{</span><span class="n">title</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot;-&quot;</span><span class="p">)</span><span class="si">}</span><span class="s1">.md&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">template_md</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">f</span><span class="p">)</span>
@@ -323,7 +304,7 @@ window.onload = wrap_img;
     
     <span class="n">images_html</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="sa">f</span><span class="s1">&#39;&lt;img src=&quot;</span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">image</span><span class="o">.</span><span class="n">parent</span><span class="p">)[</span><span class="mi">2</span><span class="p">:]</span><span class="si">}</span><span class="s1">/</span><span class="si">{</span><span class="n">image</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s1">&quot; alt=&quot;generated image&quot;&gt;&#39;</span> <span class="k">for</span> <span class="n">image</span> <span class="ow">in</span> <span class="n">images</span><span class="p">])</span>
 
-    <span class="n">video_html</span> <span class="o">=</span> <span class="s1">&#39;{</span><span class="si">% i</span><span class="s1">nclude video_small.html url=&quot;/images/book-gan.mp4&quot; %}&#39;</span> <span class="k">if</span> <span class="n">video</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span> <span class="k">else</span> <span class="s2">&quot;&quot;</span>
+    <span class="n">video_html</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="se">{{</span><span class="s1">% include video_small.html url=&quot;</span><span class="si">{</span><span class="n">video</span><span class="si">}</span><span class="s1">&quot; %</span><span class="se">}}</span><span class="s1">&#39;</span> <span class="k">if</span> <span class="n">video</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span> <span class="k">else</span> <span class="s2">&quot;&quot;</span>
         
     
     <span class="n">template_md</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;&#39;&#39;---</span>
@@ -339,6 +320,7 @@ window.onload = wrap_img;
 
 <span class="si">{</span><span class="n">video_html</span><span class="si">}</span><span class="s1"></span>
 
+<span class="s1">## Samples</span>
 <span class="s1">&lt;div style=&quot;display: flex; flex-flow: wrap; gap: 2rem&quot;&gt;</span>
 <span class="si">{</span><span class="n">images_html</span><span class="si">}</span><span class="s1"></span>
 <span class="s1">&lt;/div&gt;</span>
@@ -365,7 +347,7 @@ window.onload = wrap_img;
        <span class="s1">&#39;2020-11-28&#39;</span><span class="p">,</span>
       <span class="s2">&quot;An early experiment with the [lightweight-gan](https://github.com/lucidrains/lightweight-gan) architecture trained on a 55K-image book dataset.&quot;</span><span class="p">,</span>
       <span class="n">images</span><span class="p">,</span>
-      <span class="s2">&quot;/images/book-gan.mp4&quot;</span><span class="p">)</span>
+      <span class="s2">&quot;/images/book-gan.mp4&quot;</span><span class="p">)[:</span><span class="mi">500</span><span class="p">]</span>
 </pre></div>
 
     </div>
@@ -380,7 +362,7 @@ window.onload = wrap_img;
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&#39;---\ntitle: ../images/book_cover_gan\nlayout: post\ntoc: false\nbadges: false\nimage: /images/book_cover_gan/95-ema.jpg\ncategories: [synthetic-media]\n---\n\nAn early experiment with the [lightweight-gan](https://github.com/lucidrains/lightweight-gan) architecture trained on a 55K-image book dataset.\n\n{% include video_small.html url=&#34;/images/book-gan.mp4&#34; %}\n\n&lt;div style=&#34;display: flex; flex-flow: wrap; gap: 2rem&#34;&gt;\n&lt;img src=&#34;/images/book_cover_gan/95-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/74-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/117-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/99-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/48-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/59-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/62-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/20-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/23-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/69-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/43-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/58-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/87-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/81-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/24-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/61-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/35-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/14-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/34-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/119-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/73-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/31-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/98-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/78-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/75-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/29-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/125-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/122-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/7-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/1-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/97-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/85-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/19-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/57-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/100-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/56-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/104-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/76-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/4-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/79-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/49-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/30-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/60-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/96-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/63-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/55-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/84-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/40-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/105-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/103-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/18-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/54-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/77-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/115-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/53-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/113-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/67-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/46-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/27-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/22-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/89-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/116-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/111-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/91-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/50-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/12-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/72-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/36-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/17-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/13-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/33-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/118-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/120-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/80-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/90-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/106-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/112-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/47-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/71-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/38-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/37-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/10-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/52-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/88-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/11-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/123-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/16-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/42-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/121-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/94-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/110-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/101-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/5-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/65-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/70-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/124-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/102-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/9-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/68-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/44-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/109-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/114-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/26-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/64-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/41-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/8-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/107-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/51-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/39-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/25-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/82-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/2-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/3-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/6-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/0-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/15-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/32-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/92-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/86-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/108-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/66-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/21-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/83-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/28-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/93-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book_cover_gan/45-ema.jpg&#34; alt=&#34;generated image&#34;&gt;\n&lt;/div&gt;\n            &#39;</pre>
+<pre>&#39;---\ntitle: ../images/book_cover_gan\nlayout: post\ntoc: false\nbadges: false\nimage: /images/book_cover_gan/95-ema.jpg\ncategories: [synthetic-media]\n---\n\nAn early experiment with the [lightweight-gan](https://github.com/lucidrains/lightweight-gan) architecture trained on a 55K-image book dataset.\n\n{% include video_small.html url=&#34;/images/book-gan.mp4&#34; %}\n\n&lt;div style=&#34;display: flex; flex-flow: wrap; gap: 2rem&#34;&gt;\n&lt;img src=&#34;/images/book_cover_gan/95-ema.jpg&#34; alt=&#34;generated image&#34;&gt; &lt;img src=&#34;/images/book&#39;</pre>
 </div>
 
 </div>
@@ -426,6 +408,100 @@ window.onload = wrap_img;
        <span class="s1">&#39;2020-11-28&#39;</span><span class="p">,</span>
       <span class="s2">&quot;An early experiment with the [lightweight-gan](https://github.com/lucidrains/lightweight-gan) architecture trained on a 55K-image book dataset.&quot;</span><span class="p">,</span>
       <span class="s2">&quot;/images/book-gan.mp4&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">write_md</span><span class="p">(</span><span class="s1">&#39;../images/symbol_gan_unscii&#39;</span><span class="p">,</span>
+       <span class="s1">&#39;2021-02-03&#39;</span><span class="p">,</span>
+      <span class="sd">&quot;&quot;&quot;My first experiment with trying to generate new language glyphs. I used the [unscii](http://viznut.fi/unscii/) font because it has glyphs for most of the Unicode characters.</span>
+<span class="sd">      </span>
+<span class="sd">Unfortunately, since it&#39;s a bitmap font suitable for ASCII terminals, the end result is very pixelated is hard to imagine as letters. It also tended toward</span>
+<span class="sd">mode collapse, as the generator figured out it could fool the discriminator with a very faint grid of dots in a gridlike pattern.&quot;&quot;&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;/images/unscii-gan.mp4&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">write_md</span><span class="p">(</span><span class="s1">&#39;../images/symbol_gan_noto&#39;</span><span class="p">,</span>
+       <span class="s1">&#39;2021-02-05&#39;</span><span class="p">,</span>
+      <span class="sd">&quot;&quot;&quot;A model finetuned from my unscii GAN. I tried with Noto font from Google, but the underlying model was too deranged. </span>
+<span class="sd">Also, Noto has a lot more Eastern ideograms than Western characters and I don&#39;t know how to tell if those are even translating properly.&quot;&quot;&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;/images/noto-gan.mp4&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">write_md</span><span class="p">(</span><span class="s1">&#39;../images/symbol_gan_code2000&#39;</span><span class="p">,</span>
+       <span class="s1">&#39;2021-02-09&#39;</span><span class="p">,</span>
+      <span class="sd">&quot;&quot;&quot;I recreated my Unicode glyphs dataset with the abandonware font [Code2000](https://web.archive.org/web/20110108105420/http://code2000.net/), which has great coverage for Western characters as well as a funky, humanist design.</span>
+
+<span class="sd">This time I started to see real characters emerge among the imagined ones. It was at this point that I began to wonder if this was a good thing to do to my brain.</span>
+
+<span class="sd">But it was too late...&quot;&quot;&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">write_md</span><span class="p">(</span><span class="s1">&#39;../images/symbol_gan_4word&#39;</span><span class="p">,</span>
+       <span class="s1">&#39;2021-03-08&#39;</span><span class="p">,</span>
+      <span class="sd">&quot;&quot;&quot;After many false starts and dead ends, I finally found a concept that would truly drive me insane. I finetuned my Code2000 symbol GAN model on a set of generated images.</span>
+
+<span class="sd">These images consisted of the 1,000 most commonly used four-letter words in English. With the newly trained model, I generated some new ones.</span>
+
+<span class="sd">If you would like to purchase one of these word worms, you can find them in NFT form at the [Language Arts Marketplace](https://opensea.io/collection/language-arts). I can&#39;t imagine why you would, but there it is.</span>
+
+<span class="sd">**Warning: I don&#39;t know what happens if you stare at these for too long! Use at your own risk.**&quot;&quot;&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
