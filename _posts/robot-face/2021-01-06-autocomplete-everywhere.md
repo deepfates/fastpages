@@ -25,6 +25,8 @@ Emacs, the wizened editor/OS/religion, has survived for decades despite its pre-
 
 Code editors and IDEs have followed this philosophy since, and autocomplete for code is incredibly advanced and powerful. A modern editor really does feel as fun as the original Atom promo:
 
+{% include youtube.html url="https://www.youtube.com/watch?v=Y7aEiVwBAdk" %}
+
 Why can’t regular people have tools like this? I'm always surprised when I see someone using a word processor that doesn't autocomplete parentheses or quotation marks, for instance, yet I understand this is the way most software works. For now, at least.
 
 Autocompletion and Do What I Mean are part of the Collaborative Human-Agent Dialogue interface (CHAD). The future will have autocomplete everywhere.
