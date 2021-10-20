@@ -19,8 +19,7 @@ layout: notebook
         
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>I want to extract all the tweets I've ever written and convert them to small markdown files so they show up as "posts" on this website.</p>
-<p>Posts are organized by date, in the traditional blogging format. But so are tweets, kind of? They're listed chronologically anyway. Maybe I could make one post for each day, and then have all the tweets listed on that page. Each one could have its tweet ID as a header, thus having an internal link. Tweets can link to the tweets that precede them, and maybe even backlink to tweets that follow.</p>
+<h2 id="I-want-to-extract-all-the-tweets-I've-ever-written-and-convert-them-to-small-markdown-files-so-they-show-up-as-&quot;posts&quot;-on-this-website.">I want to extract all the tweets I've ever written and convert them to small markdown files so they show up as "posts" on this website.<a class="anchor-link" href="#I-want-to-extract-all-the-tweets-I've-ever-written-and-convert-them-to-small-markdown-files-so-they-show-up-as-&quot;posts&quot;-on-this-website."> </a></h2><p>Posts are organized by date, in the traditional blogging format. But so are tweets, kind of? They're listed chronologically anyway. Maybe I could make one post for each day, and then have all the tweets listed on that page. Each one could have its tweet ID as a header, thus having an internal link. Tweets can link to the tweets that precede them, and maybe even backlink to tweets that follow.</p>
 <p>It's not quite block references, but as a way of keeping my second brain under my ownership it should work. And this way if anyone wants to cancel me they'll have a convenient search box and permalinks for it. Even if my account gets deleted, my bad takes can stay up.</p>
 
 </div>
@@ -54,7 +53,7 @@ layout: notebook
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&#39;2021-09-01&#39;</pre>
+<pre>&#39;2021-09-12&#39;</pre>
 </div>
 
 </div>
@@ -65,6 +64,14 @@ layout: notebook
 </div>
     {% endraw %}
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This :point_up: is a workaround. Sometime after I started archiving my tweets, Twitter changed the API for search. This means that unofficial scrapers like <code>twint</code>stopped being able to see tweets from more than a few months ago. Even the in-app search was broken for a while.</p>
+<p>Fortunately I had already scraped and archived my old tweets, so now I just check to see when the last time I ran this script was and find tweets since that date. This also helps protect me from getting rate-limited by Twitter (they tend to do that if you download 30,000 tweets a few times in a row lol).</p>
+
+</div>
+</div>
+</div>
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -94,6 +101,13 @@ layout: notebook
 </div>
     {% endraw %}
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Check-data">Check data<a class="anchor-link" href="#Check-data"> </a></h2><p>That gives a dataset of tweets. Let's explore one here, and see some of its metadata.</p>
+
+</div>
+</div>
+</div>
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -116,7 +130,7 @@ layout: notebook
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>1133</pre>
+<pre>3247</pre>
 </div>
 
 </div>
@@ -166,26 +180,26 @@ layout: notebook
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>(&#39;1432830872894390283&#39;,
- &#39;2021-09-01&#39;,
- &#39;2021-09-01 06:43:24 MDT&#39;,
- 1433047838628491266,
- 0,
- &#39;https://twitter.com/deepfates/status/1433047838628491266&#39;,
+<pre>(&#39;1439019641205055496&#39;,
+ &#39;2021-09-17&#39;,
+ &#39;2021-09-17 18:28:06 MDT&#39;,
+ 1439023391512670210,
+ 4,
+ &#39;https://twitter.com/deepfates/status/1439023391512670210&#39;,
  [],
  [],
  &#39;&#39;,
  0,
- [{&#39;screen_name&#39;: &#39;aaron_clarey&#39;, &#39;name&#39;: &#39;Aaron Clarey&#39;, &#39;id&#39;: &#39;303940211&#39;}],
+ [{&#39;screen_name&#39;: &#39;IgorBrigadir&#39;, &#39;name&#39;: &#39;Igor Brigadir&#39;, &#39;id&#39;: &#39;495430242&#39;}],
  False,
  &#39;&#39;,
  &#39;&#39;,
  0,
  &#39;&#39;,
  &#39;&#39;,
- &#39;06:43:24&#39;,
+ &#39;18:28:06&#39;,
  &#39;-0600&#39;,
- &#39;@aaron_clarey 2010 i think&#39;,
+ &#39;@IgorBrigadir And it said that one day you will wrestle the very world snake itself! And win&#39;,
  [],
  3315205122,
  &#39;3315205122&#39;,
@@ -203,6 +217,13 @@ layout: notebook
 </div>
     {% endraw %}
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Tweet-layout-functions">Tweet layout functions<a class="anchor-link" href="#Tweet-layout-functions"> </a></h2><p>Many of my tweets have pictures or memes attached, but Twitter only includes the pic.twitter.com URL for these. Here I build a few functions to download the image and squeeze it into a Markdown template for display on my site.</p>
+
+</div>
+</div>
+</div>
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -229,7 +250,7 @@ layout: notebook
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">dl_image</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
-    <span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;../images/&#39;</span> <span class="o">+</span> <span class="n">url</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;../images/from_twitter/&#39;</span> <span class="o">+</span> <span class="n">url</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
     <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">stream</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
         <span class="n">r</span><span class="o">.</span><span class="n">raw</span><span class="o">.</span><span class="n">decode_content</span> <span class="o">=</span> <span class="kc">True</span>
@@ -241,7 +262,7 @@ layout: notebook
     
 <span class="c1"># hacky thing uses [1:] to shave the first &#39;.&#39; off the filename</span>
 <span class="k">def</span> <span class="nf">image_template</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
-    <span class="k">return</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;![image from twitter](/</span><span class="si">{</span><span class="n">filename</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span><span class="si">}</span><span class="s1">)</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="k">return</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;![image from twitter](</span><span class="si">{</span><span class="n">filename</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span><span class="si">}</span><span class="s1">)</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
 
     
 <span class="k">def</span> <span class="nf">get_tweet</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
@@ -326,7 +347,7 @@ layout: notebook
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>151</pre>
+<pre>4</pre>
 </div>
 
 </div>
@@ -358,8 +379,8 @@ layout: notebook
 
 
 <div class="output_markdown rendered_html output_subarea output_execute_result">
-<h4 id="*06:43:24*"><a href="https://twitter.com/deepfates/status/1433047838628491266">*06:43:24*</a><a class="anchor-link" href="#*06:43:24*"> </a></h4><p><font size="5">@aaron_clarey 2010 i think</font></p>
-<p>🗨️ 0 ♺ 0 🤍  0</p>
+<h4 id="*18:28:06*"><a href="https://twitter.com/deepfates/status/1439023391512670210">*18:28:06*</a><a class="anchor-link" href="#*18:28:06*"> </a></h4><p><font size="5">@IgorBrigadir And it said that one day you will wrestle the very world snake itself! And win</font></p>
+<p>🗨️ 0 ♺ 0 🤍  4</p>
 <hr>
 
 </div>
@@ -436,7 +457,7 @@ layout: notebook
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>5909</pre>
+<pre>136</pre>
 </div>
 
 </div>
@@ -467,7 +488,7 @@ layout: notebook
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Okay, that'll do for now. It prints a chronological page of tweets for each day. Linking, video and oter people's tweets will have to come later.</p>
+<h2 id="Do-the-work">Do the work<a class="anchor-link" href="#Do-the-work"> </a></h2><p>Okay, that'll do for now. It prints a chronological page of tweets for each day.</p>
 <p>I'll wrap that behavior in a function and pass it my tweets and a set of dates when i have tweeted.</p>
 
 </div>
@@ -519,7 +540,7 @@ layout: notebook
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>238</pre>
+<pre>661</pre>
 </div>
 
 </div>
@@ -554,7 +575,7 @@ layout: notebook
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>13</pre>
+<pre>33</pre>
 </div>
 
 </div>
@@ -603,8 +624,7 @@ layout: notebook
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>100%|██████████| 13/13 [00:08&lt;00:00,  1.53it/s]
-</pre>
+<pre>  6%|▌         | 2/33 [00:00&lt;00:16,  1.89it/s]</pre>
 </div>
 </div>
 
@@ -616,8 +636,8 @@ layout: notebook
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>I would also liek to do analysis to see how often I tweet. And make a big list of links. Maybe next time.</p>
-<p>For now you can find these secret tweet archives by searching in the <a href="/explore">Explore</a> page</p>
+<p>I would also like to do analysis to see how often I tweet, and other facts. And maybe make a big list of links. Maybe next time.</p>
+<p>For now you can find these secret tweet archives by searching in the <a href="/explore">Explore</a> page. The days archived this time are as follows.</p>
 
 </div>
 </div>
@@ -644,19 +664,39 @@ layout: notebook
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>{&#39;2021-09-01&#39;,
- &#39;2021-09-02&#39;,
- &#39;2021-09-03&#39;,
- &#39;2021-09-04&#39;,
- &#39;2021-09-05&#39;,
- &#39;2021-09-06&#39;,
- &#39;2021-09-07&#39;,
- &#39;2021-09-08&#39;,
- &#39;2021-09-09&#39;,
- &#39;2021-09-10&#39;,
- &#39;2021-09-11&#39;,
- &#39;2021-09-12&#39;,
- &#39;2021-09-13&#39;}</pre>
+<pre>{&#39;2021-09-18&#39;,
+ &#39;2021-09-19&#39;,
+ &#39;2021-09-20&#39;,
+ &#39;2021-09-21&#39;,
+ &#39;2021-09-22&#39;,
+ &#39;2021-09-23&#39;,
+ &#39;2021-09-24&#39;,
+ &#39;2021-09-25&#39;,
+ &#39;2021-09-26&#39;,
+ &#39;2021-09-27&#39;,
+ &#39;2021-09-28&#39;,
+ &#39;2021-09-29&#39;,
+ &#39;2021-09-30&#39;,
+ &#39;2021-10-01&#39;,
+ &#39;2021-10-02&#39;,
+ &#39;2021-10-03&#39;,
+ &#39;2021-10-04&#39;,
+ &#39;2021-10-05&#39;,
+ &#39;2021-10-06&#39;,
+ &#39;2021-10-07&#39;,
+ &#39;2021-10-08&#39;,
+ &#39;2021-10-09&#39;,
+ &#39;2021-10-10&#39;,
+ &#39;2021-10-11&#39;,
+ &#39;2021-10-12&#39;,
+ &#39;2021-10-13&#39;,
+ &#39;2021-10-14&#39;,
+ &#39;2021-10-15&#39;,
+ &#39;2021-10-16&#39;,
+ &#39;2021-10-17&#39;,
+ &#39;2021-10-18&#39;,
+ &#39;2021-10-19&#39;,
+ &#39;2021-10-20&#39;}</pre>
 </div>
 
 </div>
