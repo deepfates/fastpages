@@ -3,7 +3,7 @@ keywords: fastai
 title: Archive my tweets
 badges: true
 categories: [code, twitter]
-hide: true
+hide: false
 nb_path: _notebooks/2021-08-13-tweet-archive.ipynb
 layout: notebook
 ---
@@ -98,13 +98,36 @@ layout: notebook
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;twint.run.Twint at 0x7fce23268390&gt;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
     {% endraw %}
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Check-data">Check data<a class="anchor-link" href="#Check-data"> </a></h2><p>That gives a dataset of tweets. Let's explore one here, and see some of its metadata.</p>
+<p>This is all the configuration necessary to grab my tweets. Have to use <code>Hide_output = True</code>, or it will print every single tweet in the output.</p>
+<p>I now have a dataset of tweets. Let's explore one here, and see some of its metadata.</p>
 
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Check-data">Check data<a class="anchor-link" href="#Check-data"> </a></h2>
 </div>
 </div>
 </div>
@@ -292,6 +315,7 @@ layout: notebook
 <span class="s1">toc: true</span>
 <span class="s1">comments: false</span>
 <span class="s1">search_exclude: false</span>
+<span class="s1">hide: true</span>
 <span class="s1">categories: [tweets]</span>
 <span class="s1">---</span>
 
@@ -457,7 +481,7 @@ layout: notebook
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>136</pre>
+<pre>147</pre>
 </div>
 
 </div>
@@ -624,7 +648,8 @@ layout: notebook
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>  6%|▌         | 2/33 [00:00&lt;00:16,  1.89it/s]</pre>
+<pre>100%|██████████| 33/33 [00:15&lt;00:00,  2.12it/s]
+</pre>
 </div>
 </div>
 
