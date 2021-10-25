@@ -25,7 +25,7 @@ The potential employer asked me for 4 things:
 
 As a self-taught coder, looking back at old code can be an embarrassing experience from me. I haven't had a lot of feedback on my code, so I only realize how bad it was when I look at it with more experienced eyes. Nonetheless, it will be a good learning experience for me, so here goes. ## Front-end code
 
-** These screenshots are not loading, becuase of some compication with `fastpages` 
+## Front-end code
 
 An old friend asked me to design, develop and host a small website for their community herbalism group in Portland. They mostly organize through Instagram and Facebook, but wanted a flyer site at [plantainproject.org](plantainproject.org) to point people to. Especially donors.
 
