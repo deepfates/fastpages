@@ -27,7 +27,7 @@ As a self-taught coder, looking back at old code can be an embarrassing experien
 
 ## Front-end code
 
-An old friend asked me to design, develop and host a small website for their community herbalism group in Portland. They mostly organize through Instagram and Facebook, but wanted a flyer site at [plantainproject.org](plantainproject.org) to point people to. Especially donors.
+An old friend asked me to design, develop and host a small website for their community herbalism group in Portland. They mostly organize through Instagram and Facebook, but wanted a flyer site at [https://plantainproject.org](plantainproject.org) to point people to. Especially donors.
 
 I used the Gatsby framework, which was probably overkill for this use case but was a satisfying level of complexity to be a learning project for me. Mostly what I did was modify a template someone else had made, but I'm still pretty proud of the design decisions I made. 
 
@@ -47,7 +47,7 @@ Here's a small grid-based component, using CSS-in-JSX and `styled-components`, w
 
 Because this website is built with `fastpages`, I am able to write literate programs in Jupyter notebooks and use them to modify the website itself. 
 
-I decided to extract the posts I make on Twitter and post them on this site, where they serve as a live-log of my daily thoughts. In [Archive my tweets](/canon/2021/10/18/tweet-archive.html) I walk through the process of scraping tweets with `twint`, downloading attached images and converting them to Markdown posts. These become "deepfates log" posts like [this day where I only tweeted once](/tweets/2021/10/10/tweets.html)
+I decided to extract the posts I make on Twitter and post them on this site, where they serve as a live-log of my daily thoughts. In [Archive my tweets](/code/twitter/2021/08/13/tweet-archive.html) I walk through the process of scraping tweets with `twint`, downloading attached images and converting them to Markdown posts. These become "deepfates log" posts like [this day where I only tweeted once](/tweets/2021/10/10/tweets.html)
 
 ## Machine learning code
 
@@ -57,6 +57,6 @@ Please see my page [Sales Data Exploration](/canon/2021/09/08/sales-data-explora
 
 ## Deep learning code
 
-I refer the reader to my project [Legiblate](/code/2021/09/08/sales-data-exploration.html), where I train an image classifier to judge the genre of a book by its cover. Or try the  **[Legiblate app](http://legiblate.herokuapp.com/)** yourself!
+I refer the reader to my project [Legiblate](https://deepfates.com/code/2020/10/12/legiblate.html), where I train an image classifier to judge the genre of a book by its cover. Or try the  **[Legiblate app](http://legiblate.herokuapp.com/)** yourself!
 
 ![Legiblate screenshot](/images/legiblate.png)
