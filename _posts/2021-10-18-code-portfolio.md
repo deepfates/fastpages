@@ -4,7 +4,7 @@ layout: post
 toc: true
 comments: false
 search_exclude: false
-hide: false
+hide: true
 categories: [code]
 ---
 
