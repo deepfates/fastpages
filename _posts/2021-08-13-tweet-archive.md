@@ -53,7 +53,7 @@ layout: notebook
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&#39;2021-09-12&#39;</pre>
+<pre>&#39;2021-10-19&#39;</pre>
 </div>
 
 </div>
@@ -106,7 +106,7 @@ layout: notebook
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;twint.run.Twint at 0x7fce23268390&gt;</pre>
+<pre>&lt;twint.run.Twint at 0x7f8ba4086150&gt;</pre>
 </div>
 
 </div>
@@ -153,7 +153,7 @@ layout: notebook
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>3247</pre>
+<pre>3250</pre>
 </div>
 
 </div>
@@ -203,26 +203,28 @@ layout: notebook
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>(&#39;1439019641205055496&#39;,
- &#39;2021-09-17&#39;,
- &#39;2021-09-17 18:28:06 MDT&#39;,
- 1439023391512670210,
- 4,
- &#39;https://twitter.com/deepfates/status/1439023391512670210&#39;,
+<pre>(&#39;1455758834698391552&#39;,
+ &#39;2021-11-02&#39;,
+ &#39;2021-11-02 23:08:51 MDT&#39;,
+ 1455763883822563335,
+ 1,
+ &#39;https://twitter.com/deepfates/status/1455763883822563335&#39;,
  [],
  [],
  &#39;&#39;,
- 0,
- [{&#39;screen_name&#39;: &#39;IgorBrigadir&#39;, &#39;name&#39;: &#39;Igor Brigadir&#39;, &#39;id&#39;: &#39;495430242&#39;}],
+ 1,
+ [{&#39;screen_name&#39;: &#39;AinterShow&#39;,
+   &#39;name&#39;: &#39;The Big Wet Homie 👁️⃤&#39;,
+   &#39;id&#39;: &#39;1286760114632814592&#39;}],
  False,
  &#39;&#39;,
  &#39;&#39;,
  0,
  &#39;&#39;,
  &#39;&#39;,
- &#39;18:28:06&#39;,
- &#39;-0600&#39;,
- &#39;@IgorBrigadir And it said that one day you will wrestle the very world snake itself! And win&#39;,
+ &#39;23:08:51&#39;,
+ &#39;-0700&#39;,
+ &#39;@AinterShow whoop&#39;,
  [],
  3315205122,
  &#39;3315205122&#39;,
@@ -371,7 +373,7 @@ layout: notebook
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>4</pre>
+<pre>10</pre>
 </div>
 
 </div>
@@ -403,8 +405,8 @@ layout: notebook
 
 
 <div class="output_markdown rendered_html output_subarea output_execute_result">
-<h4 id="*18:28:06*"><a href="https://twitter.com/deepfates/status/1439023391512670210">*18:28:06*</a><a class="anchor-link" href="#*18:28:06*"> </a></h4><p><font size="5">@IgorBrigadir And it said that one day you will wrestle the very world snake itself! And win</font></p>
-<p>🗨️ 0 ♺ 0 🤍  4</p>
+<h4 id="*23:08:51*"><a href="https://twitter.com/deepfates/status/1455763883822563335">*23:08:51*</a><a class="anchor-link" href="#*23:08:51*"> </a></h4><p><font size="5">@AinterShow whoop</font></p>
+<p>🗨️ 1 ♺ 0 🤍  1</p>
 <hr>
 
 </div>
@@ -481,7 +483,7 @@ layout: notebook
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>147</pre>
+<pre>600</pre>
 </div>
 
 </div>
@@ -564,7 +566,7 @@ layout: notebook
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>661</pre>
+<pre>582</pre>
 </div>
 
 </div>
@@ -599,7 +601,7 @@ layout: notebook
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>33</pre>
+<pre>23</pre>
 </div>
 
 </div>
@@ -648,7 +650,7 @@ layout: notebook
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>100%|██████████| 33/33 [00:15&lt;00:00,  2.12it/s]
+<pre>100%|██████████| 23/23 [00:25&lt;00:00,  1.12s/it]
 </pre>
 </div>
 </div>
@@ -689,39 +691,29 @@ layout: notebook
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>{&#39;2021-09-18&#39;,
- &#39;2021-09-19&#39;,
- &#39;2021-09-20&#39;,
- &#39;2021-09-21&#39;,
- &#39;2021-09-22&#39;,
- &#39;2021-09-23&#39;,
- &#39;2021-09-24&#39;,
- &#39;2021-09-25&#39;,
- &#39;2021-09-26&#39;,
- &#39;2021-09-27&#39;,
- &#39;2021-09-28&#39;,
- &#39;2021-09-29&#39;,
- &#39;2021-09-30&#39;,
- &#39;2021-10-01&#39;,
- &#39;2021-10-02&#39;,
- &#39;2021-10-03&#39;,
- &#39;2021-10-04&#39;,
- &#39;2021-10-05&#39;,
- &#39;2021-10-06&#39;,
- &#39;2021-10-07&#39;,
- &#39;2021-10-08&#39;,
- &#39;2021-10-09&#39;,
- &#39;2021-10-10&#39;,
- &#39;2021-10-11&#39;,
- &#39;2021-10-12&#39;,
- &#39;2021-10-13&#39;,
- &#39;2021-10-14&#39;,
- &#39;2021-10-15&#39;,
- &#39;2021-10-16&#39;,
- &#39;2021-10-17&#39;,
- &#39;2021-10-18&#39;,
- &#39;2021-10-19&#39;,
- &#39;2021-10-20&#39;}</pre>
+<pre>{&#39;2021-11-02&#39;,
+ &#39;2021-11-03&#39;,
+ &#39;2021-11-04&#39;,
+ &#39;2021-11-05&#39;,
+ &#39;2021-11-06&#39;,
+ &#39;2021-11-07&#39;,
+ &#39;2021-11-08&#39;,
+ &#39;2021-11-09&#39;,
+ &#39;2021-11-10&#39;,
+ &#39;2021-11-11&#39;,
+ &#39;2021-11-12&#39;,
+ &#39;2021-11-13&#39;,
+ &#39;2021-11-14&#39;,
+ &#39;2021-11-15&#39;,
+ &#39;2021-11-16&#39;,
+ &#39;2021-11-17&#39;,
+ &#39;2021-11-18&#39;,
+ &#39;2021-11-19&#39;,
+ &#39;2021-11-20&#39;,
+ &#39;2021-11-21&#39;,
+ &#39;2021-11-22&#39;,
+ &#39;2021-11-23&#39;,
+ &#39;2021-11-24&#39;}</pre>
 </div>
 
 </div>
