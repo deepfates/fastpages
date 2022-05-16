@@ -85,17 +85,9 @@ Venkatash Rao puts it well in his analysis from February, *[A Text Renaissance](
 
 Conspiracies are *all about* context.
 
-[![Meme of a man standing at a bulletin board covered with papers and red string connecting conspiracies](https://bucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com/public/images/ecdba029-9e3b-4b95-b01d-c208fd2d425e_840x379.jpeg "Meme of a man standing at a bulletin board covered with papers and red string connecting conspiracies")
- a.image2.image-link.image2-379-840 {
- padding-bottom: 45.11904761904762%;
- padding-bottom: min(45.11904761904762%, 379px);
- width: 100%;
- height: 0;
- }
- a.image2.image-link.image2-379-840 img {
- max-width: 840px;
- max-height: 379px;
- }](https://cdn.substack.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fecdba029-9e3b-4b95-b01d-c208fd2d425e_840x379.jpeg) This NAME keeps coming up, over and over again!Some of these features can be seen creeping into the legacy platforms. Twitter has built a protocol for bi-directional linking, so that each tweet can "point" at the tweet it's replying to, and be pointed at by tweets that reply to it. This has created a renaissance in threaded essays, fed bite-by-bite into the 280 character limit. 
+![Meme of a man standing at a bulletin board covered with papers and red string connecting conspiracies](https://bucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com/public/images/ecdba029-9e3b-4b95-b01d-c208fd2d425e_840x379.jpeg "Meme of a man standing at a bulletin board covered with papers and red string connecting conspiracies")
+
+This NAME keeps coming up, over and over again! Some of these features can be seen creeping into the legacy platforms. Twitter has built a protocol for bi-directional linking, so that each tweet can "point" at the tweet it's replying to, and be pointed at by tweets that reply to it. This has created a renaissance in threaded essays, fed bite-by-bite into the 280 character limit. 
 
 It's also got a simple form of transclusion in the quote-tweet -- though with no edit functionality, of course. Twitter has never had edit functionality. That's its saving grace.
 

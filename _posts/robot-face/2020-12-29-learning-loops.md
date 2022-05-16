@@ -30,17 +30,9 @@ One way to speed up your learning process is to review your previous thoughts at
 
 I’ve been using a browser extension called Thread Helper to augment this capability in myself. Thread Helper replaces the distracting “What’s Happening” panel with a list of your tweets that changes *in real time* as you type in the “Compose Tweet” box. It surfaces thoughts from long ago for me to thread together and re-interpret in the moment. Instead of being faced with a barrage of ephemeral events and news stories, I am surrounded by my past selves and the thoughts they found it important to write down.
 
-[![](https://bucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com/public/images/f52dffa1-3e62-4290-83c2-96f8cb2c465c_1920x972.png)
- a.image2.image-link.image2-737-1456 {
- padding-bottom: 50.61813186813187%;
- padding-bottom: min(50.61813186813187%, 737px);
- width: 100%;
- height: 0;
- }
- a.image2.image-link.image2-737-1456 img {
- max-width: 1456px;
- max-height: 737px;
- }](https://cdn.substack.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Ff52dffa1-3e62-4290-83c2-96f8cb2c465c_1920x972.png) I’ve been using it for a month now and it’s changed Twitter from a toy into a powerful tool. This interface is a tool for writing and thinking, rather than mindless scrolling. I could use this as my only note-taking system: threading different ideas together, expressing thoughts in small re-usable nuggets and composing them into larger essays. The power of threaded thought is just beginning to take off; for more on that, read *[The Spreading of Threading](https://aaronzlewis.com/blog/2019/05/01/spreading-threading/)* by Aaron Z. Lewis.
+![](https://bucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com/public/images/f52dffa1-3e62-4290-83c2-96f8cb2c465c_1920x972.png)
+
+I’ve been using it for a month now and it’s changed Twitter from a toy into a powerful tool. This interface is a tool for writing and thinking, rather than mindless scrolling. I could use this as my only note-taking system: threading different ideas together, expressing thoughts in small re-usable nuggets and composing them into larger essays. The power of threaded thought is just beginning to take off; for more on that, read *[The Spreading of Threading](https://aaronzlewis.com/blog/2019/05/01/spreading-threading/)* by Aaron Z. Lewis.
 
 Thread Helper makes Twitter into a [digital garden](https://robotface.substack.com/p/digital-gardens). One of the creators of Thread Helper made this analogy explicit:
 

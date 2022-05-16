@@ -28,17 +28,9 @@ A glacier recedes, exposing bare rock. Lichen eat the rock, live on the rock, di
 
 The trees garden the forest for the trees.
 
-[![](https://bucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com/public/images/8f885885-b0f8-4f50-a81b-29411e3f8ec7_4000x2859.png)
- a.image2.image-link.image2-1041-1456 {
- padding-bottom: 71.49725274725274%;
- padding-bottom: min(71.49725274725274%, 1041px);
- width: 100%;
- height: 0;
- }
- a.image2.image-link.image2-1041-1456 img {
- max-width: 1456px;
- max-height: 1041px;
- }](https://cdn.substack.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F8f885885-b0f8-4f50-a81b-29411e3f8ec7_4000x2859.png) **What about you and me?**
+![](https://bucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com/public/images/8f885885-b0f8-4f50-a81b-29411e3f8ec7_4000x2859.png)
+
+**What about you and me?**
 
 As a human, I can't eat most parts of a tree. Wood, leaves, most nuts, and many fruits are off limits. The mature forest actually offers very little food for me: the undergrowth is suppressed by the shade of the canopy, so only other shade-tolerant trees can grow. Trees are great, they provide oxygen and shade and many other benefits, but not food. I am lucky to find some berries, nuts, or mushrooms. 
 

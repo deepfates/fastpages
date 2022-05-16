@@ -15,7 +15,9 @@ I wrote last week about [permaculture ethics](https://robotface.substack.com/p/t
 
 I just think that *gardening* algorithms is a better metaphor than *engineering* them.
 
-[![](https://bucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com/public/images/a8d20076-5323-4b2d-a7c7-c90fb9be3e87_728x485.jpeg)](https://cdn.substack.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fa8d20076-5323-4b2d-a7c7-c90fb9be3e87_728x485.jpeg)What does it mean to garden algorithms?
+![](https://bucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com/public/images/a8d20076-5323-4b2d-a7c7-c90fb9be3e87_728x485.jpeg)
+
+What does it mean to garden algorithms?
 ---------------------------------------
 
 When you *engineer* something — a bridge, a car, a spaceship — you design the entire thing before you build it. But the process of programming is more gradual and experimental. You can see the general outlines of the whole, but you have to fill out each specific through trial and error. Code is not concrete. It is a language, a special way of writing in the second person: *you do this, then you do that; except if other, then you do else*. 

@@ -48,17 +48,9 @@ The Mac was designed under constraints that we can now surpass. These constraint
 
  They go on to conjure a computing system that reverses every principle of Macintosh design.
 
-[![A comparison of the Mac and Anti-Mac interfaces](https://bucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com/public/images/d50531e8-af08-4d5c-9891-139eadda334d_855x682.png "A comparison of the Mac and Anti-Mac interfaces")
- a.image2.image-link.image2-682-855 {
- padding-bottom: 79.76608187134502%;
- padding-bottom: min(79.76608187134502%, 682px);
- width: 100%;
- height: 0;
- }
- a.image2.image-link.image2-682-855 img {
- max-width: 855px;
- max-height: 682px;
- }](https://cdn.substack.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fd50531e8-af08-4d5c-9891-139eadda334d_855x682.png) The authors suggest that it might be a few years before these capabilities are implemented. A quarter-century later, the Anti-Mac is making its debut:
+![A comparison of the Mac and Anti-Mac interfaces](https://bucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com/public/images/d50531e8-af08-4d5c-9891-139eadda334d_855x682.png "A comparison of the Mac and Anti-Mac interfaces")
+
+The authors suggest that it might be a few years before these capabilities are implemented. A quarter-century later, the Anti-Mac is making its debut:
 
 **`A ubiquitous computer, with language as its basic metaphor, constantly tracking your data and bringing information to you`**`.` 
 
@@ -89,17 +81,9 @@ An "artifact" is the granular unit of this system. Instead of a "file," which mi
 
 Artifacts can be linked, transcluded, tagged, versioned, filtered; the system is configurable to your needs. In fact, it attempts to model your behaviors, and adapt. The framework sends relevant artifacts to a panel called the Drawer, which you can open at any time for inspiration.
 
-[![](https://bucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com/public/images/eddd20e5-e8d6-44e7-baa9-1d47275c7924_2989x1165.png)
- a.image2.image-link.image2-567-1456 {
- padding-bottom: 38.94230769230769%;
- padding-bottom: min(38.94230769230769%, 567px);
- width: 100%;
- height: 0;
- }
- a.image2.image-link.image2-567-1456 img {
- max-width: 1456px;
- max-height: 567px;
- }](https://cdn.substack.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Feddd20e5-e8d6-44e7-baa9-1d47275c7924_2989x1165.png) The Artifacts system is in an active communication loop with the human operator.The Artifacts loop connects outside resources, like newsletters, or Wikipedia articles, or images someone sent you from their camera app (COLLABORATION); with internal resources, all organized and interlinked (THE FRAMEWORK); and presents them to you (THE MIND). This is called Retrieving Artifacts: your news feed, your search result, your Drawer contents. 
+![](https://bucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com/public/images/eddd20e5-e8d6-44e7-baa9-1d47275c7924_2989x1165.png)
+
+The Artifacts system is in an active communication loop with the human operator.The Artifacts loop connects outside resources, like newsletters, or Wikipedia articles, or images someone sent you from their camera app (COLLABORATION); with internal resources, all organized and interlinked (THE FRAMEWORK); and presents them to you (THE MIND). This is called Retrieving Artifacts: your news feed, your search result, your Drawer contents. 
 
 You accept the Retrieved Artifacts through your Understanding skill, then process it through the very normal human faculty of Incubating. Finally you Express yourself into the machine, which absorbs all different types of input and creates Artifacts from them. Your work is done.
 

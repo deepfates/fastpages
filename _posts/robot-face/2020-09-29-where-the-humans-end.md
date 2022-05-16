@@ -44,17 +44,9 @@ It's a loaded term, but in this case it's merely a mathematical distinction: the
 
 This creates a rich-club graph -- an oligarchy, in political terms. The influencers are core to their communities. In the 2018 paper *Conjoining uncooperative societies facilitates evolution of cooperation* ([PDF](https://arxiv.org/pdf/1805.12215.pdf)), which I have linked to before, it is shown that in a rich-club graph the fate of the periphery is decided by the core. It is indeed possible for separate rich-club-shaped communities to cooperate; however, the amount of cooperation is limited by the amount of oligarchs. 
 
-[![](https://bucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com/public/images/3cc71db3-0d6d-4661-9635-769da88f8bf7_674x491.png)
- a.image2.image-link.image2-491-674 {
- padding-bottom: 72.8486646884273%;
- padding-bottom: min(72.8486646884273%, 491px);
- width: 100%;
- height: 0;
- }
- a.image2.image-link.image2-491-674 img {
- max-width: 674px;
- max-height: 491px;
- }](https://cdn.substack.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F3cc71db3-0d6d-4661-9635-769da88f8bf7_674x491.png) Twitter has to draw a line between influencers and the rest of us. That line is arbitrary, and the size of the rich club of users is hardware-limited. The ways in which we connect to each other forms a microcosm of the modern city: if you're an Influencer, you can warp social reality around you. The rest of us can go to one of the influencer-defined communities and do the prescribed behavior.
+![](https://bucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com/public/images/3cc71db3-0d6d-4661-9635-769da88f8bf7_674x491.png)
+
+Twitter has to draw a line between influencers and the rest of us. That line is arbitrary, and the size of the rich club of users is hardware-limited. The ways in which we connect to each other forms a microcosm of the modern city: if you're an Influencer, you can warp social reality around you. The rest of us can go to one of the influencer-defined communities and do the prescribed behavior.
 
 We are sorted into fields, like crops, so that we may be marketed to those who would buy our attention. The complexity of our interrelation is flattened to a manageable level for profit. This is computers gardening humans. It’s not sustainable, but of course it’s not; they learned from us.
 

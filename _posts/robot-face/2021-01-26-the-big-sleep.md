@@ -57,17 +57,9 @@ I've been playing with it all week and it's amazing the things it can come up wi
 
 https://t.co/klAxM015zq 
 
-[![](https://bucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com/public/images/d57047ba-85da-4e8d-b7da-e22bf176324b_512x512.png)
- a.image2.image-link.image2-512-512 {
- padding-bottom: 100%;
- padding-bottom: min(100%, 512px);
- width: 100%;
- height: 0;
- }
- a.image2.image-link.image2-512-512 img {
- max-width: 512px;
- max-height: 512px;
- }](https://cdn.substack.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fd57047ba-85da-4e8d-b7da-e22bf176324b_512x512.png) It seems to have picked up on the color of the Twitter brand and its bird shaped outline, but inverted it to be a sun-bright bird in a Twitter-blue sky. With a Doge face: the ultimate arbiter of neutrality.  
+![](https://bucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com/public/images/d57047ba-85da-4e8d-b7da-e22bf176324b_512x512.png)
+
+It seems to have picked up on the color of the Twitter brand and its bird shaped outline, but inverted it to be a sun-bright bird in a Twitter-blue sky. With a Doge face: the ultimate arbiter of neutrality.  
 
 The Big Sleep feels like an externalized version of lucid dreaming. Or the technique that Carl Jung called active imagination, in which you picture an image in your mind and let it evolve without dissipating. It's a way to visualize the archetypes that live in the thought space of humanity. But active imagination is difficult, and personal.   
 
@@ -79,17 +71,7 @@ Thanks for reading,
 
  — Max
 
-[![](https://bucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com/public/images/d89b380a-fe33-44d7-a2ce-8224ed00b1ec_512x512.png)
- a.image2.image-link.image2-512-512 {
- padding-bottom: 100%;
- padding-bottom: min(100%, 512px);
- width: 100%;
- height: 0;
- }
- a.image2.image-link.image2-512-512 img {
- max-width: 512px;
- max-height: 512px;
- }](https://cdn.substack.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fd89b380a-fe33-44d7-a2ce-8224ed00b1ec_512x512.png)    
+![](https://bucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com/public/images/d89b380a-fe33-44d7-a2ce-8224ed00b1ec_512x512.png)    
 
 
 

@@ -30,17 +30,9 @@ So Zone 1 is where you go regularly, and we’ll want to put the most energy-int
 
 Most city lots won’t have more than these three zones, but rural homesteads will also have a Zone 4 (pasture, woodlot) and Zone 5 (wilderness, for hunting and foraging and inspiration). Zones also don’t have to be perfectly concentric; for instance, you might have a “side yard” very close to the house that’s actually in Zone 3 by usage. It’s not meant to be a rigid hierarchy, but a way of visualizing how an area is impacted and enlivened by human energy.
 
-[![](https://bucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com/public/images/7ccb45bd-b583-4d3a-8e5d-a909715c1526_450x338.png)
- a.image2.image-link.image2-338-450 {
- padding-bottom: 75.1111111111111%;
- padding-bottom: min(75.1111111111111%, 338px);
- width: 100%;
- height: 0;
- }
- a.image2.image-link.image2-338-450 img {
- max-width: 450px;
- max-height: 338px;
- }](https://cdn.substack.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F7ccb45bd-b583-4d3a-8e5d-a909715c1526_450x338.png) *(from [Deep Green Permaculture](https://deepgreenpermaculture.com/permaculture/permaculture-design-principles/4-zones-and-sectors-efficient-energy-planning/))*
+![](https://bucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com/public/images/7ccb45bd-b583-4d3a-8e5d-a909715c1526_450x338.png)
+
+*(from [Deep Green Permaculture](https://deepgreenpermaculture.com/permaculture/permaculture-design-principles/4-zones-and-sectors-efficient-energy-planning/))*
 
 **What about these** ***sectors*****, then?**
 

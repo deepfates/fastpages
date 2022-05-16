@@ -24,17 +24,9 @@ But, said he, those aren’t the only options. What about a *digital garden*?
 
 I remembered reading about this idea somewhere long ago, and a bit of searching turned it up quickly. Many people have written about it lately, but my favorite is Maggie Appleton’s *[A Brief History & Ethos of the Digital Garden](https://maggieappleton.com/garden-history)* (with its beautiful graphics)*.*
 
-[![](https://bucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com/public/images/6fa5ee62-15f5-4c4c-8814-355079312090_1600x1011.png)
- a.image2.image-link.image2-920-1456 {
- padding-bottom: 63.18681318681318%;
- padding-bottom: min(63.18681318681318%, 920px);
- width: 100%;
- height: 0;
- }
- a.image2.image-link.image2-920-1456 img {
- max-width: 1456px;
- max-height: 920px;
- }](https://cdn.substack.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F6fa5ee62-15f5-4c4c-8814-355079312090_1600x1011.png) The metaphor goes back as far as 2015, as a contrast to the *stream* metaphor. Instead of a “river of news” flowing past your eyes, a garden encourages wandering and cultivation. 
+![](https://bucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com/public/images/6fa5ee62-15f5-4c4c-8814-355079312090_1600x1011.png)
+
+The metaphor goes back as far as 2015, as a contrast to the *stream* metaphor. Instead of a “river of news” flowing past your eyes, a garden encourages wandering and cultivation. 
 
 The blog is a stream of content, as is the feed. The social apps pretend to be a stream, even though they hide or promote content based on what they think you want. 
 
